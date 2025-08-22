@@ -1,9 +1,9 @@
-import "./App.css";
-import Button from "./components/Button/Button";
+import './App.css';
+import Button from './components/Button/Button';
 
 function App() {
   return (
-    <div className="flex-row">
+    <div className="d-flex justify-content-between m-5">
       <Button variant="secondary">Get Started</Button>
       <Button
         variant="primary"
