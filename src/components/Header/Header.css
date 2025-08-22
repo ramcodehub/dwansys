@@ -1,0 +1,26 @@
+.header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  margin-left: 32px;
+}
+
+.header-link {
+  text-decoration: none;
+  color: var(--grey-color);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.header-link:hover {
+  color: var(--primary-color);
+}
