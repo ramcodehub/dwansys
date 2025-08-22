@@ -1,16 +1,16 @@
-import "./Button.css";
+import './Button.css';
 
 const Button = ({
-  variant = "primary",
+  variant = 'primary',
   children,
-  className = "",
+  className = '',
   onClick,
-  type = "button",
+  type = 'button',
   icon,
   ariaLabel,
   ...rest
 }) => {
-  const btnClass = variant === "secondary" ? "secondaryBtn" : "primaryBtn";
+  const btnClass = variant === 'secondary' ? 'secondaryBtn' : 'primaryBtn';
   return (
     <button
       type={type}
