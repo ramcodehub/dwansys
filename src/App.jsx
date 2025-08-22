@@ -1,20 +1,22 @@
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
-import Button from './components/Button/Button';
+import Demo from './pages/Demo';
+import Detail from './pages/Detail';
+import Home from './pages/Home';
 
 function App() {
   return (
-    <div className="d-flex justify-content-between m-5">
-      <Button variant="secondary">Get Started</Button>
-      <Button
-        variant="primary"
-        icon={
-          <i className="bi bi-arrow-right text-white" aria-hidden="true"></i>
-        }
-        ariaLabel="Learn more"
-      >
-        Learn More
-      </Button>
-    </div>
+    <>
+      <div className="d-flex justify-content-between m-5">
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/detail" element={<Detail />} />
+            <Route path="/demo" element={<Demo />} />
+          </Routes>
+        </Router>
+      </div>
+    </>
   );
 }
 
