@@ -1,15 +1,20 @@
 import "./App.css";
-import PrimaryButton from "./components/Button/PrimaryButton"
+import Button from "./components/Button/Button";
 
 function App() {
   return (
-    <>
-      <div className="container mt-5">
-        <h1 className="text-primary">Hello, Bootstrap 5 + Vite + React 🚀</h1>
-        <button className="secondaryBtn">Get Started</button>
-        <PrimaryButton></PrimaryButton>
-      </div>
-    </>
+    <div className="flex-row">
+      <Button variant="secondary">Get Started</Button>
+      <Button
+        variant="primary"
+        icon={
+          <i className="bi bi-arrow-right text-white" aria-hidden="true"></i>
+        }
+        ariaLabel="Learn more"
+      >
+        Learn More
+      </Button>
+    </div>
   );
 }
 
