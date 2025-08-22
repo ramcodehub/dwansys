@@ -1,6 +1,5 @@
 :root{
    --font-default: 'Abel', sans-serif;
-
     --primary-color: #5653FF;
     --secondary-color: #D252FF;
     --gradient-color: linear-gradient(to right,#5653FF,#D252FF); 
