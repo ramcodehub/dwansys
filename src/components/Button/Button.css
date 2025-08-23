@@ -13,7 +13,7 @@
 .secondaryBtn {
   background: var(--gradient-color);
   padding: 0.4em 2em;
-  font-size: 1.2em;
+  font-size: 1.3em;
   border-radius: 2.8em;
   color: var(--white-color);
   cursor: pointer;

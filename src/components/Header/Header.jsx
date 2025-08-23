@@ -19,23 +19,20 @@ const Header = () => {
     {
       name: 'Data Analytics',
       links: [
-        'Data Ingestion',
-        'Data Storage',
-        'Data Transformation',
-        'Data Migration Services',
-        'Data Modelling',
-        'Data Orchestration',
+        'Business Intelligence',
+        'Machine Learning applications',
+        'Automated Report Delivery',
       ],
     },
     {
       name: 'AI Solutions',
       links: [
-        'Data Ingestion',
-        'Data Storage',
-        'Data Transformation',
-        'Data Migration Services',
-        'Data Modelling',
-        'Data Orchestration',
+        'AI powered Virtual Assistance',
+        'Document Summarization',
+        'LLM Evaluation',
+        'RAG Application',
+        'Tool Augmented Chatbots',
+        'Agentic AI',
       ],
     },
     { name: 'Explore dwansys' },
@@ -43,10 +40,10 @@ const Header = () => {
     { name: 'Careers' },
   ];
   return (
-    <header className="header d-flex align-items-center justify-content-around ">
+    <header className="header d-flex align-items-center justify-content-between ">
       <img src={logo} alt="Logo" />
-      <nav className="header-nav">
-        <ul className="list-unstyled m-0 p-0 d-flex gap ms-4 position-relative">
+      <nav className="me-4 header-nav">
+        <ul className="list-unstyled m-0 p-0 d-flex gap  position-relative">
           {navLinks.map((link, index) =>
             link.links ? (
               <li key={index} className="dropdown">
@@ -54,7 +51,7 @@ const Header = () => {
                   {link.name}{' '}
                   <i className="bi bi-chevron-down dropdown-icon"></i>
                 </a>
-                <ul className="d-flex flex-column position-absolute m-0 p-2 start-0 rounded ">
+                <ul className="d-flex flex-column position-absolute m-0 p-2 rounded">
                   {link.links.map((link, i) => (
                     <li key={i} className="list-unstyled">
                       <a className="m-0 p-0 text-decoration-none">{link}</a>
