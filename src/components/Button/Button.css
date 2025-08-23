@@ -19,3 +19,8 @@
   cursor: pointer;
   transition: background 0.2s;
 }
+@media (max-width:1280px){
+  .secondaryBtn{
+    font-size: 1rem;
+  }
+}

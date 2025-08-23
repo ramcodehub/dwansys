@@ -51,7 +51,7 @@ const Header = () => {
                   {link.name}{' '}
                   <i className="bi bi-chevron-down dropdown-icon"></i>
                 </a>
-                <ul className="d-flex flex-column position-absolute m-0 p-2 rounded">
+                <ul className="d-flex flex-column position-absolute m-0 p-2 rounded dropdown-menu shadow z-3">
                   {link.links.map((link, i) => (
                     <li key={i} className="list-unstyled">
                       <a className="m-0 p-0 text-decoration-none">{link}</a>
