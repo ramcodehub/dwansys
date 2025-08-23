@@ -14,13 +14,15 @@ const Button = ({
   return (
     <button
       type={type}
-      className={`${btnClass} ${className}`.trim()}
+      className={`d-flex align-items-center border-0 justify-content-center ${btnClass} ${className}`.trim()}
       onClick={onClick}
       aria-label={ariaLabel}
       {...rest}
     >
       <span>{children}</span>
-      {icon && <span className="btn-icon">{icon}</span>}
+      {icon && (
+        <span className="d-flex align-items-center ps-3 btn-icon">{icon}</span>
+      )}
     </button>
   );
 };
