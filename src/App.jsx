@@ -1,4 +1,4 @@
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
 import Demo from './pages/Demo';
@@ -10,13 +10,11 @@ function App() {
     <>
       <Header />
       <div className="d-flex justify-content-between m-5">
-        <Router>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/detail" element={<Detail />} />
-            <Route path="/demo" element={<Demo />} />
-          </Routes>
-        </Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/detail" element={<Detail />} />
+          <Route path="/demo" element={<Demo />} />
+        </Routes>
       </div>
     </>
   );
