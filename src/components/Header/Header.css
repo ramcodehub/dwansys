@@ -58,15 +58,15 @@
 .header-nav .dropdown ul li a:hover {
   color: var(--white-color);
 }
-@media (min-width: 1280px) {
+@media (max-width: 1439px) {
   .header {
     padding: 3rem;
   }
   .header-link {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 6px 0 10px 6px;
   }
   .header-nav .dropdown ul {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
