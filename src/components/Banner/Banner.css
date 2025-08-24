@@ -16,3 +16,12 @@
     font-size: 1.4em;
     margin: 1rem 0 0.5rem;
 }
+
+@media (min-width:1281px){
+    .banner-heading h1{
+        font-size: 5rem;
+    }
+    .banner-description{
+        font-size: 1.6rem;
+    }
+}

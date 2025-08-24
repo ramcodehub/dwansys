@@ -17,7 +17,7 @@
   cursor: pointer;
   padding: 10px 0 10px 10px;
   color: var(--grey-color);
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   transition: color 0.2s;
 }
 .header-link .dropdown-icon {
@@ -58,7 +58,7 @@
 .header-nav .dropdown ul li a:hover {
   color: var(--white-color);
 }
-@media (max-width: 1439px) {
+@media (max-width: 1424px) {
   .header {
     padding: 3rem;
   }
