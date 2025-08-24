@@ -9,13 +9,11 @@ function App() {
   return (
     <>
       <Header />
-      <div className="d-flex justify-content-between m-5">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/detail" element={<Detail />} />
           <Route path="/demo" element={<Demo />} />
         </Routes>
-      </div>
     </>
   );
 }
