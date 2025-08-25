@@ -58,7 +58,7 @@
 .header-nav .dropdown ul li a:hover {
   color: var(--white-color);
 }
-@media (max-width: 1424px) {
+@media (max-width: 1425px) {
   .header {
     padding: 3rem;
   }
