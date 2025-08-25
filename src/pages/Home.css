@@ -1,0 +1,12 @@
+.home h1 {
+    font-size: 2.7rem;
+    max-width: 28ch;
+}
+.market-section {
+    border: 1px solid #181818;
+    border-radius:  1rem;
+    box-shadow: 0 0 2px #414141;
+}
+.market-section h1 {
+    color: #D252FF;
+}

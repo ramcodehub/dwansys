@@ -4,7 +4,7 @@
 .banner-heading h1{
     font-size: 4rem;
 }
-.banner-heading .colored{
+.colored{
     background: var(--gradient-color); 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 

@@ -1,9 +1,9 @@
-import { useRef, useState } from "react";
-import Video from '../../assets/videos/dwansysFoundation.mp4';
+import { useRef, useState } from 'react';
+import Video from '../../assets/videos/DwansysLandingPageVideo.mp4';
 import './Video.css';
 
 export default function VideoPlayer() {
-   const videoRef = useRef(null);
+  const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlay = () => {
@@ -16,7 +16,6 @@ export default function VideoPlayer() {
     setIsPlaying(false);
   };
 
-
   return (
     <div className="position-relative d-inline-block w-100 h-100 video">
       <video
@@ -27,7 +26,7 @@ export default function VideoPlayer() {
         className="rounded"
       />
 
-       {!isPlaying && (
+      {!isPlaying && (
         <button
           onClick={handlePlay}
           className="btn position-absolute top-50 start-50 translate-middle border-0 shadow-none"
@@ -35,7 +34,6 @@ export default function VideoPlayer() {
           <i className="bi bi-play-circle text-white"></i>
         </button>
       )}
-
     </div>
   );
 }
