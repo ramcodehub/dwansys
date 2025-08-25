@@ -1,0 +1,12 @@
+.medialogosContainer{
+    width: 80%;
+}
+
+.medialogosImages {
+  filter: grayscale(100%) brightness(1.5);
+  transition: 0.3s ease;
+}
+
+.medialogosImages:hover {
+  filter: grayscale(0%);
+}
