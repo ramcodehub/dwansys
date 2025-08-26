@@ -1,11 +1,11 @@
-.left-right{
-    padding: 3rem 1.5rem;
-    
-}
 .left-right img{
-    max-width: 82%;
+    max-width: 87%; 
+}
+.left-right h2{
+    max-width: 90%;
 }
 .left-right p{
+    max-width: 95%;
     font-size: 1.1rem;
     color: #AAAAAA;
 }

@@ -1,51 +1,96 @@
 import Banner from '../components/Banner/Banner';
+import LeftRight from '../components/LeftRightCard/LeftRight.jsx';
 import MediaLogos from '../components/MediaLogos/MediaLogos.jsx';
 import Video from '../components/Video/Video.jsx';
-import LeftRight from '../components/LeftRightCard/LeftRight.jsx';
-import './Home.css'
+import DataManagement from '../components/DataManagement/DataManagement.jsx';
+import DWANArchitecture from '../assets/images/DWAN Architecture.png';
+import MCP from '../assets/images/MCP.jpg';
+import './Home.css';
 
 const Home = () => {
   return (
     <div className="d-flex flex-column text-center gap-3 align-items-center home">
-      <Banner/>
-      <Video/>
-      <MediaLogos/>
-      <h1 className='m-0 p-0 lh-1'>There is still so much left for further 
-        digital transformation.</h1>
-      <h1 className='colored m-0 p-0 lh-1'>Our team is committed and focused 
-        on delivering sustainable solutions!</h1>
-      <LeftRight image='adv_bg.png'
-                heading="Comprehensive Data Collection"
-                description="Effortlessly collect data from a variety of sources, including CRM systems,user feedback, website analytics, streaming data, historical data and others.Our  generic model integrates smoothly with your existing tools to deliver a comprehensive overview of your business"/>
-      <LeftRight image='cdc_bg.png'
-                heading="Advanced Data Visualization"
-                description="Easily interpret your data with our intuitive visualization tools. From interactive dashboards to detailed reports, our visualizations help you quickly identify trends, patterns, and opportunities."
-                imageLeft={false}/>
-      <LeftRight image='BuildingAIFramework.png'
-                heading="AI Strategy Frameworks:Establishing Trust and Achieving Success"
-                description="We will analyse four prominent frameworks that assist organizations in implementing artificial intelligence in a responsible, effective, and strategic manner"/>
+      <Banner />
+      <Video />
+      <MediaLogos />
 
-      <div className='d-flex align-items-center justify-content-center container my-2'>
-        <div className='col-lg-3 text-start'>
-          <h1 className='fs-3'>Global Artificial Intelligence (AI) Market Dynamics by 2032:</h1>
-          <p className='fs-6' style={{color:'#AAAAAA'}}>AI market is slated to expand from $371.71 billion in 2025 to $ 2407.02 billion by 2032, at a CAGR of 30.6% during the forecast period</p>
+      <h1 className="m-0 p-0 lh-1">
+        There is still so much left for further digital transformation.
+      </h1>
+      <h1 className="colored m-0 p-0 lh-1">
+        Our team is committed and focused on delivering sustainable solutions!
+      </h1>
+      <div className='d-flex flex-column align-items-center col-lg-11 twopartcomponent'>
+        <LeftRight
+        image="adv_bg.png"
+        heading="Comprehensive Data Collection"
+        description="Effortlessly collect data from a variety of sources, including CRM systems,user feedback, website analytics, streaming data, historical data and others.Our  generic model integrates smoothly with your existing tools to deliver a comprehensive overview of your business"
+      />
+      <LeftRight
+        image="cdc_bg.png"
+        heading="Advanced Data Visualization"
+        description="Easily interpret your data with our intuitive visualization tools. From interactive dashboards to detailed reports, our visualizations help you quickly identify trends, patterns, and opportunities."
+        imageLeft={false}
+      />
+      <LeftRight
+        image="BuildingAIFramework.png"
+        heading="AI Strategy Frameworks:Establishing Trust and Achieving Success"
+        description="We will analyse four prominent frameworks that assist organizations in implementing artificial intelligence in a responsible, effective, and strategic manner"
+      />
+      </div>
+
+      <div className="d-flex align-items-center justify-content-center container my-2">
+        <div className="col-lg-3 text-start">
+          <h1 className="fs-3">
+            Global Artificial Intelligence (AI) Market Dynamics by 2032:
+          </h1>
+          <p className="fs-6" style={{ color: '#AAAAAA' }}>
+            AI market is slated to expand from $371.71 billion in 2025 to $
+            2407.02 billion by 2032, at a CAGR of 30.6% during the forecast
+            period
+          </p>
         </div>
-        <div className='col-lg-9 d-flex justify-content-evenly ms-3 py-5 market-section'>
-          <div className='pe-5' style={{borderRight:'2px solid #181818'}}>
+        <div className="col-lg-9 d-flex justify-content-evenly ms-3 py-5 market-section">
+          <div className="pe-5" style={{ borderRight: '2px solid #181818' }}>
             <h1> $1494 B</h1>
-            <h3>AI Market: <b>US</b></h3>
+            <h3>
+              AI Market: <b>US</b>
+            </h3>
           </div>
-          <div className='pe-5' style={{borderRight:'2px solid #181818'}}>
-            <h1 className='text-start'> $306 B</h1>
-            <h3>AI Market: <b>EMEA</b></h3>
+          <div className="pe-5" style={{ borderRight: '2px solid #181818' }}>
+            <h1 className="text-start"> $306 B</h1>
+            <h3>
+              AI Market: <b>EMEA</b>
+            </h3>
           </div>
           <div>
-            <h1 className='text-start'> $607 B</h1>
-            <h3>AI Market: <b>APAC</b></h3>
+            <h1 className="text-start"> $607 B</h1>
+            <h3>
+              AI Market: <b>APAC</b>
+            </h3>
           </div>
         </div>
       </div>
-      
+      <div className='dwan-architecture'>
+        <div className='d-flex pb-5'>
+          <div className='text-start col-lg-8'>
+            <h1 className='fs-1'>DWAN Generic Architecture:</h1>
+            <h1 className='colored fs-1' style={{maxWidth:'40ch'}}>Data Wisdom Architecture for Next-Gen</h1>
+          </div>
+          <p className='col-lg-4 text-start fs-5' style={{color:'#aaaaaa'}}>Next-Gen data eco system driven by Artificial Intelligence and human expertise</p>
+        </div>
+        <img src={DWANArchitecture} className='w-100 p-4 rounded-4' alt="DWANArchitecture"/>
+      </div>
+
+      <DataManagement/>
+
+      <div className='d-flex align-items-center justify-content-around w-100'>
+        <div className='col-lg-5 d-flex flex-column align-items-start'>
+          <h1 className='m-0 p-0lh-0'>Easy to Integrate:</h1>
+          <h2 className='m-0 p-0 colored lh-0 text-start fs-3'>Seamlessly integrates with your favourite third-party apps — powered by a robust model context protocol (MCP) for intelligent interoperability</h2>
+        </div>
+        <img src={MCP} alt="" className='col-lg-4'/>
+      </div>
     </div>
   );
 };

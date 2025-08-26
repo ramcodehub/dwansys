@@ -1,6 +1,10 @@
-.home h1 {
+.home>h1 {
     font-size: 2.7rem;
     max-width: 28ch;
+}
+.home .twopartcomponent{
+    padding: 7rem 0;
+    gap: 7rem;
 }
 .market-section {
     border: 1px solid #181818;
@@ -8,5 +12,11 @@
     box-shadow: 0 0 2px #414141;
 }
 .market-section h1 {
-    color: #D252FF;
+    color: var(--secondary-color);
+}
+.dwan-architecture{
+    margin: 7rem 4rem;
+}
+.dwan-architecture img{
+    border: 2px solid #181818;
 }
