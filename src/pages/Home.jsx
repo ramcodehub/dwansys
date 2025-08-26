@@ -4,7 +4,7 @@ import MediaLogos from '../components/MediaLogos/MediaLogos.jsx';
 import Video from '../components/Video/Video.jsx';
 import DataManagement from '../components/DataManagement/DataManagement.jsx';
 import DWANArchitecture from '../assets/images/DWAN Architecture.png';
-import MCP from '../assets/images/MCP.jpg';
+import MCP from '../assets/images/MCP.png';
 import './Home.css';
 
 const Home = () => {
@@ -84,12 +84,12 @@ const Home = () => {
 
       <DataManagement/>
 
-      <div className='d-flex align-items-center justify-content-around w-100'>
+      <div className='d-flex align-items-center justify-content-around w-100 p-5'>
         <div className='col-lg-5 d-flex flex-column align-items-start'>
           <h1 className='m-0 p-0lh-0'>Easy to Integrate:</h1>
           <h2 className='m-0 p-0 colored lh-0 text-start fs-3'>Seamlessly integrates with your favourite third-party apps — powered by a robust model context protocol (MCP) for intelligent interoperability</h2>
         </div>
-        <img src={MCP} alt="" className='col-lg-4'/>
+        <img src={MCP} alt="MCP"  className='col-lg-4 rounded-4 px-5 py-3' style={{border:'2px solid #181818'}}/>
       </div>
     </div>
   );
