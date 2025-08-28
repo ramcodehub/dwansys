@@ -1,7 +1,7 @@
 import cnn from '../../assets/images/cnn.png';
 import forbes from '../../assets/images/forbes.png';
 import yahoo from '../../assets/images/yahoo.png';
-import './MediaLogos.css';
+import './Clients.css';
 
 const MediaLogos = () => {
   return (

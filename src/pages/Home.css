@@ -2,6 +2,14 @@
     font-size: 2.7rem;
     max-width: 28ch;
 }
+.home .bg-photo{
+    background-image: url(../assets/images/subscription_background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+}
 .home .twopartcomponent{
     padding: 7rem 0;
     gap: 7rem;

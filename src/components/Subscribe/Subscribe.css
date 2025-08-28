@@ -1,0 +1,26 @@
+.subscribe{
+    border: 1px solid #181818;  
+    background: rgba(70, 70, 70, 0.05);   
+    backdrop-filter: blur(4px);             
+    -webkit-backdrop-filter: blur(10px);     
+    border-radius: 12px;                     
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+.subscribe input{
+    color: var(--white-color);
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    outline: none;
+
+}
+.subscribe button{
+    position: absolute;
+    border: 4px solid black;
+    outline: none;
+    background-color: #181818;
+    color: var(--white-color);
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
