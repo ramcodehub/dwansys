@@ -17,6 +17,10 @@
   border-radius: 1rem;
   box-shadow: 0 0 2px #414141;
 }
+
+.market-section-heading{
+    font-size: 1.75rem;
+}
 .market-section h1 {
   color: var(--secondary-color);
 }
@@ -25,4 +29,10 @@
 }
 .dwan-architecture img {
   border: 2px solid #181818;
+}
+
+@media (min-width:1400px){
+  .market-section-heading{
+    font-size: 2rem;
+}
 }

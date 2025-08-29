@@ -5,7 +5,7 @@ import './Clients.css';
 
 const MediaLogos = () => {
   return (
-    <div className="d-flex align-items-center justify-content-around py-5 w-100 medialogosContainer">
+    <div className="d-flex align-items-center justify-content-around py-5 my-4 w-100 medialogosContainer">
       <img
         src={cnn}
         alt="cnn"

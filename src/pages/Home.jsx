@@ -45,9 +45,9 @@ const Home = () => {
         />
       </div>
 
-      <div className="d-flex align-items-center justify-content-center container my-2">
+      <div className="m-0 p-0 d-flex align-items-center justify-content-between container my-2">
         <div className="col-lg-3 text-start">
-          <h1 className="fs-3">
+          <h1 className="market-section-heading">
             Global Artificial Intelligence (AI) Market Dynamics by 2032:
           </h1>
           <p className="fs-6" style={{ color: '#AAAAAA' }}>
