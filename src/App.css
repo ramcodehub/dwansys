@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,18 +9,18 @@ body {
   font-family: var(--font-default);
   font-size: var(--font-size);
 }
-.main-container{
+.main-container {
   padding-left: 78px;
   padding-right: 78px;
 }
-.full-width{
+.full-width {
   margin-left: -78px;
   margin-right: -78px;
 }
-.colored{
-    background: var(--gradient-color); 
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
-    background-clip: text;
-    color: transparent;
+.colored {
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }

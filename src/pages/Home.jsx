@@ -13,18 +13,18 @@ const Home = () => {
   return (
     <div className="text-center gap-3 home">
       <Banner />
-      <div className='full-width'>
-        <Video/>
+      <div className="full-width">
+        <Video />
       </div>
       <Clients />
 
-      <div className='d-flex flex-column  align-items-center justify-content-center description'>
+      <div className="d-flex flex-column  align-items-center justify-content-center description">
         <h1 className="m-0 p-0 lh-1">
-        There is still so much left for further digital transformation.
-      </h1>
-      <h1 className="colored m-0 p-0 lh-1">
-        Our team is committed and focused on delivering sustainable solutions!
-      </h1>
+          There is still so much left for further digital transformation.
+        </h1>
+        <h1 className="colored m-0 p-0 lh-1">
+          Our team is committed and focused on delivering sustainable solutions!
+        </h1>
       </div>
       <div className="d-flex flex-column align-items-center twopartcomponent">
         <LeftRight
@@ -116,7 +116,7 @@ const Home = () => {
         />
       </div>
       <UseCases />
-      <div className="bg-photo full-width d-flex flex-column" >
+      <div className="bg-photo full-width d-flex flex-column">
         <Subscribe />
       </div>
     </div>

@@ -1,21 +1,21 @@
-.banner{
-    padding: 2.5rem 0 1.5rem;
+.banner {
+  padding: 2.5rem 0 1.5rem;
 }
-.banner-heading h1{
-    font-size: 4rem;
-}
-
-.banner-description{
-    max-width: 70ch;
-    font-size: 1.4em;
-    margin: 1rem 0 0.5rem;
+.banner-heading h1 {
+  font-size: 4rem;
 }
 
-@media (min-width:1281px){
-    .banner-heading h1{
-        font-size: 5rem;
-    }
-    .banner-description{
-        font-size: 1.6rem;
-    }
+.banner-description {
+  max-width: 70ch;
+  font-size: 1.4em;
+  margin: 1rem 0 0.5rem;
+}
+
+@media (min-width: 1281px) {
+  .banner-heading h1 {
+    font-size: 5rem;
+  }
+  .banner-description {
+    font-size: 1.6rem;
+  }
 }

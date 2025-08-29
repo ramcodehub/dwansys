@@ -1,28 +1,28 @@
-.home>.description h1 {
-    font-size: 2.7rem;
-    max-width: 28ch;
+.home > .description h1 {
+  font-size: 2.7rem;
+  max-width: 28ch;
 }
-.home .bg-photo{
-    background-image: url(../assets/images/subscription_background.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.home .bg-photo {
+  background-image: url(../assets/images/subscription_background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.home .twopartcomponent{
-    padding: 7rem 0;
-    gap: 7rem;
+.home .twopartcomponent {
+  padding: 7rem 0;
+  gap: 7rem;
 }
 .market-section {
-    border: 1px solid #181818;
-    border-radius:  1rem;
-    box-shadow: 0 0 2px #414141;
+  border: 1px solid #181818;
+  border-radius: 1rem;
+  box-shadow: 0 0 2px #414141;
 }
 .market-section h1 {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
-.dwan-architecture{
-    margin: 7rem 0;
+.dwan-architecture {
+  margin: 7rem 0;
 }
-.dwan-architecture img{
-    border: 2px solid #181818;
+.dwan-architecture img {
+  border: 2px solid #181818;
 }

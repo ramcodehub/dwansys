@@ -1,8 +1,8 @@
 import AdvBg from '../../assets/images/Advanced Data Visualization.jpeg';
 import BuildingAIFramework from '../../assets/images/AI Strategy Frameworks.jpeg';
 import CdcBg from '../../assets/images/Comprehensive DataCollection.jpeg';
-import DataGovernance from '../../assets/images/DataGovernance.jpg';
 import DataCatalogue from '../../assets/images/DataCatalogue.jpg';
+import DataGovernance from '../../assets/images/DataGovernance.jpg';
 import DataQuality from '../../assets/images/DataQuality.jpg';
 import DataSecurity from '../../assets/images/DataSecurity.jpg';
 import Button from '../Button/Button';

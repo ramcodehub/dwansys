@@ -1,11 +1,7 @@
-import AdvBg from '../../assets/images/Advanced Data Visualization.jpeg';
-import BuildingAIFramework from '../../assets/images/AI Strategy Frameworks.jpeg';
-import CdcBg from '../../assets/images/Comprehensive DataCollection.jpeg';
-import DataGovernance from '../../assets/images/DataGovernance.jpg';
 import Button from '../Button/Button';
 import './Card.css';
 
-const Card = ({ image, heading, description}) => {
+const Card = ({ image, heading, description }) => {
   // const images = {
   //   'adv_bg.png': AdvBg,
   //   'cdc_bg.png': CdcBg,
@@ -14,20 +10,23 @@ const Card = ({ image, heading, description}) => {
   // };
   return (
     <div className="d-flex flex-column align-items-start justify-content-center p-3 d-inline rounded-4 card">
-        <img src={image}  alt={heading} className="pb-3 rounded-2 card-img-top object-fit-cover" />
-        <h2 className="text-start colored fs-3">{heading}</h2>
-        <p className="text-start lh-2 fs-6 fw-800">{description}</p>
-        
-          <Button
-          variant="primary"
-          icon={
-            <i className="bi bi-arrow-right text-white" aria-hidden="true"></i>
-          }
-          ariaLabel="Learn more"
-        >
-          Learn More
-        </Button>
-        
+      <img
+        src={image}
+        alt={heading}
+        className="pb-3 rounded-2 card-img-top object-fit-cover"
+      />
+      <h2 className="text-start colored fs-3">{heading}</h2>
+      <p className="text-start lh-2 fs-6 fw-800">{description}</p>
+
+      <Button
+        variant="primary"
+        icon={
+          <i className="bi bi-arrow-right text-white" aria-hidden="true"></i>
+        }
+        ariaLabel="Learn more"
+      >
+        Learn More
+      </Button>
     </div>
   );
 };

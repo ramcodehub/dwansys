@@ -1,20 +1,19 @@
-.data-management .data-pillar-tab{
-    border: none;
-    color: #c5c5c5;
-    font-size: 1.4rem;
-    cursor: pointer;
-    transition: color 0.3s;
-    border-right: 2px solid var(--white-color); 
+.data-management .data-pillar-tab {
+  border: none;
+  color: #c5c5c5;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: color 0.3s;
+  border-right: 2px solid var(--white-color);
 }
 
 .data-management .data-pillar-tab:last-child {
-  border-right: none; 
+  border-right: none;
 }
-.data-management .data-pillar-tab.active{
-    color: var(--primary-color);
+.data-management .data-pillar-tab.active {
+  color: var(--primary-color);
 }
-.data-management .data-pillar{
-    border: 2px solid #181818;
-    background-color: #010101;
-    
+.data-management .data-pillar {
+  border: 2px solid #181818;
+  background-color: #010101;
 }
