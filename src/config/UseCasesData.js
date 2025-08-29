@@ -94,7 +94,7 @@ const UseCasesData=[
         },
         {
             name: 'AI in Medical Diagnosis and Imaging Analysis',
-            description : "Artificial Intelligence is revolutionizing healthcare diagnostics, igniting a profound hope for millions by making disease detection faster and astonishingly more accurate through cutting-edge medical imaging.",
+            description : "AI is revolutionizing healthcare diagnostics, igniting a profound hope for millions by making disease detection faster and astonishingly more accurate through cutting-edge medical imaging.",
             image : AIMedicalDiagnosisImagingAnalysis
         },
         {

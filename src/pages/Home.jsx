@@ -11,18 +11,22 @@ import './Home.css';
 
 const Home = () => {
   return (
-    <div className="d-flex flex-column align-items-center text-center gap-3 home">
+    <div className="text-center gap-3 home">
       <Banner />
-      <Video />
+      <div className='full-width'>
+        <Video/>
+      </div>
       <Clients />
 
-      <h1 className="m-0 p-0 lh-1">
+      <div className='d-flex flex-column  align-items-center justify-content-center description'>
+        <h1 className="m-0 p-0 lh-1">
         There is still so much left for further digital transformation.
       </h1>
       <h1 className="colored m-0 p-0 lh-1">
         Our team is committed and focused on delivering sustainable solutions!
       </h1>
-      <div className="d-flex flex-column align-items-center col-lg-11 twopartcomponent">
+      </div>
+      <div className="d-flex flex-column align-items-center twopartcomponent">
         <LeftRight
           image="adv_bg.png"
           heading="Comprehensive Data Collection"
@@ -95,9 +99,9 @@ const Home = () => {
 
       <DataManagement />
 
-      <div className="d-flex align-items-center justify-content-around w-100 p-5">
+      <div className="d-flex align-items-center justify-content-around my-5 w-100">
         <div className="col-lg-5 d-flex flex-column align-items-start">
-          <h1 className="m-0 p-0lh-0">Easy to Integrate:</h1>
+          <h1 className="m-0 p-0 lh-0">Easy to Integrate:</h1>
           <h2 className="m-0 p-0 colored lh-0 text-start fs-3">
             Seamlessly integrates with your favourite third-party apps — powered
             by a robust model context protocol (MCP) for intelligent
@@ -112,7 +116,7 @@ const Home = () => {
         />
       </div>
       <UseCases />
-      <div className="bg-photo d-flex flex-column">
+      <div className="bg-photo full-width d-flex flex-column" >
         <Subscribe />
       </div>
     </div>

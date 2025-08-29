@@ -19,7 +19,7 @@ const LeftRight = ({ image, heading, description, imageLeft = true }) => {
     'DataSecurity.jpg': DataSecurity,
   };
   return (
-    <div className="d-flex flex-column flex-md-row align-items-center left-right ps-3">
+    <div className="d-flex flex-column flex-md-row align-items-center left-right">
       <div
         className={`w-50 d-flex align-items-start ${imageLeft ? 'order-md-1' : 'order-md-2'}`}
       >

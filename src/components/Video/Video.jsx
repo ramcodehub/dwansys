@@ -17,7 +17,7 @@ export default function VideoPlayer() {
   };
 
   return (
-    <div className="position-relative d-inline-block w-100 h-100 video">
+    <div className="position-relative d-inline-block w-100 video">
       <video
         ref={videoRef}
         width="100%"

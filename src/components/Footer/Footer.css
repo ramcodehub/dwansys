@@ -1,0 +1,12 @@
+.footer{
+    border: 1px solid #181818
+}
+.footer p,li{
+    color: #AAAAAA;
+}
+.footer a{
+    cursor: pointer;
+}
+.footer .footer-content a:hover{
+    color: var(--white-color);
+}

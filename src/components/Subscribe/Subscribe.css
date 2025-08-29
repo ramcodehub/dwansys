@@ -1,5 +1,7 @@
 .subscribe{
-    border: 1px solid #181818;  
+    border: 2px solid #181818; 
+    margin: 4rem 4.8rem;
+    padding: 4rem; 
     background: rgba(70, 70, 70, 0.05);   
     backdrop-filter: blur(4px);             
     -webkit-backdrop-filter: blur(10px);     
