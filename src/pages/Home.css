@@ -1,8 +1,50 @@
+.bg {
+  position: relative;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 5rem;
+}
+
+.bg::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    var(--secondary-color) 0%,
+    transparent 70%
+  );
+  transform: translateY(-50%);
+  filter: blur(100px);
+  border-radius: 50%;
+}
+
+.bg::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
+  transform: translateY(-50%);
+  filter: blur(100px);
+  border-radius: 50%;
+}
+.bg::before,
+.bg::after {
+  z-index: -1;
+}
 .home > .description h1 {
   font-size: 2.7rem;
   max-width: 28ch;
 }
 .home .bg-photo {
+  border-top: 1px solid #181818;
   background-image: url(../assets/images/subscription_background.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -18,8 +60,8 @@
   box-shadow: 0 0 2px #414141;
 }
 
-.market-section-heading{
-    font-size: 1.75rem;
+.market-section-heading {
+  font-size: 1.75rem;
 }
 .market-section h1 {
   color: var(--secondary-color);
@@ -31,8 +73,8 @@
   border: 2px solid #181818;
 }
 
-@media (min-width:1400px){
-  .market-section-heading{
+@media (min-width: 1400px) {
+  .market-section-heading {
     font-size: 2rem;
-}
+  }
 }

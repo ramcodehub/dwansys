@@ -17,7 +17,6 @@ const Home = () => {
         <Video />
       </div>
       <Clients />
-
       <div className="d-flex flex-column  align-items-center justify-content-center description">
         <h1 className="m-0 p-0 lh-1">
           There is still so much left for further digital transformation.
@@ -44,7 +43,6 @@ const Home = () => {
           description="We will analyse four prominent frameworks that assist organizations in implementing artificial intelligence in a responsible, effective, and strategic manner"
         />
       </div>
-
       <div className="m-0 p-0 d-flex align-items-center justify-content-between container my-2">
         <div className="col-lg-3 text-start">
           <h1 className="market-section-heading">
@@ -96,9 +94,7 @@ const Home = () => {
           alt="DWANArchitecture"
         />
       </div>
-
       <DataManagement />
-
       <div className="d-flex align-items-center justify-content-around my-5 w-100">
         <div className="col-lg-5 d-flex flex-column align-items-start">
           <h1 className="m-0 p-0 lh-0">Easy to Integrate:</h1>
@@ -115,7 +111,9 @@ const Home = () => {
           style={{ border: '2px solid #181818' }}
         />
       </div>
-      <UseCases />
+      <div className="full-width bg">
+        <UseCases />
+      </div>
       <div className="bg-photo full-width d-flex flex-column">
         <Subscribe />
       </div>
