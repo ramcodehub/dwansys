@@ -12,6 +12,9 @@
 }
 
 @media (min-width: 1281px) {
+  .banner{
+    padding-top: 9.6rem;
+  }
   .banner-heading h1 {
     font-size: 5rem;
   }
