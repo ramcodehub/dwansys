@@ -3,6 +3,11 @@
   padding: 4rem;
   box-sizing: border-box;
 }
+.fixed-header {
+  background-color: #000000;
+  box-shadow: 0 0 20px #181818;
+  transition: 0.3s ease;
+}
 .header img {
   height: 70px;
 }

@@ -22,7 +22,7 @@ const Footer = () => {
                   <i className="bi bi-telephone me-2"></i> +91 9014986761
                 </h6>
                 <h6>
-                  <i className="bi bi-envelope-fill me-2"></i> info@yvisoft.com
+                  <i className="bi bi-envelope-fill me-2"></i> info@dwansys.ai
                 </h6>
               </div>
             </div>

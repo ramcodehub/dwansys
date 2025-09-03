@@ -154,7 +154,7 @@ const UseCasesData = [
       {
         name: 'AI in Auto, Health, and Property Insurance',
         description:
-          'Artificial Intelligence is reshaping the insurance sector by enabling smarter risk assessment, personalized pricing, and faster claims management across auto, health, and property segments.',
+          'AI is reshaping the insurance sector by enabling smarter risk assessment, personalized pricing, and faster claims management across auto, health, and property segments.',
         image: AIAutoHealthPropertyInsurance,
       },
     ],

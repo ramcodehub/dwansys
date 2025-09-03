@@ -30,7 +30,7 @@ const navLinks = [
       'Agentic AI',
     ],
   },
-  { name: 'Explore dwansys' },
+  { name: 'Discover dwansys' },
   { name: 'Blogs' },
   { name: 'Careers' },
 ];
