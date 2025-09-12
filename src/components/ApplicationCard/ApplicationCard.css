@@ -1,0 +1,9 @@
+.application-card{
+    border: 2px solid #181818;
+    min-height: 400px;
+    background-color: #000000;
+    /* background-image: url(../../assets/images/AIGeneratedContentDevelopment.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
