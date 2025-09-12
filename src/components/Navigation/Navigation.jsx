@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import navLinks from '../../config/navLinks';
 
 const Navigation = () => (
@@ -5,29 +6,31 @@ const Navigation = () => (
     {navLinks.map((link, index) =>
       link.links ? (
         <li key={index} className="dropdown">
-          <a
-            className="d-flex align-items-baseline text-decoration-none fw-medium header-link"
-            href="#"
-          >
+          <span className="d-flex align-items-baseline text-decoration-none fw-medium header-link">
             {link.name}
             <i className="bi bi-chevron-down dropdown-icon"></i>
-          </a>
+          </span>
           <ul className="d-flex flex-column position-absolute m-0 p-2 rounded dropdown-menu shadow z-3">
-            {link.links.map((link, i) => (
+            {link.links.map((subLink, i) => (
               <li key={i} className="list-unstyled">
-                <a className="m-0 p-0 text-decoration-none">{link}</a>
+                <Link
+                  className="m-0 p-0 text-decoration-none"
+                  to={subLink.path}
+                >
+                  {subLink.name}
+                </Link>
               </li>
             ))}
           </ul>
         </li>
       ) : (
         <li key={index}>
-          <a
+          <Link
             className="d-flex align-items-baseline text-decoration-none fw-medium header-link"
-            href="#"
+            to={link.path}
           >
             {link.name}
-          </a>
+          </Link>
         </li>
       )
     )}

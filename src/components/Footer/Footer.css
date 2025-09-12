@@ -2,10 +2,11 @@
   border: 1px solid #181818;
 }
 .footer p,
-li {
+a {
   color: #aaaaaa;
 }
 .footer a {
+  text-decoration: none;
   cursor: pointer;
 }
 .footer .footer-content a:hover {

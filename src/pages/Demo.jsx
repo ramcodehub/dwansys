@@ -1,8 +1,9 @@
+import CapabilitiesBanner from '../components/CapabilitiesBanner/CapabilitiesBanner';
+
 const Demo = () => {
   return (
-    <div>
-      <h1>Demo Page</h1>
-      <p>This is the Demo page.</p>
+    <div style={{ paddingTop: '90px' }}>
+      <CapabilitiesBanner />
     </div>
   );
 };

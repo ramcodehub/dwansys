@@ -1,12 +1,12 @@
-import DWANArchitecture from '../assets/images/DWAN Architecture.png';
-import MCP from '../assets/images/MCP.png';
-import Banner from '../components/Banner/Banner';
-import Clients from '../components/Clients/Clients.jsx';
-import DataManagement from '../components/DataManagement/DataManagement.jsx';
-import LeftRight from '../components/LeftRightCard/LeftRight.jsx';
-import Subscribe from '../components/Subscribe/Subscribe.jsx';
-import UseCases from '../components/UseCases/UseCases.jsx';
-import Video from '../components/Video/Video.jsx';
+import DWANArchitecture from '../../assets/images/DWAN Architecture.png';
+import MCP from '../../assets/images/MCP.png';
+import Banner from '../../components/Banner/Banner.jsx';
+import Clients from '../../components/Clients/Clients.jsx';
+import DataManagement from '../../components/DataManagement/DataManagement.jsx';
+import LeftRight from '../../components/LeftRightCard/LeftRight.jsx';
+import Subscribe from '../../components/Subscribe/Subscribe.jsx';
+import UseCases from '../../components/UseCases/UseCases.jsx';
+import Video from '../../components/Video/Video.jsx';
 import './Home.css';
 
 const Home = () => {

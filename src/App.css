@@ -16,9 +16,17 @@ body {
 .full-width {
   margin-left: -78px;
   margin-right: -78px;
+  width: calc(100%+156px);
 }
 .colored {
   background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.colored-logo {
+  background: linear-gradient(to right, #002a78, #0e80b6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
