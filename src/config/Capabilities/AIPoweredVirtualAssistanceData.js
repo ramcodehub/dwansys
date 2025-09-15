@@ -1,5 +1,5 @@
-import Banner from "../../assets/images/data2.png";
-import Overview from "../../assets/images/data3.jpg";
+import Banner from '../../assets/images/CapabilitiesBanner/AIPoweredVirtualAssistance.jpg';
+import Overview from '../../assets/images/Capabilities-images/AIPoweredVirtualAssistance2.jpg';
 
 const AIPoweredVirtualAssistanceData = {
   sections: [
@@ -52,52 +52,108 @@ const AIPoweredVirtualAssistanceData = {
         ],
       },
     },
-    {
+   {
   type: "applications",
   props: {
     Application: [
       {
-        title: "Banking",
+        title: "Banking & Financial Services",
         items: [
           {
             points: [
-              "Fraud detection + automated compliance checks."
-            ],
-          },
-        ],
-      },
-      {
-        title: "Retail",
-        items: [
-          {
-            points: [
-              "Intelligent supply chain optimization and dynamic pricing."
-            ],
-          },
-        ],
+              "24/7 customer support for account queries, transactions, and loan status.",
+              "Personalized financial advice, budget tracking, and fraud alerts.",
+              "AI assistants like Erica (Bank of America) help users with payments and savings goals."
+            ]
+          }
+        ]
       },
       {
         title: "Healthcare",
         items: [
           {
             points: [
-              "Personalized treatment planning and automated patient support."
-            ],
-          },
-        ],
+              "Virtual health assistants guide patients through symptoms, appointments, and prescriptions.",
+              "Post-care support: medication reminders and lifestyle coaching.",
+              "AI triage bots help reduce hospital load by directing patients to the right care."
+            ]
+          }
+        ]
       },
       {
-        title: "Enterprise IT",
+        title: "Retail & E-Commerce",
         items: [
           {
             points: [
-              "Self-healing systems, predictive maintenance, smart helpdesks."
-            ],
-          },
-        ],
+              "Product recommendations based on browsing and purchase history.",
+              "Conversational shopping assistants helping with product discovery and order tracking.",
+              "Virtual try-on guidance (fashion, cosmetics, eyewear)."
+            ]
+          }
+        ]
       },
-    ],
-  },
+      {
+        title: "Travel & Hospitality",
+        items: [
+          {
+            points: [
+              "AI concierges for booking flights, hotels, and personalized itineraries.",
+              "Multilingual chatbots for international travellers.",
+              "Real-time updates on flight delays, weather, and rebooking options."
+            ]
+          }
+        ]
+      },
+      {
+        title: "Enterprise Productivity",
+        items: [
+          {
+            points: [
+              "Virtual assistants schedule meetings, manage calendars, and take meeting notes.",
+              "Automate employee onboarding with step-by-step guidance.",
+              "Integrated assistants provide quick access to company knowledge bases."
+            ]
+          }
+        ]
+      },
+      {
+        title: "Education & Learning",
+        items: [
+          {
+            points: [
+              "Personalized tutors guiding students with interactive Q&A.",
+              "AI assistants recommend courses based on learning pace and career goals.",
+              "Support for international students with visa, admission, and career guidance."
+            ]
+          }
+        ]
+      },
+      {
+        title: "Customer Support & Engagement",
+        items: [
+          {
+            points: [
+              "Automate FAQs, technical troubleshooting, and ticket routing.",
+              "Sentiment-aware assistants adapt tone and response style.",
+              "Reduce call centre workload with first-level resolution."
+            ]
+          }
+        ]
+      },
+      {
+        title: "Smart Homes & IoT",
+        items: [
+          {
+            points: [
+              "Voice assistants like Alexa, Google Assistant, or Siri manage appliances.",
+              "AI-powered security assistants monitor and alert in real time.",
+              "Personalized home automation (lights, temperature, entertainment)."
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }
   ],
 };

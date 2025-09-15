@@ -1,5 +1,6 @@
-import Banner from "../../assets/images/data2.png";
-import Overview from "../../assets/images/data3.jpg";
+import Banner from '../../assets/images/CapabilitiesBanner/BusinessIntelligence.png';
+import Overview from '../../assets/images/Capabilities-images/BusinessIntelligence2.jpg';
+import CoreComponentImg from '../../assets/images/Capabilities-images/Business Intelligence2.png';
 
 const BusinessIntelligenceData = {
   sections: [
@@ -22,12 +23,35 @@ const BusinessIntelligenceData = {
       },
     },
     {
+type: "core-component",
+  props: {
+    title: "Modern BI solutions offer powerful capabilities for business analysts, including",
+    description:"Modern Business Intelligence (BI) solutions empower analysts with advanced tools for deeper insights, interactive reporting, and multi-dimensional data exploration. These capabilities enable businesses to move from raw data to actionable strategies efficiently.",
+    image: CoreComponentImg,
+extraContent:"Implementing a BI platform is a strategic necessity for organizations seeking growth and resilience in a data-driven world. By leveraging BI tools, companies can generate meaningful insights, enhance operational efficiency, and support sustained success.",
+    points: [
+      {
+        title: "Drill-Down ",
+        text: "Allows users to examine detailed data layers, such as drilling from total sales to sales by region or store.",
+      },
+      {
+        title: "Drill-Through ",
+        text: "Facilitates navigation across multiple reports or datasets for comprehensive analysis, such as linking sales dashboards with customer feedback reports.",
+      },
+      {
+        title: "Drill-Up",
+        text: "Aggregates data to provide high-level overview, such as summarizing monthly sales into annual performance metrics.",
+      },
+    ],
+  },
+},
+    {
       type: "keyBenefits",
       props: {
         benefits: [
           {
             icon: "bi bi-lightbulb text-dark",
-            title: "The Importance of Business Intelligence in Decision-Making",
+            title: "Decision-Making",
             description:
               "BI ensures that organizations can make better decisions by leveraging accurate, timely, and meaningful insights.",
           },
@@ -39,7 +63,7 @@ const BusinessIntelligenceData = {
           },
           {
             icon: "bi bi-graph-up-arrow text-dark",
-            title: "Identify Trends and Patterns",
+            title: "Identify Trends & Patterns",
             description:
               "Recognize significant business trends, customer behaviors, and market opportunities.",
           },

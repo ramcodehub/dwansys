@@ -1,5 +1,5 @@
-import Banner from "../../assets/images/data2.png";
-import Overview from "../../assets/images/data3.jpg";
+import Banner from '../../assets/images/CapabilitiesBanner/AutomatedReportDelivery.jpg';
+import Overview from '../../assets/images/Capabilities-images/AUTOMATEDREPORTDELIVERY3.jpg';
 
 const AutomatedReportDeliveryData = {
   sections: [
@@ -41,7 +41,7 @@ const AutomatedReportDeliveryData = {
             icon: "bi bi-sliders text-dark",
             title: "Customization and Personalization",
             description:
-              "Enables tailored reports to meet the specific needs of individual departments or recipients. Supports multiple formats including PDF, Excel, PowerPoint, dashboards, and interactive visualizations. Removes reliance on manual distribution methods by automating dissemination channels.",
+              "Enables tailored reports to meet the specific needs of individual departments or recipients. Supports multiple formats including PDF, Excel, PowerPoint, dashboards, and interactive visualizations.",
           },
           {
             icon: "bi bi-lightbulb text-dark",

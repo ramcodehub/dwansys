@@ -2,6 +2,8 @@ import Applications from '../Application/Applications';
 import CapabilitiesBanner from '../CapabilitiesBanner/CapabilitiesBanner';
 import KeyBenefits from '../KeyBenefits/KeyBenefits';
 import Overview from '../Overview/Overview';
+import CapabilitiesContent from '../CapabilitiesContent/CapabilitiesContent';
+import CoreComponents from '../CoreComponents/CoreComponents';
 
 const PageBuilder = ({sections}) => {
     const COMPONENT_MAP = {
@@ -9,6 +11,8 @@ const PageBuilder = ({sections}) => {
         'overview': Overview,
         'keyBenefits': KeyBenefits,
         'applications': Applications,
+        'capabilities-content':CapabilitiesContent,
+        'core-component':CoreComponents,
     };
   return (
     <>

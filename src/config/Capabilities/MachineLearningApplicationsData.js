@@ -1,5 +1,5 @@
-import Banner from "../../assets/images/data2.png";
-import Overview from "../../assets/images/data3.jpg";
+import Banner from '../../assets/images/CapabilitiesBanner/MachineLearningApplications.jpg';
+import Overview from '../../assets/images/Capabilities-images/MachineLearningApps.jpg';
 
 const MachineLearningApplicationsData = {
   sections: [

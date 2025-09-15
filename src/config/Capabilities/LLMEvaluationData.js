@@ -1,5 +1,7 @@
 import Banner from "../../assets/images/CapabilitiesBanner/LLMEvaluation.png";
-import Overview from "../../assets/images/data3.jpg";
+import Overview from '../../assets/images/Capabilities-images/LLMEvaluation1.jpg';
+import CoreComponentImg from '../../assets/images/Capabilities-images/LLMEvaluationCore.jpg';
+
 
 const LLMEvaluationData = {
   sections: [
@@ -21,6 +23,37 @@ const LLMEvaluationData = {
         image: Overview,
       },
     },
+    {
+type: "core-component",
+  props: {
+    title: "Core Components of LLM Evaluation",
+    description: "Evaluating large language models requires a multi-dimensional approach to ensure reliability, fairness, and adaptability. These core components form the foundation for building trust and improving overall performance.",
+    image: CoreComponentImg,
+
+    points: [
+      {
+        title: "Quality and Accuracy Assessment",
+        text: "Analyzing generated responses for correctness, coherence, and relevance.  ",
+      },
+      {
+        title: "Combined Automated and Manual Testing",
+        text: "Utilizing automated benchmarking tools alongside human evaluations to ensure comprehensive validation. ",
+      },
+      {
+        title: "Regression Testing",
+        text: "Verifying that updates to the model do not introduce new errors or compromise existing performance.",
+      },
+      {
+        title: "Bias and Fairness Analysis",
+        text: "Detecting and mitigating biases in AI-generated content.",
+      },
+      {
+        title: "Robustness Testing",
+        text: "Assessing the consistency and adaptability of responses across a variety of prompts.",
+      },
+    ],
+  },
+},
     {
       type: "keyBenefits",
       props: {

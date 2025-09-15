@@ -1,5 +1,6 @@
 import Banner from "../../assets/images/CapabilitiesBanner/DataTransformation.png";
-import Overview from "../../assets/images/data3.jpg";
+import Overview from '../../assets/images/Capabilities-images/DataTransformation3.jpg';
+import CoreComponentImg from '../../assets/images/Capabilities-images/DataTransformationCore.png';
 
 const DataTransformationData = {
   sections: [
@@ -21,6 +22,38 @@ const DataTransformationData = {
         image: Overview,
       },
     },
+    {
+    type: "core-component",
+    props: {
+    title: "Igniting the Power of Data for AI, Analytics & Business Intelligence",
+    subtitle:"Core Processes in Data Transformation",
+    description:
+      "With cutting-edge ETL (Extract, Transform, Load) pipelines, we breathe life into your data—making it pure, trustworthy, and bursting with potential. We empower you to transform raw information into compelling stories through real-time dashboards and reports that captivate and inform.Let your data be the foundation for groundbreaking AI & ML models that reshape your future. Harness the unstoppable force of predictive analytics and forecasting to anticipate the unseen and seize new opportunities.We bring automation to decision-making, turning complex choices into seamless, confident actions.By elevating your data to its highest quality, we fuel your journey toward unstoppable insights, unrivalled efficiency, and relentless innovation. Together, we unlock the true spirit of data’s potential to inspire, transform, and propel your business forward with passion and purpose.",
+    image: CoreComponentImg,
+    points: [
+      {
+        title: "Data Cleaning ",
+        text: "Remove duplicates, correct errors, and resolve inconsistencies.",
+      },
+      {
+        title: "Data Integration ",
+        text: "Merge datasets from databases, APIs, and cloud platforms for unified visibility.",
+      },
+      {
+        title: "Normalization & Aggregation",
+        text: "Standardize formats and consolidate information for deeper analysis.",
+      },
+      {
+        title: "Data Enrichment ",
+        text: "Enhance internal data with external sources, giving more depth and context.",
+      },
+{
+        title: "Data Masking & Security",
+        text: "Protect sensitive information while maintaining usability.",
+      },
+    ],
+  },
+},
     {
       type: "keyBenefits",
       props: {

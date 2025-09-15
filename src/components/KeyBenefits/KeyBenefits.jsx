@@ -4,7 +4,7 @@ import './KeyBenefits.css'
 
 const KeyBenefits = ({benefits}) => {
   return (
-    <div className='container my-5'>
+    <div className='container m-0 p-0 my-5'>
       <h1 className='fw-bold my-3'>KEY BENIFITS :</h1>
       <div className='rounded-4 px-3 pt-3 mt-4 key-benefits'>
       <div className="row">

@@ -1,5 +1,5 @@
-import Banner from "../../assets/images/data2.png";
-import Overview from "../../assets/images/data3.jpg";
+import Banner from '../../assets/images/CapabilitiesBanner/DocumentSummarization.png';
+import Overview from '../../assets/images/Capabilities-images/DocumentSummarization2.jpg';
 
 const DocumentSummarizationData = {
   sections: [
@@ -63,37 +63,91 @@ const DocumentSummarizationData = {
   props: {
     Application: [
       {
-        title: "Healthcare",
+        title: "Legal & Compliance",
         items: [
           {
             points: [
-              "Condensing medical records and research publications for quicker reference."
-            ],
-          },
-        ],
+              "Summarize lengthy contracts, agreements, and regulatory updates.",
+              "Highlight key clauses, obligations, and risks for legal teams.",
+              "Reduce time spent on compliance checks and audits."
+            ]
+          }
+        ]
       },
       {
-        title: "Finance",
+        title: "Healthcare & Life Sciences",
         items: [
           {
             points: [
-              "Deriving key insights from financial reports and market analyses."
-            ],
-          },
-        ],
+              "Generate concise summaries of patient medical histories and lab reports.",
+              "Summarize long clinical trial documents and research papers.",
+              "Provide doctors with quick snapshots for faster decision-making."
+            ]
+          }
+        ]
       },
       {
-        title: "Customer Support",
+        title: "Banking & Financial Services",
         items: [
           {
             points: [
-              "Enhancing virtual support tools with summarized information to provide clear and efficient responses to customer inquiries."
-            ],
-          },
-        ],
+              "Condense credit reports, investment research, and financial statements.",
+              "Summarize regulatory filings (SEC, RBI, GDPR) for compliance officers.",
+              "Provide clients with digestible insights from long market analysis."
+            ]
+          }
+        ]
       },
-    ],
-  },
+      {
+        title: "Education & Research",
+        items: [
+          {
+            points: [
+              "Summarize academic papers, dissertations, and case studies.",
+              "Provide quick overviews of study material for students.",
+              "Help researchers scan through multiple sources faster."
+            ]
+          }
+        ]
+      },
+      {
+        title: "Corporate & Business",
+        items: [
+          {
+            points: [
+              "Summarize meeting transcripts, board minutes, and project updates.",
+              "Generate executive summaries of strategy documents and reports.",
+              "Speed up internal knowledge sharing across departments."
+            ]
+          }
+        ]
+      },
+      {
+        title: "Government & Public Sector",
+        items: [
+          {
+            points: [
+              "Condense lengthy policy drafts, whitepapers, and laws.",
+              "Summarize citizen feedback and consultation responses.",
+              "Provide decision-makers with actionable briefs from large datasets."
+            ]
+          }
+        ]
+      },
+      {
+        title: "Customer Support & Service",
+        items: [
+          {
+            points: [
+              "Summarize customer complaints and interaction logs.",
+              "Provide support agents with quick context before handling tickets.",
+              "Reduce resolution time with auto-generated issue briefs."
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }
   ],
 };

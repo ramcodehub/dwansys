@@ -6,7 +6,7 @@ const CapabilitiesBanner = ({ heading, content, backgroundImage }) => {
       <div className="capabilities-banner">
         <div className="capabilities-banner-top  d-flex flex-column align-iems-center justify-content-start" style={{marginTop:'5rem'}}>
           <h1>{heading}</h1>
-          <p className="colored-logo lh-sm">{content}</p>
+          <p className="colored-logo fw-bold lh-sm">{content}</p>
         </div>
         <div
           className="capabilities-banner-bottom"

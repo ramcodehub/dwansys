@@ -1,5 +1,5 @@
-import Banner from '../../assets/images/data2.png';
-import Overview from '../../assets/images/data3.jpg';
+import Banner from '../../assets/images/CapabilitiesBanner/DataOrchestration.png';
+import Overview from '../../assets/images/Capabilities-images/DataOrchestration1.jpg';
 
 const DataOrchestrationData = {
   sections: [

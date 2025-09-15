@@ -1,6 +1,6 @@
 .capabilities-card {
   border: 2px solid #181818;
-  max-width: 350px;
+  width: 350px;
   background: rgba(70, 70, 70, 0.05);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(10px);

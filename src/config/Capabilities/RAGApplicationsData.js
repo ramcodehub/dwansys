@@ -1,5 +1,6 @@
-import Banner from "../../assets/images/data2.png";
-import Overview from "../../assets/images/data3.jpg";
+import Banner from '../../assets/images/CapabilitiesBanner/RAGApplication.png';
+import Overview from '../../assets/images/Capabilities-images/RAGApplication1.jpg';
+import CoreComponentImg from '../../assets/images/Capabilities-images/RAG Application1.png';
 
 const RAGApplicationData = {
   sections: [
@@ -21,6 +22,33 @@ const RAGApplicationData = {
         image: Overview,
       },
     },
+    {
+type: "core-component",
+  props: {
+    title: "Key Features for Building and Managing AI Applications",
+    description: "Our platform provides essential tools and capabilities to simplify AI application development, ensuring scalability, reliability, and ease of use.",
+    image: CoreComponentImg,
+
+    points: [
+      {
+        title: "User-Friendly Interface",
+        text: "Facilitate the design and deployment of RAG applications with minimal programming requirements.",
+      },
+      {
+        title: "API Integration ",
+        text: "Enable smooth integration of LLMs with external knowledge sources.",
+      },
+      {
+        title: "Monitoring and Analytics",
+        text: "Maintain performance oversight, optimize models, and ensure system transparency.",
+      },
+      {
+        title: "Efficient Deployment",
+        text: "Accelerate testing and deployment of AI solutions in practical environments.",
+      },
+    ],
+  },
+},
     {
       type: "keyBenefits",
       props: {

@@ -1,5 +1,6 @@
-import Banner from "../../assets/images/CapabilitiesBanner/DataIngestion.png";
-import Overview from "../../assets/images/data3.jpg";
+import Banner from '../../assets/images/CapabilitiesBanner/DataIngestion.png';
+import Overview from '../../assets/images/Capabilities-images/DataIngestion3.jpg';
+import CoreComponentImg from '../../assets/images/Capabilities-images/DataIngestionCore.png';
 
 const DataIngestionData = {
   sections: [
@@ -22,6 +23,34 @@ const DataIngestionData = {
       },
     },
     {
+        type: "core-component",
+      props: {
+        title: "Extracting & Streaming Real-Time Data for Critical Applications",
+        description:
+          "Some moments demand immediacy—your decisions hinge on real-time data that’s accurate, fresh, and alive. We make that possible, empowering you to:",
+        image: CoreComponentImg,
+        extraContent: "With our unwavering dedication to flawless data ingestion, you unleash the true potential of your business—faster decisions, sharper insights, and a passionate pursuit of excellence.",
+        points: [
+          {
+            title: "Customer Behavior Insights",
+            text: "Capture every click, every sensor reading, every user interaction—transforming raw streams into powerful insights about customer behavior.",
+          },
+          {
+            title: "Real-Time Fraud Detection",
+            text: "Monitoring financial transactions live—spot fraud as it happens, protect your assets, and build trust.",
+          },
+          {
+            title: "Ai & ML Data Feeds",
+            text: "Feed your AI and ML models with continuous, up-to-the-minute data—accelerating innovation and refining intelligence.",
+          },
+          {
+            title: "Operational Excellence Monitoring",
+            text: "Drive operational excellence—keep a close eye on supply chains, system logs, and user activities to stay ahead of every challenge.",
+          },
+        ],
+      },
+},
+    {
       type: "keyBenefits",
       props: {
         benefits: [
@@ -33,7 +62,7 @@ const DataIngestionData = {
           },
           {
             icon: "bi bi-clock text-dark",
-            title: "Real-time & Batch Processing",
+            title: "Real-time Batch Processing",
             description:
               "Capture the heartbeat of your operations—whether it’s streaming data pulsing in real-time or bulk data waiting to reveal its secrets. We empower your applications to be lightning-fast and perpetually in sync.",
           },
