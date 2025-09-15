@@ -1,5 +1,5 @@
-import Banner from '../../assets/images/CapabilitiesBanner/DataMigration.jpeg';
 import Overview from '../../assets/images/Capabilities-images/DataMigration1.jpg';
+import Banner from '../../assets/images/CapabilitiesBanner/DataMigration.jpeg';
 
 const DataMigrationData = {
   sections: [

@@ -4,15 +4,17 @@
   background: rgba(70, 70, 70, 0.05);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(10px);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 }
 
 .capabilities-card:hover {
   transform: translateY(-0.4rem);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.capabilities-card .icon{
-    width: 60px;
-    background-color: #AAAAAA;
+.capabilities-card .icon {
+  width: 60px;
+  background-color: #aaaaaa;
 }

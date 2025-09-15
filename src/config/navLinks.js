@@ -25,7 +25,10 @@ const navLinks = [
   {
     name: 'AI Solutions',
     links: [
-      { name: 'AI powered Virtual Assistance',path: '/ai-powered-virtual-assitance'},
+      {
+        name: 'AI powered Virtual Assistance',
+        path: '/ai-powered-virtual-assitance',
+      },
       { name: 'Document Summarization', path: '/document-summarization' },
       { name: 'LLM Evaluation', path: '/llm-evaluation' },
       { name: 'RAG Application', path: '/rag-application' },

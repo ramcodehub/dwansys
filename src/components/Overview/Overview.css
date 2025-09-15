@@ -1,10 +1,10 @@
-.overview h1{
-    font-weight: 600;
+.overview h1 {
+  font-weight: 600;
 }
-.overview p{
-    font-size: large;
-    color: #AAAAAA;
+.overview p {
+  font-size: large;
+  color: #aaaaaa;
 }
-.overview img{
-    max-width: 400px;
+.overview img {
+  max-width: 400px;
 }

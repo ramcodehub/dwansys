@@ -1,5 +1,5 @@
-import Banner from '../../assets/images/CapabilitiesBanner/DataOrchestration.png';
 import Overview from '../../assets/images/Capabilities-images/DataOrchestration1.jpg';
+import Banner from '../../assets/images/CapabilitiesBanner/DataOrchestration.png';
 
 const DataOrchestrationData = {
   sections: [
@@ -103,7 +103,6 @@ const DataOrchestrationData = {
               },
             ],
           },
-        
         ],
       },
     },

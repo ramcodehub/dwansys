@@ -1,5 +1,4 @@
-import React from "react";
-import './ApplicationCard.css'
+import './ApplicationCard.css';
 
 const ApplicationCard = ({ title, items }) => {
   return (
@@ -11,12 +10,14 @@ const ApplicationCard = ({ title, items }) => {
             {item.subheading ? (
               <>
                 <h3 className="">{item.subheading}</h3>
-                <p className="" style={{color:'#AAAAAA'}}>{item.description}</p>
+                <p className="" style={{ color: '#AAAAAA' }}>
+                  {item.description}
+                </p>
               </>
             ) : (
               <div className="">
                 {item.points?.map((point, i) => (
-                  <p key={i} className=""  style={{color:'#AAAAAA'}}>
+                  <p key={i} className="" style={{ color: '#AAAAAA' }}>
                     {point}
                   </p>
                 ))}
@@ -30,4 +31,3 @@ const ApplicationCard = ({ title, items }) => {
 };
 
 export default ApplicationCard;
-
