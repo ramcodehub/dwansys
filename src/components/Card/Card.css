@@ -10,3 +10,10 @@
   color: #aaaaaa;
   min-height: 5.8rem;
 }
+.card .primaryBtn i {
+  transition: transform 0.3s ease; 
+}
+
+.card .primaryBtn:hover i {
+  transform: translateX(10px); 
+}

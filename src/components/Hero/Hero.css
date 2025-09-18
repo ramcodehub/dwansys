@@ -1,0 +1,28 @@
+.hero {
+  padding: 4rem 0 1.5rem;
+  height: 70dvh;
+  border-bottom: 3px solid #181818;
+}
+.hero h1 {
+  font-size: 4rem;
+  color: #0e80b6;
+}
+
+.hero p{
+  color: #AAAAAA;  
+  max-width: 70ch;
+  font-size: 1.4em;
+  margin: 1rem 0 0.5rem;
+}
+
+@media (min-width: 1281px) {
+  .hero{
+    padding-top: 9.6rem;
+  }
+  .hero h1 {
+    font-size: 5rem;
+  }
+  .hero p {
+    font-size: 1.6rem;
+  }
+}

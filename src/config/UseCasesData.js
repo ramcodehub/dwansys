@@ -36,36 +36,42 @@ const UseCasesData = [
         description:
           'Workplace safety monitoring powered by AI and IoT ensures organizations protect their employees while aligning with ESG goals.',
         image: WorkplaceSafetyMonitoring,
+        link: '/workplace-safety-monitoring',
       },
       {
         name: 'Social Sentiment Analysis',
         description:
           'Social sentiment analysis empowers organizations to understand public perception and stakeholder expectations around their ESG performance.',
         image: SocialSentimentAnalysis,
+        link: '/social-sentiment-analysis',
       },
       {
         name: 'Resource Efficiency',
         description:
           "In today's sustainability-driven landscape, businesses are under pressure to do more with less.",
         image: ResourceEfficiency,
+        link: '/resource-efficiency',
       },
       {
         name: 'Fraud & Ethics Monitoring',
         description:
           'Fraud and unethical practices not only damage reputation but also pose significant risks to ESG compliance.',
         image: FraudEthicsMonitoring,
+        link: '/fraud-ethics-monitoring',
       },
       {
         name: 'Climate Risk Modelling',
         description:
           'AI-driven climate risk modelling empowers organizations to anticipate and mitigate the impact of environmental changes on their business operations and assets.',
         image: ClimateRiskModelling,
+        link: '/climate-risk-modelling',
       },
       {
         name: 'Carbon Emissions Monitoring',
         description:
           'Organizations today face increasing pressure to comply with ESG standards and reduce their carbon footprint.',
         image: CarbonEmissionsMonitoring,
+        link: '/carbon-emissions-monitoring',
       },
     ],
   },
@@ -78,42 +84,49 @@ const UseCasesData = [
         description:
           'AI-powered wearable devices and IoT sensors are transforming healthcare by enabling continuous, real-time monitoring of patient health.',
         image: WearableHealthTechRemoteMonitoring,
+        link: '/wearable-health-tech-remote-monitoring',
       },
       {
         name: 'Predictive Analytics for Disease Outbreaks',
         description:
           'AI is transforming public health by predicting and managing disease outbreaks through advanced data analysis.',
         image: PredictiveAnalyticsforDiseaseOutbreaks,
+        link: '/predictive-analytics-for-disease-outbreaks',
       },
       {
         name: 'Genomics and Precision Medicine',
         description:
           'AI is transforming healthcare by enabling highly personalized treatment plans that account for genetic, clinical, and lifestyle data.',
         image: GenomicsPrecisionMedicine,
+        link: '/genomics-and-precision-medicine',
       },
       {
         name: 'AI in Drug Discovery and Development',
         description:
           'Artificial Intelligence is transforming the pharmaceutical industry by significantly reducing the time and cost required to discover and develop new drugs.',
         image: DrugDiscoveryDevelopment,
+        link: '/ai-in-drug-discovery-and-development',
       },
       {
         name: 'AI in Mental Health',
         description:
-          'AI is revolutionizing mental health care, igniting a beacon of hope for countless lives.',
+          'AI is revolutionizing mental health care, igniting a beacon of hope for countless lives.',
         image: AIMentalHealth,
+        link: '/ai-in-mental-health',
       },
       {
         name: 'AI in Medical Diagnosis and Imaging Analysis',
         description:
           'AI is revolutionizing healthcare diagnostics, igniting a profound hope for millions by making disease detection faster and astonishingly more accurate through cutting-edge medical imaging.',
         image: AIMedicalDiagnosisImagingAnalysis,
+        link: '/ai-in-medical-diagnosis-and-imaging-analysis',
       },
       {
         name: 'AI in Hospital Operations & Workflow Optimization',
         description:
-          'AI is revolutionizing the very soul of our hospitals, igniting a profound change that touches the lives of patients and healthcare workers alike.',
+          'AI is revolutionizing the very soul of our hospitals, igniting a profound change that touches the lives of patients and healthcare workers alike.',
         image: AIHospitalOperationsWorkflowOptimization,
+        link: '/ai-in-hospital-operations-workflow-optimization',
       },
     ],
   },
@@ -124,38 +137,44 @@ const UseCasesData = [
       {
         name: 'Regulatory Compliance & Document Processing',
         description:
-          'AI streamlines compliance management and document handling, ensuring accuracy and reducing risks for insurers.',
+          'AI streamlines compliance management and document handling, ensuring accuracy and reducing risks for insurers.',
         image: PredictiveAnalyticsforClaimsManagement,
+        link: '/regulatory-compliance-document-processing',
       },
       {
         name: 'Predictive Analytics for Claims Management',
         description:
-          'AI transforms claim processing by enabling faster, smarter, and more accurate settlements.',
+          'AI transforms claim processing by enabling faster, smarter, and more accurate settlements.',
         image: RegulatoryComplianceDocumentProcessing,
+        link: '/predictive-analytics-for-claims-management',
       },
       {
         name: 'Fraud Detection & Prevention',
         description:
-          'AI is transforming insurance fraud detection by uncovering hidden anomalies and verifying claims with precision.',
+          'AI is transforming insurance fraud detection by uncovering hidden anomalies and verifying claims with precision.',
         image: FraudDetectionPrevention,
+        link: '/fraud-detection-prevention',
       },
       {
         name: 'AI-Powered Pricing & Personalized Insurance',
         description:
           'AI is transforming the insurance industry by enabling dynamic, customer-centric pricing models that go beyond traditional risk assessments.',
         image: AIPoweredPricingPersonalizedInsurance,
+        link: '/ai-powered-pricing-personalized-insurance',
       },
       {
         name: 'AI in Risk Assessment & Underwriting',
         description:
-          'AI is transforming risk assessment and underwriting by automating processes and improving accuracy.',
+          'AI is transforming risk assessment and underwriting by automating processes and improving accuracy.',
         image: AIRiskAssessmentUnderwriting,
+        link: '/ai-in-risk-assessment-underwriting',
       },
       {
         name: 'AI in Auto, Health, and Property Insurance',
         description:
-          'AI is reshaping the insurance sector by enabling smarter risk assessment, personalized pricing, and faster claims management across auto, health, and property segments.',
+          'AI is reshaping the insurance sector by enabling smarter risk assessment, personalized pricing, and faster claims management across auto, health, and property segments.',
         image: AIAutoHealthPropertyInsurance,
+        link: '/ai-in-auto-health-property-insurance',
       },
     ],
   },
@@ -168,50 +187,60 @@ const UseCasesData = [
         description:
           'Safeguard your business and truly protect the people who place their trust in you with the unstoppable force of AI-driven fraud prevention.',
         image: FraudDetectionUsecase,
+        link: '/fraud-detection-prevention-with-ai',
       },
       {
         name: 'AI-Powered Risk Assessment',
         description:
           'AI is revolutionizing the way financial institutions confront the daunting challenge of risk, igniting a new era of hope, precision, and confidence.',
         image: RiskManagementCreditScoring,
+        link: '/ai-powered-risk-assessment',
       },
       {
         name: 'AI-Powered Loan Approvals',
         description:
           'Artificial Intelligence is revolutionizing the very essence of lending, igniting a wave of hope, opportunity, and inclusivity.',
         image: AIPoweredLoanApprovals,
+        link: '/ai-powered-loan-approvals',
       },
       {
         name: 'AI-Powered Investment Optimization',
         description:
           'Artificial Intelligence is transforming the very heart of investment, igniting a new era fuelled by boundless potential and unwavering precision.',
         image: AIInvestmentWealthManagement,
+        link: '/ai-powered-investment-optimization',
       },
       {
         name: 'AI-Powered Compliance & Anti-Money Laundering (AML)',
         description:
-          'Artificial Intelligence is revolutionizing the very heart of regulatory compliance, igniting a powerful wave of transformation that safeguards our financial world.',
+          'Artificial Intelligence is revolutionizing the very heart of regulatory compliance, igniting a powerful wave of transformation that safeguards our financial world.',
         image: AIPoweredComplianceAntiMoneyLaundering,
+        link: '/ai-powered-compliance-and-anti-money-laundering',
       },
       {
         name: 'AI-Powered Banking Automation & Process Optimization',
         description:
           'Artificial Intelligence is revolutionizing the world of banking, infusing it with a new level of innovation, efficiency, and promise.',
         image: AIPoweredBankingAutomationProcessOptimization,
+        link: '/ai-powered-banking-automation-and-process-optimization',
       },
       {
         name: 'AI-Powered Algorithmic Trading',
         description:
-          'AI is revolutionizing capital markets, igniting a passionate wave of innovation that propels us into a future brighter than ever before.',
+          'AI is revolutionizing capital markets, igniting a passionate wave of innovation that propels us into a future brighter than ever before.',
         image: AIPoweredAlgorithmicTrading,
+        link: '/ai-powered-algorithmic-trading',
       },
       {
         name: 'AI-Enhanced Cybersecurity for Financial Security',
         description:
-          'AI is revolutionizing the very essence of our financial security, igniting a fierce battle against cyber threats with unwavering determination.',
+          'AI is revolutionizing the very essence of our financial security, igniting a fierce battle against cyber threats with unwavering determination.',
         image: AIEnhancedCybersecurityforFinancialSecurity,
+        link: '/ai-enhanced-cybersecurity-for-financial-security',
       },
     ],
   },
 ];
+
 export default UseCasesData;
+

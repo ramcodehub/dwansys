@@ -1,5 +1,3 @@
-import './CoreComponent.css';
-
 const CoreComponents = ({
   title,
   subtitle,
@@ -18,7 +16,7 @@ const CoreComponents = ({
           <div className="col-lg-12 d-flex flex-column justify-content-center p-4">
             <div className="section-title">
               {title && (
-                <h1 className="fw-bold" style={{ color: '#5653ff' }}>
+                <h1 className="fw-bold" style={{ color: '#0e80b6' }}>
                   {title}
                 </h1>
               )}
@@ -40,7 +38,7 @@ const CoreComponents = ({
         )}
 
         {subtitle && (
-          <h2 className="px-4 pt-4 fw-bold" style={{ color: '#5653ff' }}>
+          <h2 className="px-4 pt-4 fw-bold" style={{ color: '#0e80b6' }}>
             {subtitle}
           </h2>
         )}

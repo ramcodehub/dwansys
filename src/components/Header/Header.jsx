@@ -17,7 +17,7 @@ const Header = () => {
   }, []);
   return (
     <header
-      className={`header d-flex align-items-center justify-content-between w-100 position-fixed z-2 ${sticky ? 'fixed-header' : ''}`}
+      className={`header d-flex align-items-center justify-content-between w-100 position-fixed  ${sticky ? 'fixed-header' : ''}`}
     >
       <img src={logo} alt="Logo" />
       <nav className="me-4 header-nav">

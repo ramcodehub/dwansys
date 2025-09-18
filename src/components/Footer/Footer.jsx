@@ -6,7 +6,7 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer id="footer" className="footer p-5">
-      <div className="footer-content my-5 ms-5 me-3">
+      <div className="footer-content my-5 ms-4 me-3">
         <div className="container">
           <div className="row d-flex justify-content-between">
             <div className="col-lg-4 col-md-6">

@@ -2,6 +2,7 @@
   height: 70px;
   padding: 4rem;
   box-sizing: border-box;
+  z-index: 70;
 }
 .fixed-header {
   background-color: #000000;

@@ -38,6 +38,7 @@ const UseCases = () => {
                 heading={carddata.name}
                 description={carddata.description}
                 image={carddata.image}
+                link={carddata.link}
               />
             </div>
           ))}

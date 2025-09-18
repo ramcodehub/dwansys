@@ -1,7 +1,8 @@
 import Button from '../Button/Button';
+import { Link } from 'react-router-dom';
 import './Card.css';
 
-const Card = ({ image, heading, description }) => {
+const Card = ({ image, heading, description ,link}) => {
   // const images = {
   //   'adv_bg.png': AdvBg,
   //   'cdc_bg.png': CdcBg,
@@ -17,8 +18,10 @@ const Card = ({ image, heading, description }) => {
       />
       <h2 className="text-start colored fs-3">{heading}</h2>
       <p className="text-start lh-2 fs-6 fw-800">{description}</p>
-
-      <Button
+       
+       <Link to={link} className='primaryBtn bg-black text-decoration-none ps-1 d-flex gap-3'>Learn More <i className="bi bi-arrow-right text-white" aria-hidden="true"></i> </Link>
+       
+      {/* <Button
         variant="primary"
         icon={
           <i className="bi bi-arrow-right text-white" aria-hidden="true"></i>
@@ -26,7 +29,7 @@ const Card = ({ image, heading, description }) => {
         ariaLabel="Learn more"
       >
         Learn More
-      </Button>
+      </Button> */}
     </div>
   );
 };
