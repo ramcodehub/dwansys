@@ -8,16 +8,16 @@
   color: #0e80b6;
 }
 
-.hero p{
-  color: #AAAAAA;  
+.hero p {
+  color: #aaaaaa;
   max-width: 70ch;
   font-size: 1.4em;
   margin: 1rem 0 0.5rem;
 }
 
 @media (min-width: 1281px) {
-  .hero{
-    padding-top: 9.6rem;
+  .hero {
+    padding-top: 7rem;
   }
   .hero h1 {
     font-size: 5rem;

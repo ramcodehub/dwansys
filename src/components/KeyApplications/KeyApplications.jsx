@@ -1,4 +1,3 @@
-import BenifitsCard from '../CapabilitiesCard/BenifitsCard';
 import KeyApplicationsCard from '../KeyApplicationsCard/KeyApplicationsCard';
 
 const KeyApplications = ({ Applications }) => {
@@ -9,11 +8,13 @@ const KeyApplications = ({ Applications }) => {
         <div className="row">
           {Applications.map((keyApplications, i) => (
             <div className="col-md-3 d-flex align-items-stretch" key={i}>
-              <KeyApplicationsCard icon={keyApplications.icon}
-                                   heading={keyApplications.heading}
-                                   content={keyApplications.content}/>
+              <KeyApplicationsCard
+                icon={keyApplications.icon}
+                heading={keyApplications.heading}
+                content={keyApplications.content}
+              />
             </div>
-           ))} 
+          ))}
         </div>
       </div>
     </div>

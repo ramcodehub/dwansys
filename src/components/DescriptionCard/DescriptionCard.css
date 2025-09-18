@@ -1,9 +1,9 @@
-.description-card p{
-    color: #E5E9EB;
+.description-card p {
+  color: #e5e9eb;
 }
-.description-card .desc-img img{
-    width: 600px;
-    height: 200px;
+.description-card .desc-img img {
+  width: 600px;
+  height: 200px;
 }
 /* .break-anywhere {
   overflow-wrap: break-word; 

@@ -1,14 +1,14 @@
 import Applications from '../Application/Applications';
+import BusinessImpact from '../BusinessImpact/BusinessImpact';
 import CapabilitiesBanner from '../CapabilitiesBanner/CapabilitiesBanner';
 import CapabilitiesContent from '../CapabilitiesContent/CapabilitiesContent';
 import CoreComponents from '../CoreComponents/CoreComponents';
+import DescriptionCard from '../DescriptionCard/DescriptionCard';
+import Hero from '../Hero/Hero';
+import KeyApplications from '../KeyApplications/KeyApplications';
 import KeyBenefits from '../KeyBenefits/KeyBenefits';
 import Overview from '../Overview/Overview';
-import KeyApplications from '../KeyApplications/KeyApplications';
-import Hero from '../Hero/Hero';
-import BusinessImpact from '../BusinessImpact/BusinessImpact';
 import RealWorld from '../RealWorld/RealWorld';
-import DescriptionCard from '../DescriptionCard/DescriptionCard';
 
 const PageBuilder = ({ sections }) => {
   const COMPONENT_MAP = {
