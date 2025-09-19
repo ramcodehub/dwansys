@@ -1,5 +1,5 @@
 import Overview from '../../../assets/images/Usecases-images/Sustainability/Resource Efficiency1.jpeg';
-import Image from '../../../assets/images/UsecasesRealWorld/Fraud Detection & Prevention wit.jpg';
+import Image from '../../../assets/images/UsecasesRealWorld/Resource Efficiency.jpg';
 const ResourceEfficiencyData = {
   sections: [
     {

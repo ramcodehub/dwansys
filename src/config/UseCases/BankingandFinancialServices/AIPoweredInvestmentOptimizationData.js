@@ -1,5 +1,5 @@
 import Overview from '../../../assets/images/Usecases-images/Banking and Financial Services/AI in Investment and Wealth Management.jpeg';
-import Image from '../../../assets/images/UsecasesRealWorld/q.jpg';
+import Image from '../../../assets/images/UsecasesRealWorld/AI-Powered Investment Optimizati.jpg';
 
 const AIPoweredInvestmentOptimizationData = {
   sections: [

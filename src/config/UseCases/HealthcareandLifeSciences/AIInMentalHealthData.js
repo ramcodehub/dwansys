@@ -1,5 +1,5 @@
 import Overview from '../../../assets/images/Usecases-images/Healthcare and Life Sciences HLS/AI in Mental Health3.jpeg';
-import Image from '../../../assets/images/UsecasesRealWorld/q.jpg';
+import Image from '../../../assets/images/UsecasesRealWorld/AIInMentalHealth.jpg';
 
 const AIInMentalHealthData = {
   sections: [

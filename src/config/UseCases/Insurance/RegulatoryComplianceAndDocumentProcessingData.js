@@ -1,5 +1,5 @@
 import Overview from '../../../assets/images/Usecases-images/Insurance/Regulatory Compliance & Document Processing2.jpeg';
-import Image from '../../../assets/images/UsecasesRealWorld/q.jpg';
+import Image from '../../../assets/images/UsecasesRealWorld/regulatory compliance and docume.jpg';
 
 const RegulatoryComplianceAndDocumentProcessingData = {
   sections: [

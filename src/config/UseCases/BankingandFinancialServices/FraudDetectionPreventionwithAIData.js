@@ -1,5 +1,6 @@
 import Image1 from '../../../assets/images/Usecases-images/Banking and Financial Services/Fraud Detection Usecase1.jpeg';
 import Image2 from '../../../assets/images/Usecases-images/Banking and Financial Services/Fraud Detection Usecase3.png';
+import Image from '../../../assets/images/UsecasesRealWorld/FraudDetectionPreventionwithAI.jpg'
 
 const FraudDetectionPreventionwithAIData = {
   sections: [

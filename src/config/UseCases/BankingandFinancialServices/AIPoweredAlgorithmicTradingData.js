@@ -1,15 +1,14 @@
 import Image1 from '../../../assets/images/Usecases-images/Banking and Financial Services/AI-Powered Algorithmic Trading1.jpeg';
 import Image2 from '../../../assets/images/Usecases-images/Banking and Financial Services/AI-Powered Algorithmic Trading3.png';
-import Image from '../../../assets/images/UsecasesRealWorld/q.jpg';
+import Image from '../../../assets/images/UsecasesRealWorld/AIPoweredAlgorithmicTrading.png';
 
-export const heading = 'AI-Powered Algorithmic Trading';
 
 const AIPoweredAlgorithmicTradingData = {
   sections: [
     {
       type: 'hero',
       props: {
-        heading: heading,
+        heading: 'AI-Powered Algorithmic Trading',
         content:
           'AI enables faster, smarter, and more precise trading decisions, transforming the financial markets with intelligence and speed.',
       },

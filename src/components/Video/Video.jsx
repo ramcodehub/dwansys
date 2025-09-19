@@ -24,6 +24,7 @@ export default function VideoPlayer() {
         src={Video}
         onClick={handlePause}
         className="rounded"
+        muted
       />
 
       {!isPlaying && (

@@ -1,5 +1,5 @@
 import Overview from '../../../assets/images/Usecases-images/Insurance/AI-Powered Pricing & Personalized Insurance2.jpeg';
-import Image from '../../../assets/images/UsecasesRealWorld/q.jpg';
+import Image from '../../../assets/images/UsecasesRealWorld/Ai-powered pricing and personalized insurance.png';
 
 const AIPoweredPricingAndPersonalizedInsuranceData = {
   sections: [

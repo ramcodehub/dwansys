@@ -1,5 +1,5 @@
 import Overview from '../../../assets/images/Usecases-images/Banking and Financial Services/Risk Management and Credit Scoring1.jpeg';
-import Image from '../../../assets/images/UsecasesRealWorld/q.jpg';
+import Image from '../../../assets/images/UsecasesRealWorld/AIPoweredRiskAssessment.jpg';
 
 const AIPoweredRiskAssessmentData = {
   sections: [

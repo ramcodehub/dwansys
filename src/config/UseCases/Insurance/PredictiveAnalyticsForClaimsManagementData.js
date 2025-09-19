@@ -1,5 +1,5 @@
 import Overview from '../../../assets/images/Usecases-images/Insurance/Predictive Analytics for Claims Management1.jpeg';
-import Image from '../../../assets/images/UsecasesRealWorld/q.jpg';
+import Image from '../../../assets/images/UsecasesRealWorld/Predictive analysis for client management.png';
 
 const PredictiveAnalyticsForClaimsManagementData = {
   sections: [

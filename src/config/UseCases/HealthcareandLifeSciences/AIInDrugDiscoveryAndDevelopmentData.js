@@ -1,5 +1,5 @@
 import Overview from '../../../assets/images/Usecases-images/Healthcare and Life Sciences HLS/Drug Discovery and Development2.jpeg';
-import Image from '../../../assets/images/UsecasesRealWorld/q.jpg';
+import Image from '../../../assets/images/UsecasesRealWorld/Drug discovery and development.jpg';
 
 const AIInDrugDiscoveryAndDevelopmentData = {
   sections: [

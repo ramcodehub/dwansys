@@ -1,5 +1,5 @@
 import Overview from '../../../assets/images/Usecases-images/Sustainability/Climate Risk Modelling2.jpeg';
-import Image from '../../../assets/images/UsecasesRealWorld/q.jpg';
+import Image from '../../../assets/images/UsecasesRealWorld/Climate Risk Modelling.webp';
 
 const ClimateRiskModellingData = {
   sections: [

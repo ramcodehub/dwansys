@@ -1,6 +1,6 @@
 import Image1 from '../../../assets/images/Usecases-images/Banking and Financial Services/AI-Powered Compliance & Anti-Money Laundering (AML)1.jpeg';
 import Image2 from '../../../assets/images/Usecases-images/Banking and Financial Services/AI-Powered Compliance & Anti-Money Laundering (AML)4.png';
-import Image from '../../../assets/images/UsecasesRealWorld/q.jpg';
+import Image from '../../../assets/images/UsecasesRealWorld/AI-Powered Compliance & Anti-Mon.jpg';
 
 const AIPoweredComplianceAndAntiMoneyLaunderingData = {
   sections: [

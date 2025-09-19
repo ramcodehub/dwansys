@@ -1,5 +1,5 @@
 import Overview from '../../../assets/images/Usecases-images/Healthcare and Life Sciences HLS/Predictive Analytics for Disease Outbreaks1.jpeg';
-import Image from '../../../assets/images/UsecasesRealWorld/q.jpg';
+import Image from '../../../assets/images/UsecasesRealWorld/Predictive analysis for disease outbreaks.jpg';
 
 const PredictiveAnalyticsForDiseaseOutbreaksData = {
   sections: [

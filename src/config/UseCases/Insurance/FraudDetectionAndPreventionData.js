@@ -1,5 +1,5 @@
 import Overview from '../../../assets/images/Usecases-images/Insurance/Fraud Detection & Prevention2.jpeg';
-import Image from '../../../assets/images/UsecasesRealWorld/q.jpg';
+import Image from '../../../assets/images/UsecasesRealWorld/Fraud detection and prevention1.jpg';
 
 const FraudDetectionAndPreventionData = {
   sections: [

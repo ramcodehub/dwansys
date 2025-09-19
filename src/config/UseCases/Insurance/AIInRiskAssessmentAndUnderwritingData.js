@@ -1,5 +1,5 @@
 import Overview from '../../../assets/images/Usecases-images/Insurance/AI in Risk Assessment & Underwriting1.jpeg';
-import Image from '../../../assets/images/UsecasesRealWorld/q.jpg';
+import Image from '../../../assets/images/UsecasesRealWorld/Ai in risk assessment and underwriting.webp';
 
 const AIRiskAssessmentAndUnderwritingData = {
   sections: [

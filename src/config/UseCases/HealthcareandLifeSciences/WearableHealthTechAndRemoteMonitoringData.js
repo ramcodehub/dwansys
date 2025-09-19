@@ -1,5 +1,5 @@
 import Overview from '../../../assets/images/Usecases-images/Healthcare and Life Sciences HLS/Wearable Health Tech & Remote Monitoring2.jpeg';
-import Image from '../../../assets/images/UsecasesRealWorld/q.jpg';
+import Image from '../../../assets/images/UsecasesRealWorld/Variable Health tech and remote .jpg';
 
 const WearableHealthTechAndRemoteMonitoringData = {
   sections: [

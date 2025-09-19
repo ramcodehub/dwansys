@@ -1,5 +1,5 @@
 import Overview from '../../../assets/images/Usecases-images/Healthcare and Life Sciences HLS/AI in Medical Diagnosis and Imaging Analysis1.jpeg';
-import Image from '../../../assets/images/UsecasesRealWorld/q.jpg';
+import Image from '../../../assets/images/UsecasesRealWorld/Ai in medical diagnosis and imag.png';
 
 const AIInMedicalDiagnosisAndImagingAnalysisData = {
   sections: [

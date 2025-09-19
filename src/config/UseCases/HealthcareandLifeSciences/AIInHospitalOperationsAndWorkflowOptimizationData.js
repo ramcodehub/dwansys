@@ -1,6 +1,6 @@
 import Image1 from '../../../assets/images/Usecases-images/Healthcare and Life Sciences HLS/AI in Hospital Operations & Workflow Optimization0.jpeg';
 import Image2 from '../../../assets/images/Usecases-images/Healthcare and Life Sciences HLS/AI in Hospital Operations & Workflow Optimization3.png';
-import Image from '../../../assets/images/UsecasesRealWorld/q.jpg';
+import Image from '../../../assets/images/UsecasesRealWorld/Ai in hospital operations and workflow optimization.png';
 
 const AIInHospitalOperationsAndWorkflowOptimizationData = {
   sections: [

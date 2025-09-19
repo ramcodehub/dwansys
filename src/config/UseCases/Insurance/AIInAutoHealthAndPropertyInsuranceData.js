@@ -1,5 +1,5 @@
 import Overview from '../../../assets/images/Usecases-images/Insurance/AI in Auto Health and Property Insurance2.jpeg';
-import Image from '../../../assets/images/UsecasesRealWorld/q.jpg';
+import Image from '../../../assets/images/UsecasesRealWorld/Ai in auto health and property i.webp';
 
 const AIAutoHealthAndPropertyInsuranceData = {
   sections: [

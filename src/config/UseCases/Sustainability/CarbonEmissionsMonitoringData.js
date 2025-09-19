@@ -1,5 +1,5 @@
 import Overview from '../../../assets/images/Usecases-images/Sustainability/Carbon Emissions Monitoring2.jpeg';
-import Image from '../../../assets/images/UsecasesRealWorld/q.jpg';
+import Image from '../../../assets/images/UsecasesRealWorld/Carbon emission Monitoring1.jpg';
 
 const CarbonEmissionsMonitoringData = {
   sections: [

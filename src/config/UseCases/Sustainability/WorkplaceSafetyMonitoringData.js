@@ -1,5 +1,5 @@
 import Overview from '../../../assets/images/Usecases-images/Sustainability/Workplace Safety Monitoring1.jpeg';
-import Image from '../../../assets/images/UsecasesRealWorld/q.jpg';
+import Image from '../../../assets/images/UsecasesRealWorld/Workplace Safety Monitoring.jpg';
 
 const WorkplaceSafetyMonitoringData = {
   sections: [
