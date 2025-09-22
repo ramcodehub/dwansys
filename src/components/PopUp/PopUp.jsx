@@ -3,7 +3,7 @@ import Button from '../Button/Button';
 import './PopUp.css';
 
 const PopUp = ({ show, onClose }) => {
-  if (!show) return null; // don’t render when hidden
+  if (!show) return null;
 
   return (
     <div className="contact-overlay">

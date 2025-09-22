@@ -110,7 +110,7 @@ const ContactUs = () => {
                   ></textarea>
                 </div>
                 <div className="text-center m-4">
-                  <button type="submit" className="">
+                  <button type="submit" className="rounded-2">
                     Send Message
                   </button>
                 </div>

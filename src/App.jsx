@@ -20,6 +20,7 @@ import DataMigration from './pages/DataSolutions/DataMigration/DataMigration';
 import DataModelling from './pages/DataSolutions/DataModelling/DataModelling';
 import DataOrchestration from './pages/DataSolutions/DataOrchestration/DataOrchestration';
 import DataTransformation from './pages/DataSolutions/DataTransformation/DataTransformation';
+import DataStorage from './pages/DataSolutions/DataStorage/DataStorage';
 
 // Insurance
 import AIPoweredPricingPersonalizedInsurance from './pages/UseCases/Insurance/AIPoweredPricingPersonalizedInsurance';
@@ -87,6 +88,7 @@ function App() {
           <Route path="/data-ingestion" element={<DataIngestion />} />
           <Route path="/data-transformation" element={<DataTransformation />} />
           <Route path="/data-modelling" element={<DataModelling />} />
+          <Route path="/data-storage" element={<DataStorage />} />
 
 
           {/* Insurance */}
