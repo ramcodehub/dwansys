@@ -1,6 +1,6 @@
-import Button from "../Button/Button";
 import ContactUs from '../../pages/ContactUs/ContactUs';
-import "./PopUp.css";
+import Button from '../Button/Button';
+import './PopUp.css';
 
 const PopUp = ({ show, onClose }) => {
   if (!show) return null; // don’t render when hidden
@@ -12,7 +12,6 @@ const PopUp = ({ show, onClose }) => {
         <Button className="close-btn" onClick={onClose}>
           ✖
         </Button>
-        
       </div>
     </div>
   );

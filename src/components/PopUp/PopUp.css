@@ -39,3 +39,15 @@
     transform: scale(1);
   }
 }
+
+@media (min-width: 1400px){
+  .contact-overlay {
+  top: 10rem;
+  left: 0;
+}
+.close-btn {
+  right: 190px;
+  
+}
+
+}
