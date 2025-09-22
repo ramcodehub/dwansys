@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import AdvBg from '../../assets/images/Advanced Data Visualization.jpeg';
 import BuildingAIFramework from '../../assets/images/AI Strategy Frameworks.jpeg';
 import CdcBg from '../../assets/images/Comprehensive DataCollection.jpeg';
@@ -5,6 +6,7 @@ import DataCatalogue from '../../assets/images/DataCatalogue.jpg';
 import DataGovernance from '../../assets/images/DataGovernance.jpg';
 import DataQuality from '../../assets/images/DataQuality.jpg';
 import DataSecurity from '../../assets/images/DataSecurity.jpg';
+import PopUp from '../PopUp/PopUp';
 import Button from '../Button/Button';
 import './LeftRight.css';
 
@@ -18,8 +20,10 @@ const LeftRight = ({ image, heading, description, imageLeft = true }) => {
     'DataQuality.jpg': DataQuality,
     'DataSecurity.jpg': DataSecurity,
   };
+  const [showContact, setShowContact] = useState(false);
   return (
-    <div className="d-flex flex-column flex-md-row align-items-center left-right">
+    <div>
+      <div className="d-flex flex-column flex-md-row align-items-center left-right">
       <div
         className={`w-50 d-flex align-items-start ${imageLeft ? 'order-md-1' : 'order-md-2'}`}
       >
@@ -36,10 +40,14 @@ const LeftRight = ({ image, heading, description, imageLeft = true }) => {
             <i className="bi bi-arrow-right text-white" aria-hidden="true"></i>
           }
           ariaLabel="Learn more"
+          onClick={() => setShowContact(true)}
         >
           Learn More
         </Button>
+      
       </div>
+    </div>
+    <PopUp show={showContact} onClose={() => setShowContact(false)} />
     </div>
   );
 };

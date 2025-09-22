@@ -66,14 +66,14 @@ const Footer = () => {
       <div className="footer-legal text-center">
         <div className="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
           <div className="d-flex flex-column align-items-center align-items-lg-start">
-            <div className="copyright d-flex align-items-center">
+            <div className="copyright d-flex align-items-start">
               <img
                 src={logo}
                 alt="Dwansys"
                 width="200"
                 style={{ borderRight: '1px solid #414141' }}
               />
-              <p className="p-3">
+              <p className="pt-3 ps-3">
                 <span>&copy; 2025. dwansys. All rights reserved.</span>
               </p>
             </div>

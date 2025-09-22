@@ -18,29 +18,29 @@ const ContactUs = () => {
                 <div className="info-item d-flex">
                   <i className="bi bi-geo-alt flex-shrink-0"></i>
                   <div>
-                    <h4>India Entity: </h4>
+                    <h4 className='text-start'>India Entity: </h4>
                     <p>Hyderabad, Telangana</p>
                   </div>
                 </div>
                 <div className="info-item d-flex">
                   <i className="bi bi-geo-alt flex-shrink-0"></i>
                   <div>
-                    <h4>UAE Entity: </h4>
-                    <p>Dubai, UAE</p>
+                    <h4 className='text-start'>UAE Entity: </h4>
+                    <p className='text-start'>Dubai, UAE</p>
                   </div>
                 </div>
                 <div className="info-item d-flex">
                   <i className="bi bi-envelope flex-shrink-0"></i>
                   <div>
-                    <h4>Email:</h4>
-                    <p>info@dwansys.ai</p>
+                    <h4 className='text-start'>Email:</h4>
+                    <p className='text-start'>info@dwansys.ai</p>
                   </div>
                 </div>
                 <div className="info-item d-flex">
                   <i className="bi bi-phone flex-shrink-0"></i>
                   <div>
-                    <h4>Call:</h4>
-                    <p>+91 9014986761</p>
+                    <h4 className='text-start'>Call:</h4>
+                    <p className='text-start'>+91 9014986761</p>
                   </div>
                 </div>
               </div>

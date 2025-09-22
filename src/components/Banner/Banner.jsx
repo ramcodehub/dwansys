@@ -1,7 +1,10 @@
 import Button from '../Button/Button';
+import { useState } from 'react'; 
+import PopUp from '../PopUp/PopUp';
 import './Banner.css';
 
 const Banner = () => {
+  const [showContact, setShowContact] = useState(false);
   return (
     <div className="d-flex flex-column align-items-center justify-content-center w-100 banner">
       <div className="d-flex flex-column align-items-center m-0 p-0 banner-heading">
@@ -15,7 +18,8 @@ const Banner = () => {
           revolution."
         </p>
       </div>
-      <Button variant="secondary">Book a Demo</Button>
+      <Button variant="secondary" onClick={() => setShowContact(true)}>Book a Demo</Button>
+      <PopUp show={showContact} onClose={() => setShowContact(false)} />
     </div>
   );
 };

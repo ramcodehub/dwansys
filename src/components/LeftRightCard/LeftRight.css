@@ -1,7 +1,7 @@
 .left-right img {
   max-width: 90%;
 }
-.left-right h2 {
+.left-right >h2 {
   max-width: 90%;
 }
 .left-right p {
