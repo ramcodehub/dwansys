@@ -1,7 +1,7 @@
+import DataStorageImg from '../../../assets/images/Capabilities-images/DataLakes.png';
 import PageBuilder from '../../../components/PageBuilder/PageBuilder';
 import DataStorageData from '../../../config/Capabilities/DataStorageData';
-import DataStorageImg from '../../../assets/images/Capabilities-images/DataLakes.png';
-import './DataStorage.css'
+import './DataStorage.css';
 
 const DataStorage = () => {
   return (
@@ -50,6 +50,19 @@ const DataStorage = () => {
             <td>Lower (cheap storage for raw data)</td>
           </tr>
         </table>
+      </div>
+      <div className=" rounded-2 w-100 p-4 mb-5 d-flex flex-column justify-content-around data-storage-hybrid">
+        <div>
+          <h1 className='fw-bold'>Hybrid Approach: Best of Both Worlds</h1>
+          <p className='fs-3'>Modern enterprises use a combination of Data Warehouses & Data Lakes to maximize efficiency:</p>
+        </div>
+        <div>
+          <ul className='list-unstyled data-storage-list'>
+            <li className='fs-3 '><strong>Data Warehouse</strong> - Optimized queries for business intelligence.</li>
+            <li className='fs-3 '><strong>Data Lake</strong> - Raw storage for AI, ML, and analytics.</li>
+          </ul>
+        </div>
+        <p className='fs-3'>We help you design, implement, and optimize data storage architecture tailored to your business needs.</p>
       </div>
     </div>
   );
