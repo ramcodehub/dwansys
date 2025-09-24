@@ -1,6 +1,7 @@
 .header {
   height: 70px;
   box-sizing: border-box;
+  padding: 3rem;
   z-index: 70;
 }
 .fixed-header {
@@ -90,5 +91,8 @@
   }
   .mobile-menu-btn {
     display: block !important;
+  }
+  .navBar-Btn{
+    display: none !important;
   }
 }

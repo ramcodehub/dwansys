@@ -11,15 +11,7 @@ const Subscribe = () => {
           Don’t worry we won’t spam.
         </p>
       </div>
-      <div className="col-lg-6 position-relative">
-        <input
-          type="email"
-          placeholder="Enter your email"
-          className="bg-black rounded-3"
-          style={{ padding: '1.25rem' }}
-        />
-        <button className="px-5 py-3 fs-6 rounded-3">Subscribe</button>
-      </div>
+      <div className="col-lg-6 position-relative"> <input type="email" placeholder="Enter your email" className="bg-black rounded-3" style={{ padding: '1.25rem' }} /> <button className="px-5 py-3 fs-6 rounded-3">Subscribe</button> </div>
     </div>
   );
 };

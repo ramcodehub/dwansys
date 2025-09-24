@@ -27,8 +27,8 @@ const Header = () => {
       <img src={logo} alt="Logo" />
       <nav className=" d-flex justify-content-between header-nav" >
         <Navigation />
-        <Button variant="secondary" onClick={() => setShowContact(true)} className='ms-5'>Get Started</Button>
       </nav>
+      <Button variant="secondary" onClick={() => setShowContact(true)} className='navBar-Btn ms-4'>Get Started</Button>
       <PopUp show={showContact} onClose={() => setShowContact(false)} />
       <button
         className="mobile-menu-btn d-md-none"

@@ -8,3 +8,9 @@
 .overview img {
   max-width: 400px;
 }
+@media (max-width:576px){
+  .overview{
+    display: flex;
+    flex-direction: column;
+  }
+}

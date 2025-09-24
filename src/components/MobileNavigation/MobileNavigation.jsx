@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import navLinks from "../../config/navLinks";
+import PopUp from "../PopUp/PopUp";
 import "./MobileNavigation.css";
 
 const MobileNavigation = ({ open, onClose }) => {
   const [openDropdown, setOpenDropdown] = useState(null);
-
+  const [showContact, setShowContact] = useState(false);
   const toggleDropdown = (index) => {
     setOpenDropdown(openDropdown === index ? null : index);
   };
@@ -56,6 +57,8 @@ const MobileNavigation = ({ open, onClose }) => {
             )
           )}
         </ul>
+        <Link onClick={() => setShowContact(true)}  className="mt-3">Get Started</Link>
+        <PopUp show={showContact} onClose={() => setShowContact(false)} />
       </div>
     </div>
   );

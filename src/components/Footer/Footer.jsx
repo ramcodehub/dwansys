@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="footer-content my-5 ms-4 me-3">
         <div className="container">
           <div className="row d-flex justify-content-between">
-            <div className="col-12 col-sm-6 col-lg-4">
+            <div className="col-md-12 col-lg-6 col-xl-4">
               <div className="footer-info d-flex flex-column gap-2">
                 <h4>Reach Us</h4>
                 <p>
@@ -26,12 +26,12 @@ const Footer = () => {
                 </h6>
               </div>
             </div>
-
-            <div className="col-sm-12 col-md-12 col-lg-8 d-flex justify-content-around footer-links">
+            <div className='col-md-12 col-lg-12 col-xl-8'>
+            <div className="col-xl-12 d-flex justify-content-around footer-links">
               {navLinks.map(
                 (navLink, index) =>
                   navLink.links && (
-                    <div className=" col-lg-3  footer-as" key={index}>
+                    <div className="col-12 col-md-6 col-lg-3  col-xl-3  footer-as" key={index}>
                       <h4 className="colored">{navLink.name}</h4>
                       <ul className="list-unstyled m-0 p-0">
                         {navLink.links.map((link, i) => (
@@ -44,7 +44,7 @@ const Footer = () => {
                   )
               )}
 
-              <div className="footer-as col-lg-3 ms-4">
+              <div className="footer-as col-12 col-md-6 col-lg-3 col-xl-3 ms-4">
                 <h4 className="colored">Insights</h4>
                 <ul className="list-unstyled">
                   <li className="mb-2 lh-1">
@@ -57,6 +57,7 @@ const Footer = () => {
                     <Link to="/careers">Careers</Link>
                   </li>
                 </ul>
+              </div>
               </div>
             </div>
           </div>

@@ -13,11 +13,14 @@ a {
   color: var(--white-color);
 }
 
-@media (max-width:900px) {
+@media (max-width:1199px) {
   .footer-links{
     flex-wrap: wrap;   
-    /* margin: 0 !important;      
-    padding: 0 !important; */
+    margin-top: 3rem;
+    justify-content: space-between !important;
+  }
+  .footer-as{
+    margin: 0 !important;
   }
 }
 
