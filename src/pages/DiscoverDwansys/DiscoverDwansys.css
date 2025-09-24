@@ -1,0 +1,46 @@
+.heroo-section {
+  background: #000000;
+  color: white;
+  text-align: center;
+  padding-top: 7.4rem;
+
+  position: relative;
+}
+.heroo-content {
+  padding-left: 3.8rem;
+  margin-bottom: -3rem;
+}
+
+.heroo-content h1 {
+  font-size: 5.8rem;
+}
+.heroo-content p {
+  max-width: 52ch;
+  color: #aaaaaa;
+}
+.wave-divider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-divider svg {
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+
+.discover-dwansys .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #181818;
+  padding: 20px;
+  min-height: 150px;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
+}
+.discover-dwansys .box p{
+  color: #aaaaaa;
+  text-align: center !important;
+}

@@ -12,3 +12,22 @@ a {
 .footer .footer-content a:hover {
   color: var(--white-color);
 }
+
+@media (max-width:900px) {
+  .footer-links{
+    flex-wrap: wrap;   
+    /* margin: 0 !important;      
+    padding: 0 !important; */
+  }
+}
+
+@media (max-width:500px) {
+  .footer-links{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-as{
+    margin: 0 !important;
+  }
+}

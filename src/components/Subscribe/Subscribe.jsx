@@ -2,7 +2,7 @@ import './Subscribe.css';
 
 const Subscribe = () => {
   return (
-    <div className="d-flex align-items-center justify-content-between text-start rounded-4 subscribe">
+    <div className="d-flex align-items-center justify-content-between  text-start rounded-4 subscribe">
       <div className="col-lg-6">
         <h2 className="lh-1">Subscribe to our list</h2>
         <p className="lh-1 m-0 p-0" style={{ color: '#AAAAAA' }}>

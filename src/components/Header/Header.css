@@ -1,6 +1,5 @@
 .header {
   height: 70px;
-  padding: 4rem;
   box-sizing: border-box;
   z-index: 70;
 }
@@ -64,6 +63,14 @@
 .header-nav .dropdown ul li a:hover {
   color: var(--white-color);
 }
+.header .mobile-menu-btn{
+  border: none;
+  outline: none;
+  background: black;
+  color: #AAAAAA;
+  font-size: 2.4rem;
+}
+
 @media (max-width: 1425px) {
   .header {
     padding: 3rem;
@@ -74,5 +81,14 @@
   }
   .header-nav .dropdown ul {
     font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1240px) {
+  .header-nav {
+    display: none !important;
+  }
+  .mobile-menu-btn {
+    display: block !important;
   }
 }

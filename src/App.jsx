@@ -62,6 +62,7 @@ import AIEnhancedCybersecurityforFinancialSecurity from './pages/UseCases/Bankin
 
 // General
 import Home from './pages/Home/Home';
+import DiscoverDwansys from './pages/DiscoverDwansys/DiscoverDwansys';
 
 function App() {
   return (
@@ -71,6 +72,7 @@ function App() {
       <div className="main-container">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path='/discover-dwansys' element={<DiscoverDwansys/>}/>
          
           <Route path="/llm-evaluation" element={<LLMEvaluation />} />
           <Route path="/agentic-ai" element={<AgenticAI />} />

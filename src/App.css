@@ -32,3 +32,16 @@ body {
   background-clip: text;
   color: transparent;
 }
+
+@media (max-width :768px) {
+  .main-container{
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  
+  .full-width{
+    margin-left: -10%;
+    margin-right: -10%;
+    width: calc(100%+20%);
+  }
+}

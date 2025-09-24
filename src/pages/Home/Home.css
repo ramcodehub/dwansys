@@ -73,8 +73,17 @@
   border: 2px solid #181818;
 }
 
+
 @media (min-width: 1400px) {
   .market-section-heading {
     font-size: 2rem;
+  }
+}
+@media (max-width: 800px) {
+   .market-sectionn{
+     flex-direction: column;
+   }
+  .mcp{
+    flex-direction: column;
   }
 }

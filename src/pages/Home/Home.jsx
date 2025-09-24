@@ -11,7 +11,7 @@ import './Home.css';
 
 const Home = () => {
   return (
-    <div className="text-center gap-3 home">
+    <div className="text-center  home">
       <Banner />
       <div className="full-width">
         <Video />
@@ -25,7 +25,7 @@ const Home = () => {
           Our team is committed and focused on delivering sustainable solutions!
         </h1>
       </div>
-      <div className="d-flex flex-column align-items-center twopartcomponent">
+      <div className="d-flex flex-column align-items-center mx-2 twopartcomponent">
         <LeftRight
           image="adv_bg.png"
           heading="Comprehensive Data Collection"
@@ -43,7 +43,7 @@ const Home = () => {
           description="We will analyse four prominent frameworks that assist organizations in implementing artificial intelligence in a responsible, effective, and strategic manner"
         />
       </div>
-      <div className="m-0 p-0 d-flex align-items-center justify-content-between container my-2">
+      <div className="m-0 p-0 d-flex align-items-center justify-content-between container my-2 market-sectionn">
         <div className="col-lg-3 text-start">
           <h1 className="market-section-heading">
             Global Artificial Intelligence (AI) Market Dynamics by 2032:
@@ -95,7 +95,7 @@ const Home = () => {
         />
       </div>
       <DataManagement />
-      <div className="d-flex align-items-center justify-content-around my-5 w-100">
+      <div className="d-flex align-items-center justify-content-around my-5 w-100 mcp">
         <div className="col-lg-5 d-flex flex-column align-items-start">
           <h1 className="m-0 p-0 lh-0">Easy to Integrate:</h1>
           <h2 className="m-0 p-0 colored lh-0 text-start fs-3">
@@ -114,7 +114,7 @@ const Home = () => {
       <div className="full-width bg">
         <UseCases />
       </div>
-      <div className="bg-photo full-width d-flex flex-column">
+      <div className="bg-photo d-flex flex-column full-width">
         <Subscribe />
       </div>
     </div>

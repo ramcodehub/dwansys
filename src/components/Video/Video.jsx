@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import Video from '../../assets/videos/DwansysLandingPageVideo.mp4';
+import Video from '../../assets/videos/DwansysLandingPageVideo2.mp4';
 import './Video.css';
 
 export default function VideoPlayer() {

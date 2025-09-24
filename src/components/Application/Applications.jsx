@@ -19,10 +19,10 @@ export default function Applications({ Application }) {
         </h1>
         <div className="d-flex gap-2 me-4">
           <button ref={prevRef} className="p-3 border-0 rounded-circle">
-            <i class="bi bi-arrow-left text-dark fs-4"></i>
+            <i className="bi bi-arrow-left text-dark fs-4"></i>
           </button>
           <button ref={nextRef} className="p-3 border-0 rounded-circle">
-            <i class="bi bi-arrow-right text-dark fs-4"></i>
+            <i className="bi bi-arrow-right text-dark fs-4"></i>
           </button>
         </div>
       </div>
