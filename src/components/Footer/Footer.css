@@ -12,6 +12,25 @@ a {
 .footer .footer-content a:hover {
   color: var(--white-color);
 }
+.footer  .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: rgba(var(--color-white-rgb), 0.1);
+  color: #aaaaaa;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 4px;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+  background: var(--color-white);
+  text-decoration: none;
+}
 
 @media (max-width:1199px) {
   .footer-links{
@@ -23,7 +42,12 @@ a {
     margin: 0 !important;
   }
 }
-
+@media (max-width: 768px) {
+  .social-links{
+    padding-top: 1rem;
+  }
+  
+}
 @media (max-width:500px) {
   .footer-links{
     margin-top: 3rem;
