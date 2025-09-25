@@ -16,7 +16,7 @@ const Home = () => {
       <div className="full-width">
         <Video />
       </div>
-      <Clients />
+      {/* <Clients /> */}
       <div className="d-flex flex-column  align-items-center justify-content-center description">
         <h1 className="m-0 p-0 lh-1">
           There is still so much left for further digital transformation.
@@ -55,13 +55,13 @@ const Home = () => {
           </p>
         </div>
         <div className="col-lg-9 d-flex justify-content-evenly ms-3 py-5 market-section">
-          <div className="pe-5" style={{ borderRight: '2px solid #181818' }}>
+          <div className="pe-5 market-section-money" style={{ borderRight: '2px solid #181818' }}>
             <h1> $1494 B</h1>
             <h3>
               AI Market: <b>US</b>
             </h3>
           </div>
-          <div className="pe-5" style={{ borderRight: '2px solid #181818' }}>
+          <div className="pe-5 market-section-money" style={{ borderRight: '2px solid #181818' }}>
             <h1 className="text-start"> $306 B</h1>
             <h3>
               AI Market: <b>EMEA</b>
@@ -76,14 +76,14 @@ const Home = () => {
         </div>
       </div>
       <div className="dwan-architecture">
-        <div className="d-flex pb-5">
-          <div className="text-start col-lg-8">
+        <div className="d-flex row pb-5">
+          <div className="text-start col-12 col-lg-8">
             <h1 className="fs-1">DWAN Generic Architecture:</h1>
             <h1 className="colored fs-1" style={{ maxWidth: '40ch' }}>
               Data Wisdom Architecture for Next-Gen
             </h1>
           </div>
-          <p className="col-lg-4 text-start fs-5" style={{ color: '#aaaaaa' }}>
+          <p className="col-12 col-lg-4 text-start fs-5" style={{ color: '#aaaaaa' }}>
             Next-Gen data eco system driven by Artificial Intelligence and human
             expertise
           </p>

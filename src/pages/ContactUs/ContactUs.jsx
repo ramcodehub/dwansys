@@ -2,14 +2,14 @@ import './ContactUs.css';
 
 const ContactUs = () => {
   return (
-    <div>
-      <section id="contact" className="contact">
+     <section id="contact" className="contact row">
         <div
-          className="container px-4 col-lg-9 rounded-4"
+          className="container px-4 col-md-10 col-lg-9 rounded-4 contact-div"
           style={{ border: '3px solid #181818' }}
-        >
-          <div className="row gy-5 gx-lg-5">
-            <div className="col-lg-5 bg-contact-info">
+        > 
+
+          <div className="row d-flex gy-5 gx-lg-5">
+            <div className=" col-md-5 col-lg-5 bg-contact-info">
               <div className="info">
                 <h3 className="fs-1 m-0 p-0 lh-1 fw-bold">Get in Touch </h3>
                 <p className="mt-1 fw-medium" style={{ color: '#AAAAAA' }}>
@@ -45,7 +45,7 @@ const ContactUs = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-7 bg-contact-form">
+            <div className=" col-md-7 col-lg-7 bg-contact-form">
               <form role="form" className="contact-form">
                 <div className="row">
                   <div className="col-md-6 form-group">
@@ -94,7 +94,7 @@ const ContactUs = () => {
                 <div className="form-group mt-3">
                   <input
                     type="text"
-                    className="form-control"
+                    className="form-control subject"
                     name="subject"
                     id="subject"
                     placeholder="Subject"
@@ -118,8 +118,7 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </section>  
   );
 };
 

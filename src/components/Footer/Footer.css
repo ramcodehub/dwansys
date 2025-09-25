@@ -33,4 +33,13 @@ a {
   .footer-as{
     margin: 0 !important;
   }
+  .footer-legal .copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .footer-legal .copyright img{
+    border: none !important;
+  }
 }

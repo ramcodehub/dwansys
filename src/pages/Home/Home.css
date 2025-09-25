@@ -86,4 +86,37 @@
   .mcp{
     flex-direction: column;
   }
+  .mcp img{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  .market-section{
+    padding: 0 !important;
+  }
+  .market-section h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.6rem;
+    font-size: 1rem ;
+  }
+  .market-section h3{
+    font-size: 0.8rem ;
+     padding: 0.6rem;
+  }
+  .market-section .market-section-money{
+    padding-right: 0 !important;
+  }
+  .mcp img{
+    width: 200px;
+  }
+  .home > .description h1 {
+  font-size: 2rem;
+  max-width: 28ch;
+ }
+ 
 }

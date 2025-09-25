@@ -12,12 +12,12 @@ export default function Applications({ Application }) {
 
   return (
     <div className="pb-5 ">
-      <div className="d-flex align-items-center justify-content-between mb-4">
+      <div className="d-flex  align-items-center justify-content-between swipe-btn mb-4">
         <h1 className="fw-bold">
           How to apply across Industries or
           <br /> various business functions
         </h1>
-        <div className="d-flex gap-2 me-4">
+        <div className="d-flex  gap-2 me-4">
           <button ref={prevRef} className="p-3 border-0 rounded-circle">
             <i className="bi bi-arrow-left text-dark fs-4"></i>
           </button>
@@ -34,6 +34,12 @@ export default function Applications({ Application }) {
         onBeforeInit={(swiper) => {
           swiper.params.navigation.prevEl = prevRef.current;
           swiper.params.navigation.nextEl = nextRef.current;
+        }}
+        breakpoints={{
+          320: { slidesPerView: 1, spaceBetween: 20 },
+          480: { slidesPerView: 1, spaceBetween: 20 },
+          768: { slidesPerView: 2, spaceBetween: 20 },
+          992: { slidesPerView: 3, spaceBetween: 20 },
         }}
       >
         {Application.map((application, idx) => (

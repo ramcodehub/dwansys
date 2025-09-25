@@ -31,3 +31,37 @@
 .data-storage-hybrid{
   border: 2px solid #181818;
 }
+
+@media (max-width : 1024px) {
+  .data-lake{
+    flex-direction: column;
+  }
+  .data-lake {
+    align-items: center;
+  }
+}
+@media (max-width : 576px){
+  .data-storage table {
+    margin-left: 0 !important;
+  }
+  .data-storage th{
+    font-size: 1rem;
+    }
+    .data-storage td{
+        font-size: 0.6rem;
+        color: #d9d9d9;
+    }
+
+    .data-storage th,
+    .data-storage td {
+      border: 2px solid #AAAAAA;  
+      padding: 10px 14px;
+      text-align: left;
+    }
+    
+} 
+@media (max-width : 340px){
+  .data-lake img{
+    width: 260px;
+  }
+}

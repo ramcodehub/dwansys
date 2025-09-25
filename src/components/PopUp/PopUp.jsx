@@ -7,12 +7,14 @@ const PopUp = ({ show, onClose }) => {
 
   return (
     <div className="contact-overlay">
+    
       <div className="popup">
-        <ContactUs />
-        <Button className="close-btn" onClick={onClose}>
-          ✖
-        </Button>
+          <ContactUs/>
+          <Button className="close-btn" onClick={onClose}>
+            ✖
+          </Button>  
       </div>
+      
     </div>
   );
 };

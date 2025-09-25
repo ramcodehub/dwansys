@@ -102,3 +102,60 @@
     transform: rotate(360deg);
   }
 }
+
+
+@media (max-width:768px) {
+  .contact .contact-div
+  {
+    border: none !important;
+  }
+  .contact .info {
+  padding: 0.6rem 0;
+}
+.contact .info-item {
+  padding-top: 0.4rem;
+  gap: 0.6rem;
+}
+.contact .info-item i {
+  font-size: 1.4rem;
+}
+.contact .info-item h4 {
+  font-size: 1rem;
+}
+.contact .contact-form textarea {
+  font-size: 1rem;
+  padding: 0.5rem;
+  height: 100px;
+}
+.contact .contact-form input {
+  font-size: 1rem;
+  padding: 0.5rem;
+  background-color: #181818;
+}
+.info h3{
+  font-size: 2rem !important;
+}
+.contact .contact-form button[type='submit'] {
+  background: var(--gradient-color);
+  border: 0;
+  padding: 10px 40px;
+  color: var(--color-white);
+  transition: 0.4s;
+  border-radius: 0;
+}
+
+}
+
+@media (max-width:576px){
+   .contact .bg-contact-info{
+    display: none;
+   }
+   .contact .contact-form textarea {
+    font-size: 1rem;
+    padding: 0.5rem;
+     height: 80px;
+   }
+   .contact .subject{
+    display: none;
+   }
+}

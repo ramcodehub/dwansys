@@ -35,11 +35,30 @@
     gap: 2rem;
   }
   .subscribe input{
-    height: 30px;
+    height: 50px;
     width: 450px;
   }
   .subscribe button{
-    height: 28px;
+    padding: 0.5rem !important;
     top: 50%;
   }
 }
+
+@media (max-width: 576px) {
+  .subscribe{
+    margin: 1rem;
+    padding: 1rem 1rem;
+    gap: 1.2rem;
+  }
+  .subscribe input{
+    height: 50px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 350px) {
+  .subscribe input{
+    width: 230px;
+  }
+}
+

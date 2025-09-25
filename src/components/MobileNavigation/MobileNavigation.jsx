@@ -19,7 +19,7 @@ const MobileNavigation = ({ open, onClose }) => {
           <i className="bi bi-x"></i>
         </button>
 
-        <ul className="list-unstyled m-0 mt-5 pt-2 p-0 d-flex flex-column gap-3">
+        <ul className="list-unstyled m-0 mt-4 p-0 d-flex flex-column gap-3">
           {navLinks.map((link, index) =>
             link.links ? (
               <li key={index} className="mobile-dropdown">

@@ -7,3 +7,12 @@
   height: auto !important;
   display: flex !important;
 }
+@media (max-width:576px) {
+  .swipe-btn>div{
+    margin-right: 0 !important;
+  }
+  .swipe-btn  i
+  {
+    font-size: 14px !important;
+  }
+}

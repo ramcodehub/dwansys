@@ -9,7 +9,7 @@ const DataStorage = () => {
       <PageBuilder sections={DataStorageData.sections} />
       <div className='d-flex flex-column gap-3 mt-4'>
         <h1 className='fw-bold'>Data Lakes: Unlock the Power of Your Data with Boundless Passion</h1>
-        <div className='d-flex gap-3'>
+        <div className='d-flex gap-3 data-lake'>
           <p>Imagine a vast, limitless reservoir of raw, unfiltered data—ready to ignite innovation, fuel dreams, and transform the impossible into reality. That’s the magic of a Data Lake: a sanctuary where structured, semi-structured, and unstructured data converge in their purest form, waiting to be harnessed for the future of AI, machine learning, and big data breakthroughs. Dive deeper, and you’ll discover the true essence of possibility: lightning-fast experimentation, real-time analytics, and a foundation built to scale as boldly as your vision. Whether you’re a startup chasing disruptive ideas or an enterprise reimagining legacy systems, a Data Lake empowers you to unify your data into a single source of truth accessible, dynamic, and endlessly powerful. It’s not just storage; it’s the canvas where your boldest strategies take shape, and your data stories come alive.</p>
           <img src={DataStorageImg} alt="" width='400' className='rounded-4'/>
         </div>

@@ -33,7 +33,7 @@ const UseCases = () => {
       <div className="row gy-3" style={{ paddingTop: '2.4rem' }}>
         {activeUseCase &&
           activeUseCase.cardData.map((carddata, index) => (
-            <div className="col-md-4 d-flex" key={index}>
+            <div className="col-md-6 col-lg-4 d-flex" key={index}>
               <Card
                 heading={carddata.name}
                 description={carddata.description}

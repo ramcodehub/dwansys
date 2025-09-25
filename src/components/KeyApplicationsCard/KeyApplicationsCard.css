@@ -8,3 +8,10 @@
 .key-application-card p {
   color: #aaaaaa;
 }
+
+
+@media (max-width: 576px){
+ .key-application-card {
+  margin-top: 1rem;
+ }
+}

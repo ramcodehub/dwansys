@@ -17,7 +17,6 @@ const DiscoverDwansys = () => {
             </p>
           </div>
 
-          {/* Wave divider */}
           <div className="wave-divider">
             <svg
               viewBox="0 0 1440 200"
@@ -69,8 +68,8 @@ const DiscoverDwansys = () => {
       <div className='my-5'>
         <h1 className='fw-bold'>Shaping the Future with Intelligent Innovation</h1>
         <p className="fs-5" style={{ color: '#AAAAAA' }}>In a world where technology and human ingenuity converge, we help organizations unlock new possibilities. Our focus is on building intelligent, secure, and future-ready ecosystems that empower people, businesses, and industries to thrive.</p>
-      <div className='d-flex flex-column gap-5 mt-5 ms-4'>
-        <LeftRight heading="Cybersecurity by Design"
+      <div className=' d-flex flex-column gap-5 mt-5 ms-4'>
+          <LeftRight heading="Cybersecurity by Design"
                     description="Resilience isn’t an afterthought—it’s the foundation. We embed cybersecurity into every layer of our solutions, from strategy to execution. By taking a proactive approach, we safeguard data, protect trust, and ensure business continuity in an increasingly connected world."
                     button={false}
                     image='CybersecuritybyDesign.jpg'/>
@@ -87,7 +86,7 @@ const DiscoverDwansys = () => {
                     description="The future belongs to those who adapt with agility. We build data-driven, agile ecosystems that empower organizations to navigate uncertainty with confidence, make informed decisions, and scale innovation sustainably."
                     button={false}
                     image='FutureReadiness.jpg'
-                    imageLeft={false}/>                        
+                    imageLeft={false}/>                     
       </div>
       </div>
 

@@ -9,3 +9,41 @@
   font-size: 1.1rem;
   color: #aaaaaa;
 }
+
+@media (max-width:800px) {
+  .left-right{
+    padding: 0 !important;
+    align-items: start;
+  }
+  .left-right img {
+    width: 500px !important;
+  }
+  .left-right h2 {
+    padding-top: 1rem;
+    font-size: 1.6rem !important;
+  }
+  .left-right p {
+    max-width: 95%;
+    font-size: 0.8rem !important;
+    color: #aaaaaa;
+  }
+}
+
+@media (max-width:576px) {
+  .left-right{
+    padding: 0 !important;
+    align-items: start;
+  }
+  .left-right img {
+    width: 500px !important;
+  }
+  .left-right h2 {
+    padding-top: 0.6rem;
+    font-size: 0.8rem !important;
+  }
+  .left-right p {
+    max-width: 95%;
+    font-size: 0.6rem !important;
+    color: #aaaaaa;
+  }
+}

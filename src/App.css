@@ -46,14 +46,3 @@ body {
 }
 
 /* Mobile */
-@media (max-width: 576px) {
-  .main-container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  .full-width {
-    margin-left: -16px;
-    margin-right: -16px;
-    width: calc(100% + 74px);
-  }
-}

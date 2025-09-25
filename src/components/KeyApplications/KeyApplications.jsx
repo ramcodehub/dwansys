@@ -7,7 +7,7 @@ const KeyApplications = ({ Applications }) => {
       <div className="rounded-4 px-3 pt-3 mt-4">
         <div className="row">
           {Applications.map((keyApplications, i) => (
-            <div className="col-md-3 d-flex align-items-stretch" key={i}>
+            <div className="col-md-4 col-lg-3 d-flex align-items-stretch" key={i}>
               <KeyApplicationsCard
                 icon={keyApplications.icon}
                 heading={keyApplications.heading}

@@ -20,7 +20,7 @@
   right: -100%;
   width: 80%;
   max-width: 420px;
-  height: 140vh;
+  min-height: 140vh;
   background: var(--background-color);
   padding: 2rem;
   transition: right 0.3s ease;

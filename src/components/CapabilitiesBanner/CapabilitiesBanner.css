@@ -48,3 +48,38 @@
     top: 100px;
   }
 }
+
+@media (max-width: 768px) {
+  .capabilities-banner-top {
+  top: 50px;
+  left: 50px;
+  margin-top: 4rem;
+}
+.capabilities-banner-top h1 {
+  font-size: 3.4rem;
+}
+
+.capabilities-banner-top p {
+  font-size: 1.4rem;
+  max-width: 34ch !important;
+}
+  
+}
+
+
+@media (max-width: 576px) {
+  .capabilities-banner-top {
+  top: 20px;
+  left: 20px;
+  margin-top: 4rem;
+}
+.capabilities-banner-top h1 {
+  font-size: 2.4rem;
+}
+
+.capabilities-banner-top p {
+  font-size: 1rem;
+  max-width: 34ch !important;
+}
+  
+}

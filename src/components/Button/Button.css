@@ -24,3 +24,13 @@
     font-size: 1rem;
   }
 }
+
+@media (max-width: 576px) {
+  .primaryBtn{
+    padding: 0.3rem 0.5rem !important;
+    font-size: 0.7rem !important;
+  }
+  .secondaryBtn {
+    font-size: 0.8rem;
+  }
+}

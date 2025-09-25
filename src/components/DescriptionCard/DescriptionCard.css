@@ -5,7 +5,16 @@
   width: 600px;
   height: 200px;
 }
-/* .break-anywhere {
-  overflow-wrap: break-word; 
-  hyphens: auto;
-} */
+ @media (max-width: 768px){
+  .description-card div p ,.description-card p {
+     font-size: 1rem !important;
+   }
+}
+@media (max-width: 576px){
+  .description-card div  {
+    flex-direction: column;
+   }
+   .description-card div img{
+    width: 320px !important;
+   }
+}
