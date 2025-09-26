@@ -1,7 +1,7 @@
 import Overview from '../../../assets/images/Usecases-images/Insurance/Predictive Analytics for Claims Management1.jpeg';
 import Image from '../../../assets/images/UsecasesRealWorld/Predictive analysis for client management.png';
 
-const PredictiveAnalyticsForClaimsManagementData = {
+const PredictiveAnalyticsforClaimsManagementData = {
   sections: [
     {
       type: 'hero',
@@ -56,4 +56,4 @@ const PredictiveAnalyticsForClaimsManagementData = {
   ],
 };
 
-export default PredictiveAnalyticsForClaimsManagementData;
+export default PredictiveAnalyticsforClaimsManagementData;
