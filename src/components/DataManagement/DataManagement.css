@@ -10,12 +10,44 @@
 .data-management .data-pillar-tab:last-child {
   border-right: none;
 }
+
 .data-management .data-pillar-tab.active {
   color: var(--primary-color);
 }
+
 .data-management .data-pillar {
   border: 2px solid #181818;
   background-color: #010101;
 }
 
+/* Tabs container on desktop */
+.data-pillar-tabs {
+  display: flex;
+  justify-content: center;
+ 
+  width: 100%;
+}
 
+/* Mobile: make only the tab row scrollable */
+@media (max-width: 576px) {
+  .data-pillar-tabs {
+    justify-content: flex-start; /* make it start from left */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .data-pillar-tabs::-webkit-scrollbar {
+    display: none; /* Chrome/Safari hides scrollbar */
+  }
+
+  .data-pillar-tab {
+    flex: 0 0 auto; /* keep each tab in line, no shrinking */
+  }
+  .data-pillar{
+    padding-left: 1.2rem !important;
+  }
+}

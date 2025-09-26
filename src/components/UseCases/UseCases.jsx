@@ -9,7 +9,7 @@ const UseCases = () => {
     (UseCase) => UseCase.tab === activeTab
   );
   return (
-    <div className="data-management d-flex flex-column align-items-center justify-content-center ">
+    <div className="data-management d-flex flex-column align-items-center justify-content-center usecase">
       <div className="pt-5 pb-4">
         <h1 className="lh-1 m-0 p-0" style={{ maxWidth: '34ch' }}>
           Societal Value Creation with sustainability : The Future is Industry
@@ -19,7 +19,7 @@ const UseCases = () => {
           Human-machine collaboration & sustainability
         </h1>
       </div>
-      <div>
+      <div className="data-pillar-tabs">
         {UseCasesData.map((UseCase, index) => (
           <button
             key={index}
@@ -33,7 +33,7 @@ const UseCases = () => {
       <div className="row gy-3" style={{ paddingTop: '2.4rem' }}>
         {activeUseCase &&
           activeUseCase.cardData.map((carddata, index) => (
-            <div className="col-md-6 col-lg-4 d-flex" key={index}>
+            <div className="col-12 col-md-6 col-lg-4 d-flex" key={index}>
               <Card
                 heading={carddata.name}
                 description={carddata.description}

@@ -25,8 +25,8 @@ const ContactUs = () => {
                 <div className="info-item d-flex">
                   <i className="bi bi-geo-alt flex-shrink-0"></i>
                   <div>
-                    <h4 className='text-start'>UAE Entity: </h4>
-                    <p className='text-start'>Dubai, UAE</p>
+                    <h4 className='text-start'>US Entity: </h4>
+                    <p className='text-start'>Dallas, US</p>
                   </div>
                 </div>
                 <div className="info-item d-flex">

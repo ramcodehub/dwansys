@@ -33,7 +33,7 @@
 }
 
 
-.mobile-nav .close-btn {
+.mobile-nav>.close-btn {
   background: none;
   border: none;
   position: absolute;

@@ -27,7 +27,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="col-md-12 col-lg-12 col-xl-8">
-              <div className="col-xl-12 d-flex justify-content-around footer-links">
+              <div className="col-xl-12 d-flex justify-content-around footer-links pe-1">
                 {navLinks.map(
                   (navLink, index) =>
                     navLink.links && (
@@ -93,7 +93,7 @@ const Footer = () => {
               <span>Follow us:</span>
             </strong>
             <div>
-              <a href="" target="_blank" className="linkedin">
+              <a href="https://www.linkedin.com/company/dwansys-technologies-private-limited/" target="_blank" className="linkedin">
                 <i className="bi bi-linkedin"></i>
               </a>
               <a

@@ -15,3 +15,10 @@
     align-items: center;
   }
 }
+@media (max-width:576px) {
+  
+  .overview img{
+    width: 320px !important;
+  }
+  
+}
