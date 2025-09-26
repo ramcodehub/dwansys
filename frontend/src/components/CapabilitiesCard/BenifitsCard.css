@@ -1,0 +1,35 @@
+.capabilities-card {
+  border: 2px solid var(--border-color);
+  width: 350px;
+  background: var(--card-background);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(10px);
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .capabilities-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  .capabilities-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.capabilities-card:hover {
+  transform: translateY(-0.4rem);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.capabilities-card .icon {
+  width: 60px;
+  background-color: #aaaaaa;
+}

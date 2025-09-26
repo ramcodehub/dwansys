@@ -1,0 +1,113 @@
+.header {
+  height: 70px;
+  box-sizing: border-box;
+  padding: 3rem;
+  z-index: 70;
+}
+.fixed-header {
+  background-color: var(--header-background);
+  box-shadow: var(--header-shadow);
+  transition: 0.3s ease;
+}
+.header img {
+  height: 70px;
+}
+
+.header-nav > ul {
+  gap: 40px;
+}
+
+.header-link {
+  box-sizing: border-box;
+  gap: 10px;
+  cursor: pointer;
+  padding: 10px 0 10px 10px;
+  color: var(--text-color);
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.header-link .dropdown-icon {
+  font-size: 0.8rem;
+}
+.header-link:hover {
+  color: var(--text-color);
+}
+
+.header-nav .dropdown ul {
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  border: 2px solid var(--dropdown-border);
+  background-color: var(--dropdown-background);
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(10px);
+}
+.header-nav .dropdown:hover ul {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.header-nav .dropdown ul li a {
+  color: var(--text-color);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.header-nav .dropdown:hover > .header-link {
+  color: var(--text-color);
+}
+
+.header-nav .dropdown ul li a:hover {
+  color: var(--text-color);
+}
+.header .mobile-menu-btn{
+  border: none;
+  outline: none;
+  background: var(--header-background);
+  color: var(--grey-color);
+  font-size: 2.4rem;
+  transition: color 0.3s ease;
+}
+
+.header .mobile-menu-btn:hover {
+  color: var(--text-color);
+}
+
+@media (max-width: 1425px) {
+  .header {
+    padding: 3rem;
+  }
+  .header-link {
+    font-size: 1rem;
+    padding: 6px 0 10px 6px;
+  }
+  .header-nav .dropdown ul {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1240px) {
+  .header-nav {
+    display: none !important;
+  }
+  .mobile-menu-btn {
+    display: block !important;
+  }
+  .navBar-Btn{
+    display: none !important;
+  }
+}
+@media (max-width:576px) {
+  .header {
+    padding: 2.2rem 0.5rem;
+  }
+  .header img {
+  height: 56px;
+}
+}
