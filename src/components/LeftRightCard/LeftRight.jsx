@@ -33,12 +33,12 @@ const LeftRight = ({ image, heading, description, imageLeft = true, button=true 
     <div>
       <div className="d-flex flex-column flex-md-row align-items-center left-right">
       <div
-        className={`w-50 d-flex align-items-start ${imageLeft ? 'order-md-1' : 'order-md-2'}`}
+        className={`w-100 d-flex align-items-start ${imageLeft ? 'order-md-1' : 'order-md-2'}`}
       >
         <img src={images[image]} alt={heading} className="rounded" />
       </div>
       <div
-        className={`w-50  d-flex flex-column align-items-start ${imageLeft ? 'order-md-2' : 'order-md-1'}`}
+        className={`w-100  d-flex flex-column align-items-start ${imageLeft ? 'order-md-2' : 'order-md-1'}`}
       >
         <h2 className="text-start fs-2">{heading}</h2>
         <p className="text-start fs-5 lh-2 fw-500">{description}</p>

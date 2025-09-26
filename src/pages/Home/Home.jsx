@@ -16,7 +16,7 @@ const Home = () => {
       <div className="full-width">
         <Video />
       </div>
-      {/* <Clients /> */}
+      <Clients />
       <div className="d-flex flex-column  align-items-center justify-content-center description">
         <h1 className="m-0 p-0 lh-1">
           There is still so much left for further digital transformation.

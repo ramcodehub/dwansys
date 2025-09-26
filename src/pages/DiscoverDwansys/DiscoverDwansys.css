@@ -54,12 +54,15 @@
 @media (max-width:576px) {
   .heroo-content {
   padding-left: 1.4rem;
-}
+  }
   .heroo-content h1{
     font-size: 3rem;
   }
   .heroo-content p{
     font-size: 1.2rem !important;
+  }
+  .discover-dwansys .overview img{
+    width: 320px !important;
   }
   
 }
