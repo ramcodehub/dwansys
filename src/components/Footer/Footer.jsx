@@ -54,11 +54,11 @@ const Footer = () => {
                       <Link to="/discover-dwansys">Discover Dwansys</Link>
                     </li>
                     <li className="mb-2 lh-1">
-                      <Link to="/blog">Blog</Link>
+                      <Link to="/blogs">Blogs</Link>
                     </li>
-                    <li className="lh-1">
+                    {/* <li className="lh-1">
                       <Link to="/careers">Careers</Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
               </div>
