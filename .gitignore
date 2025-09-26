@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Builds
+dist/
+build/
+.cache/
+
+# Env
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+*.out
+*.err
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Archives
+*.zip
+*.tar.gz
+*.tgz
+
+# Misc
+*.local
+
+
