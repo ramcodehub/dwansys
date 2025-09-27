@@ -20,7 +20,11 @@ app.use(pinoHttp({ logger }));
 
 // Security & Basics
 app.use(helmet());
-app.use(cors({ origin: process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : true }));
+app.use(cors({ 
+  origin: process.env.CORS_ORIGIN 
+    ? process.env.CORS_ORIGIN.split(',').map(url => url.trim())
+    : true 
+}));
 app.use(express.json({ limit: '1mb' }));
 
 // Basic rate limit for all routes
