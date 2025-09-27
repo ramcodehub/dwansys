@@ -1,0 +1,49 @@
+services:
+  - type: web
+    name: dwansys-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: LOG_LEVEL
+        value: info
+      - key: CORS_ORIGIN
+        value: https://your-frontend-app.netlify.app
+      - key: SUPABASE_URL
+        fromDatabase:
+          name: supabase
+          property: connectionString
+      - key: SUPABASE_KEY
+        fromDatabase:
+          name: supabase
+          property: password
+      - key: SUPABASE_SERVICE_KEY
+        fromDatabase:
+          name: supabase
+          property: serviceKey
+      - key: EMAIL_HOST
+        fromDatabase:
+          name: email
+          property: host
+      - key: EMAIL_PORT
+        fromDatabase:
+          name: email
+          property: port
+      - key: EMAIL_USER
+        fromDatabase:
+          name: email
+          property: username
+      - key: EMAIL_PASS
+        fromDatabase:
+          name: email
+          property: password
+      - key: EMAIL_FROM
+        fromDatabase:
+          name: email
+          property: from

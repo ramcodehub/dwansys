@@ -1,6 +1,6 @@
 import React from 'react'
 import PageBuilder from '../../../components/PageBuilder/PageBuilder'
-import AIPoweredBankingAutomationAndProcessOptimizationData from '../../../config/UseCases/BankingAndFinancialServices/AIPoweredBankingAutomationAndProcessOptimizationData'
+import AIPoweredBankingAutomationAndProcessOptimizationData from '../../../config/UseCases/BankingandFinancialServices/AIPoweredBankingAutomationAndProcessOptimizationData'
 
 const AIPoweredBankingAutomationAndProcessOptimization = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
 import PageBuilder from '../../../components/PageBuilder/PageBuilder'
-import AIEnhancedCybersecurityforFinancialSecurityData from '../../../config/UseCases/BankingAndFinancialServices/AIEnhancedCybersecurityforFinancialSecurityData'
+import AIEnhancedCybersecurityforFinancialSecurityData from '../../../config/UseCases/BankingandFinancialServices/AIEnhancedCybersecurityforFinancialSecurityData'
 
 const AIEnhancedCybersecurityforFinancialSecurity = () => {
   return (

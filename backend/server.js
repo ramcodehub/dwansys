@@ -29,6 +29,7 @@ app.use(globalLimiter);
 
 // Health
 app.get('/health', (req, res) => res.json({ ok: true }));
+app.get('/ping', (req, res) => res.json({ message: 'pong', timestamp: new Date().toISOString() }));
 
 // Routes
 app.use('/api', emailRouter);
@@ -39,7 +40,7 @@ app.use('/api/subscribers', subscribersRouter);
 app.use(notFoundHandler);
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => {
   logger.info({ port: PORT, env: process.env.NODE_ENV }, 'Backend server running');
 });
