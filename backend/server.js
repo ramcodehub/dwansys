@@ -40,7 +40,7 @@ app.use('/api/subscribers', subscribersRouter);
 app.use(notFoundHandler);
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   logger.info({ port: PORT, env: process.env.NODE_ENV }, 'Backend server running');
 });
