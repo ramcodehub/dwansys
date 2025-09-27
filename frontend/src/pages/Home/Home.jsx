@@ -1,4 +1,4 @@
-import DWANArchitecture from '../../assets/images/DWAN Architecture.png';
+import DWANArchitecture from '../../assets/images/Dwan Architecture.png';
 import MCP from '../../assets/images/MCP.png';
 import Banner from '../../components/Banner/Banner.jsx';
 import Clients from '../../components/Clients/Clients.jsx';
