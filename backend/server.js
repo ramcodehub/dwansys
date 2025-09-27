@@ -23,7 +23,10 @@ app.use(helmet());
 app.use(cors({ 
   origin: process.env.CORS_ORIGIN 
     ? process.env.CORS_ORIGIN.split(',').map(url => url.trim())
-    : true 
+    : true,
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json({ limit: '1mb' }));
 
