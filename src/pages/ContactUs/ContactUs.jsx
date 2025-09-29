@@ -1,6 +1,50 @@
 import './ContactUs.css';
+import { useState } from 'react';
 
 const ContactUs = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [feedback, setFeedback] = useState({ type: null, text: '' });
+
+  const API_BASE = import.meta?.env?.VITE_API_BASE_URL || 'http://localhost:5000';
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (isSubmitting) return;
+    setIsSubmitting(true);
+    try {
+      const form = e.currentTarget;
+      const formData = new FormData(form);
+      const payload = {
+        name: String(formData.get('name') || '').trim(),
+        email: String(formData.get('email') || '').trim(),
+        company: String(formData.get('company') || '').trim() || null,
+        phone: String(formData.get('phone') || '').trim() || null,
+        subject: String(formData.get('subject') || '').trim(),
+        message: String(formData.get('message') || '').trim(),
+      };
+
+      const res = await fetch(`${API_BASE}/api/contacts`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        throw new Error(json?.error?.message || 'Failed to submit');
+      }
+      // Optional: clear form on success
+      form.reset();
+      setFeedback({
+        type: 'success',
+        text: `Dear ${payload.name}, we have received your message. Our team will contact you shortly. Thank you ✅`,
+      });
+    } catch (err) {
+      setFeedback({ type: 'error', text: err.message || 'Something went wrong. Please try again.' });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
      <section id="contact" className="contact row">
         <div
@@ -46,7 +90,7 @@ const ContactUs = () => {
               </div>
             </div>
             <div className=" col-md-7 col-lg-7 bg-contact-form">
-              <form role="form" className="contact-form">
+              <form role="form" className="contact-form" onSubmit={handleSubmit}>
                 <div className="row">
                   <div className="col-md-6 form-group">
                     <input
@@ -64,7 +108,7 @@ const ContactUs = () => {
                       className="form-control"
                       name="email"
                       id="email"
-                      placeholder="Your Email"
+                      placeholder="Enter Your Bussiness Email"
                       required=""
                     />
                   </div>
@@ -75,18 +119,18 @@ const ContactUs = () => {
                       type="text"
                       name="company"
                       className="form-control"
-                      id="name"
-                      placeholder="Company"
+                      id="company"
+                      placeholder="Enter Your Company"
                       required=""
                     />
                   </div>
                   <div className="col-md-6 form-group mt-3 mt-md-0">
                     <input
-                      type="email"
+                      type="tel"
                       className="form-control"
-                      name="Phonenumber"
-                      id="email"
-                      placeholder="Phone Number"
+                      name="phone"
+                      id="phone"
+                      placeholder="Enter Phone Number"
                       required=""
                     />
                   </div>
@@ -97,7 +141,7 @@ const ContactUs = () => {
                     className="form-control subject"
                     name="subject"
                     id="subject"
-                    placeholder="Subject"
+                    placeholder="Enter Subject"
                     required=""
                   />
                 </div>
@@ -110,9 +154,22 @@ const ContactUs = () => {
                   ></textarea>
                 </div>
                 <div className="text-center m-4">
-                  <button type="submit" className="rounded-2">
-                    Send Message
+                  <button type="submit" className="rounded-2" disabled={isSubmitting}>
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
+                  {feedback.text ? (
+                    <div
+                      className="mt-2"
+                      style={{
+                        color: feedback.type === 'success' ? '#16a34a' : '#dc2626',
+                        fontWeight: 600,
+                        textAlign: 'center',
+                        backgroundColor: 'transparent',
+                      }}
+                    >
+                      {feedback.text}
+                    </div>
+                  ) : null}
                 </div>
               </form>
             </div>
