@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import navLinks from "../../config/navLinks";
 import PopUp from "../PopUp/PopUp";
-import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import "./MobileNavigation.css";
 
 const MobileNavigation = ({ open, onClose }) => {
@@ -58,10 +57,7 @@ const MobileNavigation = ({ open, onClose }) => {
             )
           )}
         </ul>
-        <div className="d-flex align-items-center justify-content-between mt-3">
-          <Link onClick={() => setShowContact(true)}>Get Started</Link>
-          <ThemeToggle />
-        </div>
+        <Link onClick={() => setShowContact(true)}  className="mt-3">Get Started</Link>
         <PopUp show={showContact} onClose={() => setShowContact(false)} />
       </div>
     </div>

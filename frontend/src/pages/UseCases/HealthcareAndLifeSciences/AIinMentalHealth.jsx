@@ -1,6 +1,6 @@
 import React from 'react'
 import PageBuilder from '../../../components/PageBuilder/PageBuilder'
-import AIinMentalHealthData from '../../../config/UseCases/HealthcareandLifeSciences/AIInMentalHealthData'
+import AIinMentalHealthData from '../../../config/UseCases/HealthcareAndLifeSciences/AIinMentalHealthData'
 
 const AIinMentalHealth = () => {
   return (

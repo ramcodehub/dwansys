@@ -40,14 +40,9 @@
   top: 16px;
   right: 20px;
   font-size: 2rem;
-  color: var(--grey-color);
+  color: #AAAAAA;
   cursor: pointer;
   margin-bottom: 2rem;
-  transition: color 0.3s ease;
-}
-
-.mobile-nav>.close-btn:hover {
-  color: var(--text-color);
 }
 
 .mobile-nav ul li {
@@ -57,11 +52,10 @@
 .mobile-nav a {
   display: block;
   padding: 0.5rem 0;
-  color: var(--grey-color);
+  color: #AAAAAA;
   text-decoration: none;
   font-size: 1.2rem;
-  border-bottom: 2px solid var(--border-color);
-  transition: color 0.3s ease;
+  border-bottom: 2px solid #2D3132;
 }
 
 .mobile-nav a:hover {
@@ -75,16 +69,11 @@
   justify-content: space-between;
   background: none;
   border: none;
-  color: var(--grey-color);
-  border-bottom: 2px solid var(--border-color);
+  color: #AAAAAA;
+   border-bottom: 2px solid #2D3132;
   font-size: 1.2rem;
   padding: 0.5rem 0;
   cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.dropdown-toggle-btn:hover {
-  color: var(--text-color);
 }
 
 .mobile-submenu {

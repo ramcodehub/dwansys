@@ -1,27 +1,12 @@
 .capabilities-card {
-  border: 2px solid var(--border-color);
+  border: 2px solid #181818;
   width: 350px;
-  background: var(--card-background);
+  background: rgba(70, 70, 70, 0.05);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(10px);
   transition:
     transform 0.3s ease-in-out,
     box-shadow 0.3s ease-in-out;
-}
-
-/* Mobile responsive adjustments */
-@media (max-width: 768px) {
-  .capabilities-card {
-    width: 100%;
-    max-width: 350px;
-  }
-}
-
-@media (max-width: 576px) {
-  .capabilities-card {
-    width: 100%;
-    max-width: 100%;
-  }
 }
 
 .capabilities-card:hover {

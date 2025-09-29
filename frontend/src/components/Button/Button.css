@@ -1,6 +1,6 @@
 /* Shared button styles */
 .primaryBtn {
-  background: var(--button-background);
+  background: #353535;
   font-family: var(--font-default);
   color: var(--white-color);
   padding: 0.4em 1em;
@@ -8,11 +8,6 @@
   font-size: 1em;
   cursor: pointer;
   transition: background 0.2s;
-  border: 1px solid var(--border-color);
-}
-
-.primaryBtn:hover {
-  background: var(--button-hover);
 }
 
 .secondaryBtn {

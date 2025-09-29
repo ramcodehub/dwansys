@@ -1,14 +1,13 @@
 .card {
-  border: 2px solid var(--border-color);
-  background-color: var(--card-background);
+  border: 2px solid #181818;
+  background-color: #000000;
   max-width: 600px;
-  transition: all 0.3s ease;
 }
 .card h2 {
   min-height: 4.6rem;
 }
 .card p {
-  color: var(--grey-color);
+  color: #aaaaaa;
   min-height: 5.8rem;
 }
 .card .primaryBtn i {
@@ -19,24 +18,4 @@
   transform: translateX(10px); 
 }
 
-/* Make cards full-width on mobile and override inline display */
-@media (max-width: 768px) {
-  .card {
-    width: 100%;
-    max-width: 100%;
-    display: block !important; /* override d-inline */
-  }
-  .card img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-width: 576px) {
-  .card {
-    width: 100% !important;
-    max-width: 100% !important;
-    display: block !important;
-  }
-}
 

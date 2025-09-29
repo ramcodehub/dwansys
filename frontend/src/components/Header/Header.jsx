@@ -4,7 +4,6 @@ import Button from '../Button/Button';
 import PopUp from "../PopUp/PopUp";
 import Navigation from '../Navigation/Navigation';
 import MobileNavigation from '../MobileNavigation/MobileNavigation';
-import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
@@ -29,10 +28,7 @@ const Header = () => {
       <nav className=" d-flex justify-content-between header-nav" >
         <Navigation />
       </nav>
-      <div className="d-flex align-items-center gap-3">
-        <ThemeToggle />
-        <Button variant="secondary" onClick={() => setShowContact(true)} className='navBar-Btn'>Get Started</Button>
-      </div>
+      <Button variant="secondary" onClick={() => setShowContact(true)} className='navBar-Btn ms-4'>Get Started</Button>
       <PopUp show={showContact} onClose={() => setShowContact(false)} />
       <button
         className="mobile-menu-btn d-md-none"

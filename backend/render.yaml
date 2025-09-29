@@ -1,7 +1,7 @@
 services:
   - type: web
     name: dwansys-backend
-    env: node
+    runtime: node
     plan: free
     buildCommand: npm install
     startCommand: npm start
@@ -14,7 +14,7 @@ services:
       - key: LOG_LEVEL
         value: info
       - key: CORS_ORIGIN
-        value: https://your-frontend-app.netlify.app
+        value: https://dwansys.com
       - key: SUPABASE_URL
         fromDatabase:
           name: supabase

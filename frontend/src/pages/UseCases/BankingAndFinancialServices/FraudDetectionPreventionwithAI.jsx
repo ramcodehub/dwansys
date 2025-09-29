@@ -1,6 +1,6 @@
 import React from 'react'
 import PageBuilder from '../../../components/PageBuilder/PageBuilder'
-import FraudDetectionPreventionwithAIData from '../../../config/UseCases/BankingandFinancialServices/FraudDetectionPreventionwithAIData'
+import FraudDetectionPreventionwithAIData from '../../../config/UseCases/BankingAndFinancialServices/FraudDetectionPreventionwithAIData'
 
 const FraudDetectionPreventionwithAI = () => {
   return (

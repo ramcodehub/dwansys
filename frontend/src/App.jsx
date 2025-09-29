@@ -2,9 +2,6 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
-import { ThemeProvider } from './contexts/ThemeContext';
-// Import theme test for development
-import './utils/themeTest.js';
 import AgenticAI from './pages/AI_Solutions/AgenticAI/AgenticAI';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 // AI Solutions
@@ -72,7 +69,7 @@ import ErrorPage from './components/ErrorPage/ErrorPage';
 
 function App() {
   return (
-    <ThemeProvider>
+    <>
       <ScrollToTop/>
       <Header />
       <div className="main-container">
@@ -140,7 +137,7 @@ function App() {
         </Routes>
       </div>
       <Footer />
-    </ThemeProvider>
+    </>
   );
 }
 
