@@ -32,15 +32,19 @@ const corsOptions = {
     const allowedOrigins = corsOrigin.split(',').map(origin => origin.trim());
     
     // Check if the origin is in our allowed list OR if it's undefined (for same-origin requests)
-    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+    // Also allow if the origin is null or undefined
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin || origin === 'null') {
       callback(null, true);
     } else {
+      // Log the origin for debugging purposes
+      logger.warn({ origin, allowedOrigins }, 'CORS Origin not allowed');
       callback(new Error('Not allowed by CORS'));
     }
   },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  optionsSuccessStatus: 200 // Some legacy browsers choke on 204
 };
 
 app.use(cors(corsOptions));
@@ -49,8 +53,25 @@ app.use(express.json({ limit: '1mb' }));
 // Explicitly handle preflight OPTIONS requests
 app.options('*', cors(corsOptions));
 
+// Add a middleware to log all requests for debugging
+app.use((req, res, next) => {
+  logger.info({ method: req.method, url: req.url, origin: req.get('origin') }, 'Incoming request');
+  next();
+});
+
 // Basic rate limit for all routes
-const globalLimiter = rateLimit({ windowMs: 60 * 1000, max: 120, standardHeaders: true, legacyHeaders: false });
+const globalLimiter = rateLimit({ 
+  windowMs: 60 * 1000, 
+  max: 120, 
+  standardHeaders: true, 
+  legacyHeaders: false,
+  message: {
+    error: {
+      code: 'RATE_LIMIT_EXCEEDED',
+      message: 'Too many requests, please try again later.'
+    }
+  }
+});
 app.use(globalLimiter);
 
 // Health
@@ -68,5 +89,5 @@ app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  logger.info({ port: PORT, env: process.env.NODE_ENV }, 'Backend server running');
+  logger.info({ port: PORT, env: process.env.NODE_ENV, corsOrigins: process.env.CORS_ORIGIN }, 'Backend server running');
 });
