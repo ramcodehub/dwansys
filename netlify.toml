@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+[build]
+<<<<<<< HEAD
+  base = "frontend"
+  command = "npm run build"
+  publish = "frontend/dist"
+=======
+  command = "npm run build"
+  publish = "dist"
+>>>>>>> 685137abb47f4a3ebd0df6531f49d7d2080d8058
+
+>>>>>>> ebcec9630b5c1142cd921b58551be1bac1c32579
 [build.environment]
   NODE_VERSION = "20"
 
@@ -26,3 +39,6 @@
   to = "https://dwansys.onrender.com/api/:splat"
   status = 200
   force = true
+=======
+  force = true
+>>>>>>> 685137abb47f4a3ebd0df6531f49d7d2080d8058
