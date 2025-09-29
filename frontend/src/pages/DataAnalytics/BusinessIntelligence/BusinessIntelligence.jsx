@@ -1,5 +1,5 @@
 import PageBuilder from '../../../components/PageBuilder/PageBuilder';
-import BusinessIntelligenceData from '../../../config/Capabilities/BusinessIntelligenceData.js';
+import BusinessIntelligenceData from '../../../config/Capabilities/BusinessIntelligenceData';
 
 const BusinessIntelligence = () => {
   return (

@@ -1,11 +1,11 @@
 import React from 'react'
 import PageBuilder from '../../../components/PageBuilder/PageBuilder'
-import AIInMentalHealthData from '../../../config/UseCases/HealthcareandLifeSciences/AIInMentalHealthData.js'
+import AIinMentalHealthData from '../../../config/UseCases/HealthcareandLifeSciences/AIinMentalHealthData'
 
 const AIinMentalHealth = () => {
   return (
     <div>
-      <PageBuilder sections={AIInMentalHealthData.sections}/>
+      <PageBuilder sections={AIinMentalHealthData.sections}/>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import PageBuilder from '../../../components/PageBuilder/PageBuilder';
-import AIPoweredVirtualAssistanceData from '../../../config/Capabilities/AIPoweredVirtualAssistanceData.js';
+import AIPoweredVirtualAssistanceData from '../../../config/Capabilities/AIPoweredVirtualAssistanceData';
 
 const AIPoweredVirtualAssistance = () => {
   return (

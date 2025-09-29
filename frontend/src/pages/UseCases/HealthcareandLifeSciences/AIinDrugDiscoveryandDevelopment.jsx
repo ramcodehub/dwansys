@@ -1,6 +1,6 @@
 import React from 'react'
 import PageBuilder from '../../../components/PageBuilder/PageBuilder'
-import AIInDrugDiscoveryAndDevelopmentData from '../../../config/UseCases/HealthcareandLifeSciences/AIInDrugDiscoveryAndDevelopmentData.js'
+import AIInDrugDiscoveryAndDevelopmentData from '../../../config/UseCases/HealthcareandLifeSciences/AIInDrugDiscoveryAndDevelopmentData'
 
 
 const AIinDrugDiscoveryandDevelopment = () => {

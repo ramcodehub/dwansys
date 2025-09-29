@@ -1,11 +1,11 @@
 import React from 'react'
 import PageBuilder from '../../../components/PageBuilder/PageBuilder'
-import AIInMedicalDiagnosisAndImagingAnalysisData from '../../../config/UseCases/HealthcareandLifeSciences/AIInMedicalDiagnosisAndImagingAnalysisData.js'
+import AIinMedicalDiagnosisandImagingAnalysisData from '../../../config/UseCases/HealthcareandLifeSciences/AIinMedicalDiagnosisandImagingAnalysisData'
 
 const AIinMedicalDiagnosisandImagingAnalysis = () => {
   return (
     <div>
-      <PageBuilder sections={AIInMedicalDiagnosisAndImagingAnalysisData.sections}/>
+      <PageBuilder sections={AIinMedicalDiagnosisandImagingAnalysisData.sections}/>
     </div>
   )
 }

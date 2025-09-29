@@ -1,6 +1,6 @@
 import React from 'react'
 import PageBuilder from '../../../components/PageBuilder/PageBuilder'
-import AIInHospitalOperationsAndWorkflowOptimizationData from '../../../config/UseCases/HealthcareandLifeSciences/AIInHospitalOperationsAndWorkflowOptimizationData.js'
+import AIInHospitalOperationsAndWorkflowOptimizationData from '../../../config/UseCases/HealthcareandLifeSciences/AIInHospitalOperationsAndWorkflowOptimizationData'
 
 const AIinHospitalOperationsWorkflowOptimization = () => {
   return (

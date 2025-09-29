@@ -1,5 +1,5 @@
 import PageBuilder from '../../../components/PageBuilder/PageBuilder';
-import AutomatedReportDeliveryData from '../../../config/Capabilities/AutomatedReportDeliveryData.js';
+import AutomatedReportDeliveryData from '../../../config/Capabilities/AutomatedReportDeliveryData';
 
 const AutomatedReportDelivery = () => {
   return (

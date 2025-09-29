@@ -1,5 +1,5 @@
 import PageBuilder from '../../../components/PageBuilder/PageBuilder';
-import DocumentSummarizationData from '../../../config/Capabilities/DocumentSummarizationData.js';
+import DocumentSummarizationData from '../../../config/Capabilities/DocumentSummarizationData';
 
 const DocumentSummarization = () => {
   return (

@@ -1,6 +1,6 @@
 import DataStorageImg from '../../../assets/images/Capabilities-images/DataLakes.png';
 import PageBuilder from '../../../components/PageBuilder/PageBuilder';
-import DataStorageData from '../../../config/Capabilities/DataStorageData.js';
+import DataStorageData from '../../../config/Capabilities/DataStorageData';
 import './DataStorage.css';
 
 const DataStorage = () => {

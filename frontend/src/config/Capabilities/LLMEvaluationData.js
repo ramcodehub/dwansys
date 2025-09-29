@@ -1,6 +1,6 @@
 import Overview from '../../assets/images/Capabilities-images/LLMEvaluation1.jpg';
 import CoreComponentImg from '../../assets/images/Capabilities-images/LLMEvaluationCore.jpg';
-import Banner from '../../assets/images/CapabilitiesBanner/LLMEValuation.png';
+import Banner from '../../assets/images/CapabilitiesBanner/LLMEvaluation.png';
 
 const LLMEvaluationData = {
   sections: [

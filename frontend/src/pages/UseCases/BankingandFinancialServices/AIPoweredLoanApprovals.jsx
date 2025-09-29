@@ -1,6 +1,6 @@
 import React from 'react'
 import PageBuilder from '../../../components/PageBuilder/PageBuilder'
-import AIPoweredLoanApprovalsData from '../../../config/UseCases/BankingandFinancialServices/AIPoweredLoanApprovalsData.js'
+import AIPoweredLoanApprovalsData from '../../../config/UseCases/BankingandFinancialServices/AIPoweredLoanApprovalsData'
 
 const AIPoweredLoanApprovals = () => {
   return (

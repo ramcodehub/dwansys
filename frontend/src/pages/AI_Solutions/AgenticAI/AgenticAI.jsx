@@ -1,5 +1,5 @@
 import PageBuilder from '../../../components/PageBuilder/PageBuilder';
-import AgenticAIData from '../../../config/Capabilities/AgenticAIData.js';
+import AgenticAIData from '../../../config/Capabilities/AgenticAIData';
 
 const AgenticAI = () => {
   return (

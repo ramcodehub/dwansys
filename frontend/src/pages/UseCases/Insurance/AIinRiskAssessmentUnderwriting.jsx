@@ -1,11 +1,11 @@
 import React from 'react'
 import PageBuilder from '../../../components/PageBuilder/PageBuilder'
-import AIInRiskAssessmentAndUnderwritingData from '../../../config/UseCases/Insurance/AIInRiskAssessmentAndUnderwritingData.js'
+import AIRiskAssessmentAndUnderwritingData from '../../../config/UseCases/Insurance/AIInRiskAssessmentAndUnderwritingData'
 
 const AIinRiskAssessmentUnderwriting = () => {
   return (
     <div>
-      <PageBuilder sections={AIInRiskAssessmentAndUnderwritingData.sections}/>
+      <PageBuilder sections={AIRiskAssessmentAndUnderwritingData.sections}/>
     </div>
   )
 }

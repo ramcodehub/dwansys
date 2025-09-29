@@ -1,5 +1,5 @@
 import PageBuilder from '../../../components/PageBuilder/PageBuilder';
-import DataOrchestrationData from '../../../config/Capabilities/DataOrchestrationData.js';
+import DataOrchestrationData from '../../../config/Capabilities/DataOrchestrationData';
 
 const DataOrchestration = () => {
   return (

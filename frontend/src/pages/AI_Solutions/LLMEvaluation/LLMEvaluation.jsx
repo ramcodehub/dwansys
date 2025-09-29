@@ -1,5 +1,5 @@
 import PageBuilder from '../../../components/PageBuilder/PageBuilder';
-import LLMEvalutionData from '../../../config/Capabilities/LLMEvaluationData.js';
+import LLMEvalutionData from '../../../config/Capabilities/LLMEvaluationData';
 
 const LLMEvaluation = () => {
   return (
