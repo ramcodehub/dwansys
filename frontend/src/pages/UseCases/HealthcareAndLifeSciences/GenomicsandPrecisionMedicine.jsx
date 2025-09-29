@@ -1,6 +1,6 @@
 import React from 'react'
 import PageBuilder from '../../../components/PageBuilder/PageBuilder'
-import GenomicsandPrecisionMedicineData from '../../../config/UseCases/HealthcareandLifeSciences/GenomicsandPrecisionMedicineData'
+import GenomicsandPrecisionMedicineData from '../../../config/UseCases/HealthcareandLifeSciences/GenomicsAndPrecisionMedicineData'
 
 const GenomicsandPrecisionMedicine = () => {
   return (

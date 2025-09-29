@@ -30,14 +30,14 @@ import PredictiveAnalyticsforClaimsManagement from './pages/UseCases/Insurance/P
 import RegulatoryComplianceDocumentProcessing from './pages/UseCases/Insurance/RegulatoryComplianceDocumentProcessing';
 import AIinAutoHealthPropertyInsurance from './pages/UseCases/Insurance/AIinAutoHealthPropertyInsurance';
 
-// HealthcareAndLifeSciences
-import WearableHealthTechRemoteMonitoring from './pages/UseCases/HealthcareAndLifeSciences/WearableHealthTechRemoteMonitoring';
-import PredictiveAnalyticsforDiseaseOutbreaks from './pages/UseCases/HealthcareAndLifeSciences/PredictiveAnalyticsforDiseaseOutbreaks';
-import GenomicsandPrecisionMedicine from './pages/UseCases/HealthcareAndLifeSciences/GenomicsandPrecisionMedicine';
-import AIinDrugDiscoveryandDevelopment from './pages/UseCases/HealthcareAndLifeSciences/AIinDrugDiscoveryandDevelopment';
-import AIinMentalHealth from './pages/UseCases/HealthcareAndLifeSciences/AIinMentalHealth';
-import AIinMedicalDiagnosisandImagingAnalysis from './pages/UseCases/HealthcareAndLifeSciences/AIinMedicalDiagnosisandImagingAnalysis';
-import AIinHospitalOperationsWorkflowOptimization from './pages/UseCases/HealthcareAndLifeSciences/AIinHospitalOperationsWorkflowOptimization';
+// HealthcareandLifeSciences
+import WearableHealthTechRemoteMonitoring from './pages/UseCases/HealthcareandLifeSciences/WearableHealthTechRemoteMonitoring';
+import PredictiveAnalyticsforDiseaseOutbreaks from './pages/UseCases/HealthcareandLifeSciences/PredictiveAnalyticsforDiseaseOutbreaks';
+import GenomicsandPrecisionMedicine from './pages/UseCases/HealthcareandLifeSciences/GenomicsandPrecisionMedicine';
+import AIinDrugDiscoveryandDevelopment from './pages/UseCases/HealthcareandLifeSciences/AIinDrugDiscoveryandDevelopment';
+import AIinMentalHealth from './pages/UseCases/HealthcareandLifeSciences/AIinMentalHealth';
+import AIinMedicalDiagnosisandImagingAnalysis from './pages/UseCases/HealthcareandLifeSciences/AIinMedicalDiagnosisandImagingAnalysis';
+import AIinHospitalOperationsWorkflowOptimization from './pages/UseCases/HealthcareandLifeSciences/AIinHospitalOperationsWorkflowOptimization';
 
 // Sustainability
 import SocialSentimentAnalysis from './pages/UseCases/Sustainability/SocialSentimentAnalysis';
@@ -48,15 +48,15 @@ import CarbonEmissionsMonitoring from './pages/UseCases/Sustainability/CarbonEmi
 import WorkplaceSafetyMonitoring from './pages/UseCases/Sustainability/WorkplaceSafetyMonitoring';
 
 
-// BankingAndFinancialServices
-import FraudDetectionPreventionwithAI from './pages/UseCases/BankingAndFinancialServices/FraudDetectionPreventionwithAI';
-import AIPoweredRiskAssessment from './pages/UseCases/BankingAndFinancialServices/AIPoweredRiskAssessment';
-import AIPoweredLoanApprovals from './pages/UseCases/BankingAndFinancialServices/AIPoweredLoanApprovals';
-import AIPoweredInvestmentOptimization from './pages/UseCases/BankingAndFinancialServices/AIPoweredInvestmentOptimization';
-import AIPoweredComplianceAndAntiMoneyLaundering from './pages/UseCases/BankingAndFinancialServices/AIPoweredComplianceAndAntiMoneyLaundering';
-import AIPoweredBankingAutomationAndProcessOptimization from './pages/UseCases/BankingAndFinancialServices/AIPoweredBankingAutomationAndProcessOptimization';
-import AIPoweredAlgorithmicTrading from './pages/UseCases/BankingAndFinancialServices/AIPoweredAlgorithmicTrading';
-import AIEnhancedCybersecurityforFinancialSecurity from './pages/UseCases/BankingAndFinancialServices/AIEnhancedCybersecurityforFinancialSecurity';
+// BankingandFinancialServices
+import FraudDetectionPreventionwithAI from './pages/UseCases/BankingandFinancialServices/FraudDetectionPreventionwithAI';
+import AIPoweredRiskAssessment from './pages/UseCases/BankingandFinancialServices/AIPoweredRiskAssessment';
+import AIPoweredLoanApprovals from './pages/UseCases/BankingandFinancialServices/AIPoweredLoanApprovals';
+import AIPoweredInvestmentOptimization from './pages/UseCases/BankingandFinancialServices/AIPoweredInvestmentOptimization';
+import AIPoweredComplianceAndAntiMoneyLaundering from './pages/UseCases/BankingandFinancialServices/AIPoweredComplianceAndAntiMoneyLaundering';
+import AIPoweredBankingAutomationAndProcessOptimization from './pages/UseCases/BankingandFinancialServices/AIPoweredBankingAutomationAndProcessOptimization';
+import AIPoweredAlgorithmicTrading from './pages/UseCases/BankingandFinancialServices/AIPoweredAlgorithmicTrading';
+import AIEnhancedCybersecurityforFinancialSecurity from './pages/UseCases/BankingandFinancialServices/AIEnhancedCybersecurityforFinancialSecurity';
 
 
 
@@ -106,7 +106,7 @@ function App() {
           <Route path='/regulatory-compliance-document-processing' element={<RegulatoryComplianceDocumentProcessing/>}/>
           <Route path='/ai-in-auto-health-property-insurance' element={<AIinAutoHealthPropertyInsurance/>}/>
 
-          {/* HealthcareAndLifeSciences */}
+          {/* HealthcareandLifeSciences */}
           <Route path='/wearable-health-tech-remote-monitoring' element={<WearableHealthTechRemoteMonitoring/>}/>
           <Route path='/predictive-analytics-for-disease-outbreaks' element={<PredictiveAnalyticsforDiseaseOutbreaks/>}/>
           <Route path='/genomics-and-precision-medicine' element={<GenomicsandPrecisionMedicine/>}/>
@@ -123,7 +123,7 @@ function App() {
           <Route path='/carbon-emissions-monitoring' element={<CarbonEmissionsMonitoring/>}/>
           <Route path='/workplace-safety-monitoring' element={<WorkplaceSafetyMonitoring/>}/>
 
-          {/* BankingAndFinancialServices */}
+          {/* BankingandFinancialServices */}
           <Route path='/fraud-detection-prevention-with-ai' element={<FraudDetectionPreventionwithAI/>}/>
           <Route path='/ai-powered-risk-assessment' element={<AIPoweredRiskAssessment/>}/>
           <Route path='/ai-powered-loan-approvals' element={<AIPoweredLoanApprovals/>}/>
