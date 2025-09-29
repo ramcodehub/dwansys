@@ -1,0 +1,35 @@
+# Node
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# Env / secrets
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+*.out
+*.err
+
+# Coverage / tooling
+coverage/
+.nyc_output/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Builds / caches
+dist/
+build/
+.cache/
+
+# Database dumps
+*.sql.dump
+*.sqlite
+
+
