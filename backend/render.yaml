@@ -14,7 +14,7 @@ services:
       - key: LOG_LEVEL
         value: info
       - key: CORS_ORIGIN
-        value: https://dwansys.com,https://www.dwansys.com,https://dwansyss.netlify.app
+        value: https://dwansys.com,https://www.dwansys.com,https://dwansyss.netlify.app,https://dwansys.onrender.com
       - key: SUPABASE_URL
         value: your_supabase_project_url
       - key: SUPABASE_KEY

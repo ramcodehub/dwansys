@@ -31,6 +31,7 @@ const corsOptions = {
     const corsOrigin = process.env.CORS_ORIGIN || 'http://localhost:5173';
     const allowedOrigins = corsOrigin.split(',').map(origin => origin.trim());
     
+    // Check if the origin is in our allowed list OR if it's undefined (for same-origin requests)
     if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
       callback(null, true);
     } else {
@@ -44,6 +45,9 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use(express.json({ limit: '1mb' }));
+
+// Explicitly handle preflight OPTIONS requests
+app.options('*', cors(corsOptions));
 
 // Basic rate limit for all routes
 const globalLimiter = rateLimit({ windowMs: 60 * 1000, max: 120, standardHeaders: true, legacyHeaders: false });

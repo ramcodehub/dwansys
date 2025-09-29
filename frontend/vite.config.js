@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   // Add base path configuration for deployment to subdirectories if needed
-  base: './',
+  base: '/',
   // Configure build options
   build: {
     // Ensure assets are properly bundled
