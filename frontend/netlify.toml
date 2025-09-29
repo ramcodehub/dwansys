@@ -24,9 +24,9 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# SPA fallback for all routes
+# API proxy for local development
 [[redirects]]
   from = "/api/*"
-  to = "https://your-backend-app.onrender.com/api/:splat"
+  to = "https://dwansys.onrender.com/api/:splat"
   status = 200
   force = true

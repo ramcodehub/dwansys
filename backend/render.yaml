@@ -14,36 +14,20 @@ services:
       - key: LOG_LEVEL
         value: info
       - key: CORS_ORIGIN
-        value: https://dwansys.com
+        value: https://dwansys.com,https://www.dwansys.com,https://dwansyss.netlify.app
       - key: SUPABASE_URL
-        fromDatabase:
-          name: supabase
-          property: connectionString
+        value: your_supabase_project_url
       - key: SUPABASE_KEY
-        fromDatabase:
-          name: supabase
-          property: password
+        value: your_supabase_anon_key
       - key: SUPABASE_SERVICE_KEY
-        fromDatabase:
-          name: supabase
-          property: serviceKey
+        value: your_supabase_service_role_key
       - key: EMAIL_HOST
-        fromDatabase:
-          name: email
-          property: host
+        value: your_smtp_host
       - key: EMAIL_PORT
-        fromDatabase:
-          name: email
-          property: port
+        value: "587"
       - key: EMAIL_USER
-        fromDatabase:
-          name: email
-          property: username
+        value: your_email_username
       - key: EMAIL_PASS
-        fromDatabase:
-          name: email
-          property: password
+        value: your_email_password
       - key: EMAIL_FROM
-        fromDatabase:
-          name: email
-          property: from
+        value: noreply@yourdomain.com
