@@ -1,33 +1,22 @@
-# Dependencies
-node_modules/
-
-# Builds
-dist/
-build/
-.cache/
-
-# Env
-.env
-.env.*
-
 # Logs
-logs/
+logs
 *.log
-*.out
-*.err
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# OS / Editor
-.DS_Store
-Thumbs.db
-.idea/
-.vscode/
-
-# Archives
-*.zip
-*.tar.gz
-*.tgz
-
-# Misc
+node_modules
+dist
+dist-ssr
 *.local
 
-
+# Editor directories and files
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
