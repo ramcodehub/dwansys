@@ -1,6 +1,6 @@
 import React from 'react'
 import PageBuilder from '../../../components/PageBuilder/PageBuilder'
-import PredictiveAnalyticsforClaimsManagementData from '../../../config/UseCases/Insurance/PredictiveAnalyticsforClaimsManagementData'
+import PredictiveAnalyticsforClaimsManagementData from '../../../config/UseCases/Insurance/PredictiveAnalyticsForClaimsManagementData'
 
 const PredictiveAnalyticsforClaimsManagement = () => {
   return (
