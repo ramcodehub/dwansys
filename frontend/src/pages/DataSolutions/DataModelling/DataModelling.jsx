@@ -1,5 +1,5 @@
 import PageBuilder from '../../../components/PageBuilder/PageBuilder';
-import DataModellingData from '../../../config/Capabilities/DataModellingData';
+import DataModellingData from '../../../config/Capabilities/DataModellingData.js';
 
 const DataModelling = () => {
   return (

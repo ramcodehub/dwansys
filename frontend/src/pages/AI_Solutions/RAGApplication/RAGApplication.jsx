@@ -1,5 +1,5 @@
 import PageBuilder from '../../../components/PageBuilder/PageBuilder';
-import RAGApplicationData from '../../../config/Capabilities/RAGApplicationsData';
+import RAGApplicationData from '../../../config/Capabilities/RAGApplicationsData.js';
 
 const RAGApplication = () => {
   return (

@@ -1,5 +1,5 @@
 import PageBuilder from '../../../components/PageBuilder/PageBuilder';
-import DataMigrationData from '../../../config/Capabilities/DataMigrationData';
+import DataMigrationData from '../../../config/Capabilities/DataMigrationData.js';
 
 const DataMigration = () => {
   return (
@@ -10,4 +10,3 @@ const DataMigration = () => {
 };
 
 export default DataMigration;
-

@@ -1,6 +1,6 @@
 import React from 'react'
 import PageBuilder from '../../../components/PageBuilder/PageBuilder'
-import AIPoweredRiskAssessmentData from '../../../config/UseCases/BankingandFinancialServices/AIPoweredRiskAssessmentData'
+import AIPoweredRiskAssessmentData from '../../../config/UseCases/BankingandFinancialServices/AIPoweredRiskAssessmentData.js'
 
 const AIPoweredRiskAssessment = () => {
   return (

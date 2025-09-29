@@ -1,6 +1,6 @@
 import React from 'react'
 import PageBuilder from '../../../components/PageBuilder/PageBuilder'
-import ClimateRiskModellingData from '../../../config/UseCases/Sustainability/ClimateRiskModellingData'
+import ClimateRiskModellingData from '../../../config/UseCases/Sustainability/ClimateRiskModellingData.js'
 
 const ClimateRiskModelling = () => {
   return (

@@ -1,5 +1,5 @@
 import PageBuilder from '../../../components/PageBuilder/PageBuilder';
-import MachineLearningApplicationsData from '../../../config/Capabilities/MachineLearningApplicationsData';
+import MachineLearningApplicationsData from '../../../config/Capabilities/MachineLearningApplicationsData.js';
 
 const MachineLearningApplications = () => {
   return (

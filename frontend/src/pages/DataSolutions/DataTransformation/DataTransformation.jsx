@@ -1,5 +1,5 @@
 import PageBuilder from '../../../components/PageBuilder/PageBuilder';
-import DataTransformationData from '../../../config/Capabilities/DataTransformationData';
+import DataTransformationData from '../../../config/Capabilities/DataTransformationData.js';
 
 const DataTransformation = () => {
   return (

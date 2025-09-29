@@ -1,5 +1,5 @@
 import PageBuilder from '../../../components/PageBuilder/PageBuilder';
-import ToolAugmentedChatbotsData from '../../../config/Capabilities/ToolAugmentedChatbotsData';
+import ToolAugmentedChatbotsData from '../../../config/Capabilities/ToolAugmentedChatbotsData.js';
 import CapabilitiesContent from '../../../components/CapabilitiesContent/CapabilitiesContent';
 
 const ToolAugmentedChatbots = () => {

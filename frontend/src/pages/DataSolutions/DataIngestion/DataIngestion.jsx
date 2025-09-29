@@ -1,5 +1,5 @@
 import PageBuilder from '../../../components/PageBuilder/PageBuilder';
-import DataIngestionData from '../../../config/Capabilities/DataIngestionData';
+import DataIngestionData from '../../../config/Capabilities/DataIngestionData.js';
 
 const DataIngestion = () => {
   return (
