@@ -67,7 +67,7 @@ const corsOptions = {
 // Apply CORS middleware before any routes
 app.use(cors(corsOptions));
 
-// Handle preflight OPTIONS requests explicitly
+// Handle preflight OPTIONS requests explicitly with more comprehensive headers
 app.options('*', (req, res) => {
   // Log the incoming OPTIONS request for debugging
   logger.info({
@@ -78,10 +78,12 @@ app.options('*', (req, res) => {
     accessControlRequestMethod: req.header('access-control-request-method')
   }, 'Preflight OPTIONS request received');
   
+  // Set all necessary CORS headers
   res.header('Access-Control-Allow-Origin', req.header('origin') || '*');
   res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type,Authorization');
+  res.header('Access-Control-Allow-Headers', 'Content-Type,Authorization,X-Requested-With,Accept');
   res.header('Access-Control-Allow-Credentials', 'true');
+  res.header('Access-Control-Max-Age', '86400'); // Cache preflight for 24 hours
   res.sendStatus(200);
 });
 
