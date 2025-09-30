@@ -16,15 +16,38 @@ const Subscribe = () => {
     console.log('Subscribe Component - API_BASE being used:', API_BASE);
   }, [API_BASE]);
 
+  // Prevent form submission on Enter key in input field
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // Prevent multiple submissions
     if (isSubmitting) return;
+    
+    // Get form data
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const email = String(formData.get('email') || '').trim();
+
+    // Basic validation
+    if (!email) {
+      setFeedback({ type: 'error', text: 'Please enter your email address.' });
+      return;
+    }
+
+    // Simple email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setFeedback({ type: 'error', text: 'Please enter a valid email address.' });
+      return;
+    }
+
     setIsSubmitting(true);
     try {
-      const form = e.currentTarget;
-      const formData = new FormData(form);
-      const email = String(formData.get('email') || '').trim();
-
       const res = await fetch(`${API_BASE}/api/subscribers`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -66,6 +89,7 @@ const Subscribe = () => {
             className="bg-black rounded-3" 
             style={{ padding: '1.25rem' }}
             required
+            onKeyDown={handleKeyDown} // Prevent Enter key submission
           />
           <button 
             type="submit" 

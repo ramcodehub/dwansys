@@ -16,22 +16,38 @@ const ContactUs = () => {
     console.log('ContactUs Component - API_BASE being used:', API_BASE);
   }, [API_BASE]);
 
+  // Prevent form submission on Enter key in input fields
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // Prevent multiple submissions
     if (isSubmitting) return;
+    
+    // Get form data
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const payload = {
+      name: String(formData.get('name') || '').trim(),
+      email: String(formData.get('email') || '').trim(),
+      company: String(formData.get('company') || '').trim() || null,
+      phone: String(formData.get('phone') || '').trim() || null,
+      subject: String(formData.get('subject') || '').trim(),
+      message: String(formData.get('message') || '').trim(),
+    };
+
+    // Basic validation
+    if (!payload.name || !payload.email || !payload.subject || !payload.message) {
+      setFeedback({ type: 'error', text: 'Please fill in all required fields.' });
+      return;
+    }
+
     setIsSubmitting(true);
     try {
-      const form = e.currentTarget;
-      const formData = new FormData(form);
-      const payload = {
-        name: String(formData.get('name') || '').trim(),
-        email: String(formData.get('email') || '').trim(),
-        company: String(formData.get('company') || '').trim() || null,
-        phone: String(formData.get('phone') || '').trim() || null,
-        subject: String(formData.get('subject') || '').trim(),
-        message: String(formData.get('message') || '').trim(),
-      };
-
       const res = await fetch(`${API_BASE}/api/contacts`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -108,7 +124,8 @@ const ContactUs = () => {
                       className="form-control"
                       id="name"
                       placeholder="Your Name"
-                      required=""
+                      required
+                      onKeyDown={handleKeyDown} // Prevent Enter key submission
                     />
                   </div>
                   <div className="col-md-6 form-group mt-3 mt-md-0">
@@ -117,8 +134,9 @@ const ContactUs = () => {
                       className="form-control"
                       name="email"
                       id="email"
-                      placeholder="Enter Your Bussiness Email"
-                      required=""
+                      placeholder="Enter Your Business Email"
+                      required
+                      onKeyDown={handleKeyDown} // Prevent Enter key submission
                     />
                   </div>
                 </div>
@@ -130,7 +148,7 @@ const ContactUs = () => {
                       className="form-control"
                       id="company"
                       placeholder="Enter Your Company"
-                      required=""
+                      onKeyDown={handleKeyDown} // Prevent Enter key submission
                     />
                   </div>
                   <div className="col-md-6 form-group mt-3 mt-md-0">
@@ -140,7 +158,7 @@ const ContactUs = () => {
                       name="phone"
                       id="phone"
                       placeholder="Enter Phone Number"
-                      required=""
+                      onKeyDown={handleKeyDown} // Prevent Enter key submission
                     />
                   </div>
                 </div>
@@ -151,7 +169,8 @@ const ContactUs = () => {
                     name="subject"
                     id="subject"
                     placeholder="Enter Subject"
-                    required=""
+                    required
+                    onKeyDown={handleKeyDown} // Prevent Enter key submission
                   />
                 </div>
                 <div className="form-group mt-3">
@@ -159,7 +178,8 @@ const ContactUs = () => {
                     className="form-control"
                     name="message"
                     placeholder="Message"
-                    required=""
+                    required
+                    onKeyDown={handleKeyDown} // Prevent Enter key submission
                   ></textarea>
                 </div>
                 <div className="text-center m-4">
