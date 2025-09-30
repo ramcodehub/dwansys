@@ -1,6 +1,6 @@
 import React from 'react'
 import PageBuilder from '../../../components/PageBuilder/PageBuilder'
-import CarbonEmissionsMonitoringData from '../../../config/UseCases/Sustainability/CarbonEmissionsMonitoringData'
+import CarbonEmissionsMonitoringData from '../../../config/UseCases/Sustainability/CarbonEmissionsMonitoringData.js'
 
 const CarbonEmissionsMonitoring = () => {
   return (

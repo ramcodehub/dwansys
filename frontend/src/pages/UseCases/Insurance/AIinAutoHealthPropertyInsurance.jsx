@@ -1,6 +1,6 @@
 import React from 'react'
 import PageBuilder from '../../../components/PageBuilder/PageBuilder'
-import AIAutoHealthAndPropertyInsuranceData from '../../../config/UseCases/Insurance/AIInAutoHealthAndPropertyInsuranceData'
+import AIAutoHealthAndPropertyInsuranceData from '../../../config/UseCases/Insurance/AIInAutoHealthAndPropertyInsuranceData.js'
 
 const AIinAutoHealthPropertyInsurance = () => {
   return (

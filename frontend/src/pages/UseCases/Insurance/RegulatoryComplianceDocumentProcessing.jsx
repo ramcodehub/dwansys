@@ -1,6 +1,6 @@
 import React from 'react'
 import PageBuilder from '../../../components/PageBuilder/PageBuilder'
-import RegulatoryComplianceAndDocumentProcessingData from '../../../config/UseCases/Insurance/RegulatoryComplianceAndDocumentProcessingData'
+import RegulatoryComplianceAndDocumentProcessingData from '../../../config/UseCases/Insurance/RegulatoryComplianceAndDocumentProcessingData.js'
 
 const RegulatoryComplianceDocumentProcessing = () => {
   return (

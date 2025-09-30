@@ -1,6 +1,6 @@
 import React from 'react'
 import PageBuilder from '../../../components/PageBuilder/PageBuilder'
-import SocialSentimentAnalysisData from '../../../config/UseCases/Sustainability/SocialSentimentAnalysisData'
+import SocialSentimentAnalysisData from '../../../config/UseCases/Sustainability/SocialSentimentAnalysisData.js'
 
 const SocialSentimentAnalysis = () => {
   return (

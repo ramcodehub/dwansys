@@ -1,6 +1,6 @@
 import React from 'react'
 import PageBuilder from '../../../components/PageBuilder/PageBuilder'
-import ResourceEfficiencyData from '../../../config/UseCases/Sustainability/ResourceEfficiencyData'
+import ResourceEfficiencyData from '../../../config/UseCases/Sustainability/ResourceEfficiencyData.js'
 
 const ResourceEfficiency = () => {
   return (

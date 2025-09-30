@@ -1,6 +1,6 @@
 import React from 'react'
 import PageBuilder from '../../../components/PageBuilder/PageBuilder'
-import FraudEthicsMonitoringData from '../../../config/UseCases/Sustainability/FraudEthicsMonitoringData'
+import FraudEthicsMonitoringData from '../../../config/UseCases/Sustainability/FraudEthicsMonitoringData.js'
 
 const FraudEthicsMonitoring = () => {
   return (
