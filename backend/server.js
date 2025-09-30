@@ -89,9 +89,6 @@ app.options('*', (req, res) => {
 
 app.use(express.json({ limit: '1mb' }));
 
-// Explicitly handle preflight OPTIONS requests
-app.options('*', cors(corsOptions));
-
 // Add a middleware to log incoming requests with origin information
 app.use((req, res, next) => {
   // Log requests for debugging (only in production for critical info)
