@@ -22,6 +22,14 @@ function getSupabase() {
       throw err;
     }
     
+    // Log Supabase configuration for debugging (without exposing the key)
+    console.log('Supabase client configuration:', {
+      url,
+      hasServiceKey: !!serviceKey,
+      hasAnonKey: !!anonKey,
+      usingServiceKey: !!serviceKey
+    });
+    
     // Create Supabase client with optimized settings
     supabase = createClient(url, key, {
       auth: { 

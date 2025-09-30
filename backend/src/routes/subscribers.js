@@ -24,6 +24,13 @@ router.post('/', createLimiter, async (req, res, next) => {
     const userAgent = req.headers['user-agent'] || null;
 
     const payload = { email: value.email, ip, user_agent: userAgent };
+    
+    // Log the payload for debugging
+    console.log('Inserting subscriber:', { 
+      email: payload.email,
+      ip: payload.ip
+    });
+    
     const { data, error: dbError } = await supabase
       .from('subscribers')
       .insert(payload)
@@ -37,6 +44,7 @@ router.post('/', createLimiter, async (req, res, next) => {
     }
     
     if (dbError) {
+      console.error('Database error:', dbError);
       if (dbError.code === '23505') { // Unique constraint violation
         const err = new Error('Email already subscribed');
         err.status = 409;
@@ -65,6 +73,7 @@ router.post('/', createLimiter, async (req, res, next) => {
       res.header('Access-Control-Allow-Origin', req.header('origin'));
       res.header('Access-Control-Allow-Credentials', 'true');
     }
+    console.error('Subscriber form error:', err);
     next(err); 
   }
 });

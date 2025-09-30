@@ -24,6 +24,16 @@ router.post('/', createLimiter, async (req, res, next) => {
     const userAgent = req.headers['user-agent'] || null;
 
     const payload = { name: value.name, email: value.email, phone: value.phone, company: value.company, subject: value.subject, message: value.message, ip, user_agent: userAgent };
+    
+    // Log the payload for debugging
+    console.log('Inserting contact:', { 
+      name: payload.name, 
+      email: payload.email,
+      subject: payload.subject,
+      hasMessage: !!payload.message,
+      ip: payload.ip
+    });
+    
     const { data, error: dbError } = await supabase
       .from('dwansyscontacts')
       .insert(payload)
@@ -37,6 +47,7 @@ router.post('/', createLimiter, async (req, res, next) => {
     }
     
     if (dbError) { 
+      console.error('Database error:', dbError);
       const e = new Error(dbError.message); 
       e.status = 500; 
       throw e; 
@@ -59,6 +70,7 @@ router.post('/', createLimiter, async (req, res, next) => {
       res.header('Access-Control-Allow-Origin', req.header('origin'));
       res.header('Access-Control-Allow-Credentials', 'true');
     }
+    console.error('Contact form error:', err);
     next(err); 
   }
 });
