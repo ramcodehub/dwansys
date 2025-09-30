@@ -14,22 +14,17 @@ const { notFoundHandler, errorHandler } = require('./src/middleware/errorHandler
 
 const app = express();
 
-// Logging
-const logger = pino({ level: process.env.LOG_LEVEL || 'info' });
+// Set logging level to warn to reduce verbosity
+const logger = pino({ level: process.env.LOG_LEVEL || 'warn' });
 app.use(pinoHttp({ 
   logger,
-  customSuccessMessage: (req, res) => {
-    const duration = Date.now() - req.startTime;
-    return `Request completed in ${duration}ms`;
-  },
-  customErrorMessage: (req, res, err) => {
-    const duration = Date.now() - req.startTime;
-    return `Request errored in ${duration}ms`;
-  },
-  reqCustomProps: (req, res) => {
-    return {
-      duration: Date.now() - req.startTime
-    };
+  // Only log errors and warnings, not every request
+  quietReqLogger: true,
+  autoLogging: {
+    ignore: (req) => {
+      // Ignore health check and static file requests
+      return req.url === '/health' || req.url === '/ping';
+    }
   }
 }));
 
@@ -57,8 +52,10 @@ const corsOptions = {
     if (allowedOrigins.indexOf(origin) !== -1 || !origin || origin === 'null') {
       callback(null, true);
     } else {
-      // Log the origin for debugging purposes
-      logger.warn({ origin, allowedOrigins }, 'CORS Origin not allowed');
+      // Only log CORS errors in development
+      if (process.env.NODE_ENV === 'development') {
+        logger.warn({ origin, allowedOrigins }, 'CORS Origin not allowed');
+      }
       callback(new Error('Not allowed by CORS'));
     }
   },
@@ -74,9 +71,10 @@ app.use(express.json({ limit: '1mb' }));
 // Explicitly handle preflight OPTIONS requests
 app.options('*', cors(corsOptions));
 
-// Add a middleware to log all requests for debugging
+// Remove the verbose request logging middleware
+// Add a simple startup message instead
 app.use((req, res, next) => {
-  logger.info({ method: req.method, url: req.url, origin: req.get('origin') }, 'Incoming request');
+  // Only log errors, not every request
   next();
 });
 
@@ -113,5 +111,6 @@ app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  logger.info({ port: PORT, env: process.env.NODE_ENV, corsOrigins: process.env.CORS_ORIGIN }, 'Backend server running');
+  // Simple startup message without verbose details
+  console.log(`Backend server running on port ${PORT}`);
 });
