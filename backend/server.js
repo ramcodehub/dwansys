@@ -52,17 +52,17 @@ const corsOptions = {
     if (allowedOrigins.indexOf(origin) !== -1 || !origin || origin === 'null') {
       callback(null, true);
     } else {
-      // Only log CORS errors in development
-      if (process.env.NODE_ENV === 'development') {
-        logger.warn({ origin, allowedOrigins }, 'CORS Origin not allowed');
-      }
+      // Log CORS errors in development and production for debugging
+      logger.warn({ origin, allowedOrigins, env: process.env.NODE_ENV }, 'CORS Origin not allowed');
       callback(new Error('Not allowed by CORS'));
     }
   },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-  optionsSuccessStatus: 200 // Some legacy browsers choke on 204
+  optionsSuccessStatus: 200, // Some legacy browsers choke on 204
+  // Add preflight continue to handle preflight requests properly
+  preflightContinue: false
 };
 
 app.use(cors(corsOptions));
@@ -71,12 +71,13 @@ app.use(express.json({ limit: '1mb' }));
 // Explicitly handle preflight OPTIONS requests
 app.options('*', cors(corsOptions));
 
-// Remove the verbose request logging middleware
-// Add a simple startup message instead
-app.use((req, res, next) => {
-  // Only log errors, not every request
-  next();
-});
+// Add a middleware to log all requests for debugging in development
+if (process.env.NODE_ENV === 'development') {
+  app.use((req, res, next) => {
+    // Only log errors, not every request
+    next();
+  });
+}
 
 // Basic rate limit for all routes
 const globalLimiter = rateLimit({ 
@@ -113,4 +114,8 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   // Simple startup message without verbose details
   console.log(`Backend server running on port ${PORT}`);
+  // Log CORS origins for debugging
+  const corsOrigin = process.env.CORS_ORIGIN || 'http://localhost:5173';
+  const allowedOrigins = corsOrigin.split(',').map(origin => origin.trim());
+  console.log(`CORS allowed origins: ${allowedOrigins.join(', ')}`);
 });
