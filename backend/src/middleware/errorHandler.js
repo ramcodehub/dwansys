@@ -13,6 +13,11 @@ const redact = (obj) => {
 };
 
 function notFoundHandler(req, res, next) {
+  // Ensure CORS headers are set for 404 responses
+  if (req.header('origin')) {
+    res.header('Access-Control-Allow-Origin', req.header('origin'));
+    res.header('Access-Control-Allow-Credentials', 'true');
+  }
   res.status(404).json({ error: 'Not Found' });
 }
 
@@ -22,6 +27,12 @@ function errorHandler(err, req, res, next) {
   const code = err.code || 'INTERNAL_ERROR';
   const isProd = process.env.NODE_ENV === 'production';
   const message = status >= 500 ? (isProd ? 'Internal Server Error' : (err.message || 'Internal Server Error')) : err.message || 'Request failed';
+
+  // Ensure CORS headers are set for error responses
+  if (req.header('origin')) {
+    res.header('Access-Control-Allow-Origin', req.header('origin'));
+    res.header('Access-Control-Allow-Credentials', 'true');
+  }
 
   if (req.log && typeof req.log.error === 'function') {
     req.log.error({
@@ -45,5 +56,3 @@ function errorHandler(err, req, res, next) {
 }
 
 module.exports = { notFoundHandler, errorHandler };
-
-

@@ -61,23 +61,49 @@ const corsOptions = {
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   optionsSuccessStatus: 200, // Some legacy browsers choke on 204
-  // Add preflight continue to handle preflight requests properly
   preflightContinue: false
 };
 
+// Apply CORS middleware before any routes
 app.use(cors(corsOptions));
+
+// Handle preflight OPTIONS requests explicitly
+app.options('*', (req, res) => {
+  // Log the incoming OPTIONS request for debugging
+  logger.info({
+    method: req.method,
+    url: req.url,
+    origin: req.header('origin'),
+    accessControlRequestHeaders: req.header('access-control-request-headers'),
+    accessControlRequestMethod: req.header('access-control-request-method')
+  }, 'Preflight OPTIONS request received');
+  
+  res.header('Access-Control-Allow-Origin', req.header('origin') || '*');
+  res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type,Authorization');
+  res.header('Access-Control-Allow-Credentials', 'true');
+  res.sendStatus(200);
+});
+
 app.use(express.json({ limit: '1mb' }));
 
 // Explicitly handle preflight OPTIONS requests
 app.options('*', cors(corsOptions));
 
-// Add a middleware to log all requests for debugging in development
-if (process.env.NODE_ENV === 'development') {
-  app.use((req, res, next) => {
-    // Only log errors, not every request
-    next();
-  });
-}
+// Add a middleware to log incoming requests with origin information
+app.use((req, res, next) => {
+  // Log requests for debugging (only in production for critical info)
+  if (process.env.NODE_ENV === 'development' || 
+      (req.method !== 'GET' && req.method !== 'HEAD' && req.url !== '/health' && req.url !== '/ping')) {
+    logger.info({
+      method: req.method,
+      url: req.url,
+      origin: req.header('origin'),
+      userAgent: req.header('user-agent')
+    }, 'Incoming request');
+  }
+  next();
+});
 
 // Basic rate limit for all routes
 const globalLimiter = rateLimit({ 
