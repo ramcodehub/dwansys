@@ -36,8 +36,9 @@ router.post('/', createLimiter, async (req, res, next) => {
     };
 
     // Insert into database
+    console.log('Attempting to insert subscriber:', payload);
     const { data, error: dbError } = await supabase
-      .from('subscribers')
+      .from('subscribers')  // Make sure this table exists
       .insert(payload)
       .select()
       .single();
@@ -55,10 +56,13 @@ router.post('/', createLimiter, async (req, res, next) => {
       return res.status(500).json({ 
         error: { 
           code: 'DATABASE_ERROR', 
-          message: 'Failed to save subscription'
+          message: 'Failed to save subscription',
+          details: process.env.NODE_ENV === 'development' ? dbError.message : undefined
         } 
       });
     }
+
+    console.log('Subscriber inserted successfully:', data);
 
     // Send email asynchronously (non-blocking)
     sendEmail({ template: 'subscription', data: value, req })
@@ -76,10 +80,105 @@ router.post('/', createLimiter, async (req, res, next) => {
     res.status(500).json({ 
       error: { 
         code: 'INTERNAL_ERROR', 
-        message: 'An unexpected error occurred'
+        message: 'An unexpected error occurred',
+        details: process.env.NODE_ENV === 'development' ? err.message : undefined
       } 
     });
   }
 });
 
-// ... keep the rest of the routes as they are ...
+router.put('/:id', async (req, res, next) => {
+  try {
+    // Validate request body
+    const { error, value } = subscriberUpdateSchema.validate(req.body, { abortEarly: false, stripUnknown: true });
+    if (error) {
+      return res.status(400).json({ 
+        error: { 
+          code: 'INVALID_BODY', 
+          message: 'Invalid subscriber payload',
+          details: error.details.map((d) => d.message)
+        } 
+      });
+    }
+
+    // Get Supabase client
+    const supabase = getSupabase();
+
+    // Prepare payload
+    const payload = { 
+      email: value.email, 
+      user_agent: req.headers['user-agent'] || null
+    };
+
+    // Update in database
+    const { data, error: dbError } = await supabase
+      .from('subscribers')
+      .update(payload)
+      .eq('id', req.params.id)
+      .select()
+      .single();
+    
+    if (dbError) {
+      console.error('Database error in subscribers route:', dbError);
+      return res.status(500).json({ 
+        error: { 
+          code: 'DATABASE_ERROR', 
+          message: 'Failed to update subscription',
+          details: process.env.NODE_ENV === 'development' ? dbError.message : undefined
+        } 
+      });
+    }
+
+    // Respond with success
+    res.status(200).json({ success: true, subscriber: data });
+  } catch (err) { 
+    console.error('Unexpected error in subscribers route:', err);
+    res.status(500).json({ 
+      error: { 
+        code: 'INTERNAL_ERROR', 
+        message: 'An unexpected error occurred',
+        details: process.env.NODE_ENV === 'development' ? err.message : undefined
+      } 
+    });
+  }
+});
+
+router.delete('/:id', async (req, res, next) => {
+  try {
+    // Get Supabase client
+    const supabase = getSupabase();
+
+    // Delete from database
+    const { data, error: dbError } = await supabase
+      .from('subscribers')
+      .delete()
+      .eq('id', req.params.id)
+      .select()
+      .single();
+    
+    if (dbError) {
+      console.error('Database error in subscribers route:', dbError);
+      return res.status(500).json({ 
+        error: { 
+          code: 'DATABASE_ERROR', 
+          message: 'Failed to delete subscription',
+          details: process.env.NODE_ENV === 'development' ? dbError.message : undefined
+        } 
+      });
+    }
+
+    // Respond with success
+    res.status(200).json({ success: true, subscriber: data });
+  } catch (err) { 
+    console.error('Unexpected error in subscribers route:', err);
+    res.status(500).json({ 
+      error: { 
+        code: 'INTERNAL_ERROR', 
+        message: 'An unexpected error occurred',
+        details: process.env.NODE_ENV === 'development' ? err.message : undefined
+      } 
+    });
+  }
+});
+
+module.exports = router;
