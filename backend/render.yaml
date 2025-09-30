@@ -14,7 +14,7 @@ services:
       - key: LOG_LEVEL
         value: warn
       - key: CORS_ORIGIN
-        value: https://dwansys.com,https://www.dwansys.com,https://dwansyss.netlify.app,https://dwansys.onrender.com
+        value: https://dwansys.com,https://www.dwansys.com,https://dwansyss.netlify.app,https://dwansys.onrender.com,http://localhost:5173
       - key: SUPABASE_URL
         value: https://aadcldlmhpnxdnrmubym.supabase.co
       - key: SUPABASE_KEY

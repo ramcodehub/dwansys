@@ -56,7 +56,7 @@ const corsOptions = {
       console.warn('CORS Origin not allowed:', { origin, allowedOrigins, env: process.env.NODE_ENV });
       callback(new Error('Not allowed by CORS'));
     }
-    },
+  },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
@@ -126,4 +126,6 @@ app.listen(PORT, () => {
   const corsOrigin = process.env.CORS_ORIGIN || 'http://localhost:5173';
   const allowedOrigins = corsOrigin.split(',').map(origin => origin.trim());
   console.log(`CORS allowed origins: ${allowedOrigins.join(', ')}`);
+  console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
+  console.log(`CORS_ORIGIN env var: ${process.env.CORS_ORIGIN}`);
 });
