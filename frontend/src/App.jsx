@@ -58,8 +58,6 @@ import AIPoweredBankingAutomationAndProcessOptimization from './pages/UseCases/B
 import AIPoweredAlgorithmicTrading from './pages/UseCases/BankingandFinancialServices/AIPoweredAlgorithmicTrading';
 import AIEnhancedCybersecurityforFinancialSecurity from './pages/UseCases/BankingandFinancialServices/AIEnhancedCybersecurityforFinancialSecurity';
 
-
-
 // General
 import Home from './pages/Home/Home';
 import DiscoverDwansys from './pages/DiscoverDwansys/DiscoverDwansys';

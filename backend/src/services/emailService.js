@@ -19,9 +19,15 @@ async function initializeTransporter(req) {
   const common = {
     host,
     auth: { user, pass },
-    connectionTimeout: 10_000,
-    greetingTimeout: 10_000,
-    socketTimeout: 15_000,
+    connectionTimeout: 5000, // 5 seconds
+    greetingTimeout: 5000,   // 5 seconds
+    socketTimeout: 5000,     // 5 seconds
+    // Add connection pooling
+    pool: true,
+    maxConnections: 5,
+    maxMessages: 100,
+    rateDelta: 1000,
+    rateLimit: 5
   };
 
   const attempts = [];
@@ -36,7 +42,14 @@ async function initializeTransporter(req) {
   for (const cfg of attempts) {
     const transporter = nodemailer.createTransport({ ...common, ...cfg });
     try {
-      await transporter.verify();
+      // Add a timeout to the verification
+      const verifyPromise = transporter.verify();
+      const timeoutPromise = new Promise((_, reject) => {
+        setTimeout(() => reject(new Error('SMTP verification timeout')), 10000);
+      });
+      
+      await Promise.race([verifyPromise, timeoutPromise]);
+      
       if (req && req.log) req.log.info({ smtp: { host, port: cfg.port, secure: cfg.secure } }, 'SMTP verified');
       return transporter;
     } catch (err) {
@@ -91,46 +104,42 @@ function generateSubscriptionEmail(data) {
 }
 
 async function sendEmail({ from, subject, html, template, data, req }) {
-  const transporter = await initializeTransporter(req);
-  const to = process.env.EMAIL_TO;
-  if (!to) throw Object.assign(new Error('EMAIL_TO not configured'), { status: 500 });
+  try {
+    const transporter = await initializeTransporter(req);
+    const to = process.env.EMAIL_TO;
+    if (!to) throw Object.assign(new Error('EMAIL_TO not configured'), { status: 500 });
 
-  let finalHtml = html;
-  let finalSubject = subject;
-  if (template === 'contact-form') {
-    finalHtml = generateContactFormEmail(data || {});
-    finalSubject = subject || `[Contact] ${data?.subject || 'New submission'}`;
-  } else if (template === 'subscription') {
-    finalHtml = generateSubscriptionEmail(data || {});
-    finalSubject = subject || `[Newsletter] New subscriber: ${data?.email || 'Unknown'}`;
-  }
-
-  const mailOptions = {
-    from: from || process.env.EMAIL_USER,
-    to,
-    subject: finalSubject,
-    html: finalHtml,
-  };
-
-  const maxAttempts = 3;
-  let lastErr;
-  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
-    try {
-      const info = await transporter.sendMail(mailOptions);
-      if (req && req.log) req.log.info({ attempt, messageId: info.messageId }, 'Email sent');
-      return { success: true, messageId: info.messageId };
-    } catch (err) {
-      lastErr = err;
-      if (req && req.log) req.log.warn({ attempt, err: { message: err.message } }, 'Email send failed');
-      if (attempt < maxAttempts) await delay(500 * attempt);
+    let finalHtml = html;
+    let finalSubject = subject;
+    if (template === 'contact-form') {
+      finalHtml = generateContactFormEmail(data || {});
+      finalSubject = subject || `[Contact] ${data?.subject || 'New submission'}`;
+    } else if (template === 'subscription') {
+      finalHtml = generateSubscriptionEmail(data || {});
+      finalSubject = subject || `[Newsletter] New subscriber: ${data?.email || 'Unknown'}`;
     }
+
+    const mailOptions = {
+      from: from || process.env.EMAIL_USER,
+      to,
+      subject: finalSubject,
+      html: finalHtml,
+    };
+
+    // Add timeout to email sending
+    const sendPromise = transporter.sendMail(mailOptions);
+    const timeoutPromise = new Promise((_, reject) => {
+      setTimeout(() => reject(new Error('Email sending timeout')), 15000);
+    });
+    
+    const info = await Promise.race([sendPromise, timeoutPromise]);
+    
+    if (req && req.log) req.log.info({ messageId: info.messageId }, 'Email sent');
+    return { success: true, messageId: info.messageId };
+  } catch (err) {
+    if (req && req.log) req.log.error({ err: { message: err.message } }, 'Failed to send email');
+    throw err;
   }
-  const e = new Error('Failed to send email');
-  e.status = 502;
-  e.cause = lastErr;
-  throw e;
 }
 
 module.exports = { initializeTransporter, generateContactFormEmail, generateSubscriptionEmail, sendEmail };
-
-

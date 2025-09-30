@@ -1,11 +1,20 @@
 import './ContactUs.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const ContactUs = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [feedback, setFeedback] = useState({ type: null, text: '' });
 
-  const API_BASE = import.meta?.env?.VITE_API_BASE_URL || 'http://localhost:5000';
+  // More robust way to access environment variable
+  const API_BASE = (import.meta && import.meta.env && import.meta.env.VITE_API_BASE_URL) 
+    ? import.meta.env.VITE_API_BASE_URL 
+    : 'http://localhost:5001'; // Default to 5001 instead of 5000
+
+  // Log the API base URL for debugging
+  useEffect(() => {
+    console.log('ContactUs Component - VITE_API_BASE_URL:', import.meta?.env?.VITE_API_BASE_URL);
+    console.log('ContactUs Component - API_BASE being used:', API_BASE);
+  }, [API_BASE]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

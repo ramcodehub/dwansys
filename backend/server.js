@@ -16,7 +16,28 @@ const app = express();
 
 // Logging
 const logger = pino({ level: process.env.LOG_LEVEL || 'info' });
-app.use(pinoHttp({ logger }));
+app.use(pinoHttp({ 
+  logger,
+  customSuccessMessage: (req, res) => {
+    const duration = Date.now() - req.startTime;
+    return `Request completed in ${duration}ms`;
+  },
+  customErrorMessage: (req, res, err) => {
+    const duration = Date.now() - req.startTime;
+    return `Request errored in ${duration}ms`;
+  },
+  reqCustomProps: (req, res) => {
+    return {
+      duration: Date.now() - req.startTime
+    };
+  }
+}));
+
+// Add start time to requests for performance monitoring
+app.use((req, res, next) => {
+  req.startTime = Date.now();
+  next();
+});
 
 // Security & Basics
 app.use(helmet());
@@ -76,7 +97,10 @@ app.use(globalLimiter);
 
 // Health
 app.get('/health', (req, res) => res.json({ ok: true }));
-app.get('/ping', (req, res) => res.json({ message: 'pong', timestamp: new Date().toISOString() }));
+app.get('/ping', (req, res) => {
+  const duration = Date.now() - req.startTime;
+  res.json({ message: 'pong', timestamp: new Date().toISOString(), responseTime: duration });
+});
 
 // Routes
 app.use('/api', emailRouter);

@@ -31,12 +31,16 @@ router.post('/', createLimiter, async (req, res, next) => {
       .single();
     if (dbError) { const e = new Error(dbError.message); e.status = 500; throw e; }
 
-    try {
-      await sendEmail({ template: 'contact-form', data: value, req });
-    } catch (emailErr) {
-      if (req.log) req.log.warn({ err: { message: emailErr.message } }, 'Failed to send contact email');
-    }
+    // Send email asynchronously (non-blocking)
+    sendEmail({ template: 'contact-form', data: value, req })
+      .then(() => {
+        if (req.log) req.log.info('Contact form email sent successfully');
+      })
+      .catch((emailErr) => {
+        if (req.log) req.log.warn({ err: { message: emailErr.message } }, 'Failed to send contact email');
+      });
 
+    // Respond immediately after database operation
     res.status(201).json({ success: true, contact: data });
   } catch (err) { next(err); }
 });
@@ -81,5 +85,3 @@ router.delete('/:id', async (req, res, next) => {
 });
 
 module.exports = router;
-
-

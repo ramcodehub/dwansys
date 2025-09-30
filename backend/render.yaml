@@ -16,18 +16,18 @@ services:
       - key: CORS_ORIGIN
         value: https://dwansys.com,https://www.dwansys.com,https://dwansyss.netlify.app,https://dwansys.onrender.com
       - key: SUPABASE_URL
-        value: your_supabase_project_url
+        value: https://aadcldlmhpnxdnrmubym.supabase.co
       - key: SUPABASE_KEY
-        value: your_supabase_anon_key
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFhZGNsZGxtaHBueGRucm11YnltIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg5MDE1MDUsImV4cCI6MjA3NDQ3NzUwNX0.Ne2a9NXpoTvyWNg0yH0R4jxE6JkRR096RWxOeKRBulA
       - key: SUPABASE_SERVICE_KEY
-        value: your_supabase_service_role_key
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFhZGNsZGxtaHBueGRucm11YnltIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1ODkwMTUwNSwiZXhwIjoyMDc0NDc3NTA1fQ.AifjjmHOA-2Q6s8IpSYxL76KTMl5NOduWek0KjJh80U
       - key: EMAIL_HOST
-        value: your_smtp_host
+        value: smtpout.secureserver.net
       - key: EMAIL_PORT
         value: "587"
       - key: EMAIL_USER
-        value: your_email_username
+        value: sanjeevirr@yvisoft.com
       - key: EMAIL_PASS
-        value: your_email_password
+        value: Welc@me@321
       - key: EMAIL_FROM
         value: noreply@yourdomain.com

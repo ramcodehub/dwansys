@@ -42,12 +42,16 @@ router.post('/', createLimiter, async (req, res, next) => {
       throw e;
     }
 
-    try {
-      await sendEmail({ template: 'subscription', data: value, req });
-    } catch (emailErr) {
-      if (req.log) req.log.warn({ err: { message: emailErr.message } }, 'Failed to send subscription email');
-    }
+    // Send email asynchronously (non-blocking)
+    sendEmail({ template: 'subscription', data: value, req })
+      .then(() => {
+        if (req.log) req.log.info('Subscription email sent successfully');
+      })
+      .catch((emailErr) => {
+        if (req.log) req.log.warn({ err: { message: emailErr.message } }, 'Failed to send subscription email');
+      });
 
+    // Respond immediately after database operation
     res.status(201).json({ success: true, subscriber: data });
   } catch (err) { next(err); }
 });
