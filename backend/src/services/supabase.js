@@ -6,43 +6,16 @@ function getSupabase() {
   if (!supabase) {
     const url = process.env.SUPABASE_URL;
     const serviceKey = process.env.SUPABASE_SERVICE_KEY;
-    const anonKey = process.env.SUPABASE_KEY;
-    const key = serviceKey || anonKey;
     
-    if (!url || !key) {
-      const err = new Error('Supabase env not configured properly');
-      err.code = 'SUPABASE_CONFIG_MISSING';
-      err.status = 500;
-      err.details = {
-        urlMissing: !url,
-        keyMissing: !key,
-        serviceKeyMissing: !serviceKey,
-        anonKeyMissing: !anonKey
-      };
-      throw err;
+    if (!url || !serviceKey) {
+      throw new Error('Supabase configuration missing: SUPABASE_URL and SUPABASE_SERVICE_KEY are required');
     }
     
-    // Log Supabase configuration for debugging (without exposing the key)
-    console.log('Supabase client configuration:', {
-      url,
-      hasServiceKey: !!serviceKey,
-      hasAnonKey: !!anonKey,
-      usingServiceKey: !!serviceKey
-    });
-    
-    // Create Supabase client with optimized settings
-    supabase = createClient(url, key, {
+    // Create Supabase client with minimal configuration
+    supabase = createClient(url, serviceKey, {
       auth: { 
         persistSession: false,
         detectSessionInUrl: false
-      },
-      db: {
-        schema: 'public'
-      },
-      global: {
-        headers: {
-          'X-Client-Info': 'dwansys-backend'
-        }
       }
     });
   }

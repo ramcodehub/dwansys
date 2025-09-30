@@ -53,10 +53,10 @@ const corsOptions = {
       callback(null, true);
     } else {
       // Log CORS errors in development and production for debugging
-      logger.warn({ origin, allowedOrigins, env: process.env.NODE_ENV }, 'CORS Origin not allowed');
+      console.warn('CORS Origin not allowed:', { origin, allowedOrigins, env: process.env.NODE_ENV });
       callback(new Error('Not allowed by CORS'));
     }
-  },
+    },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
@@ -64,28 +64,11 @@ const corsOptions = {
   preflightContinue: false
 };
 
-// Apply CORS middleware before any routes
+// Apply CORS middleware before any routes - this will handle OPTIONS requests automatically
 app.use(cors(corsOptions));
 
-// Handle preflight OPTIONS requests explicitly with more comprehensive headers
-app.options('*', (req, res) => {
-  // Log the incoming OPTIONS request for debugging
-  logger.info({
-    method: req.method,
-    url: req.url,
-    origin: req.header('origin'),
-    accessControlRequestHeaders: req.header('access-control-request-headers'),
-    accessControlRequestMethod: req.header('access-control-request-method')
-  }, 'Preflight OPTIONS request received');
-  
-  // Set all necessary CORS headers
-  res.header('Access-Control-Allow-Origin', req.header('origin') || '*');
-  res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type,Authorization,X-Requested-With,Accept');
-  res.header('Access-Control-Allow-Credentials', 'true');
-  res.header('Access-Control-Max-Age', '86400'); // Cache preflight for 24 hours
-  res.sendStatus(200);
-});
+// Remove our custom OPTIONS handler to avoid conflicts
+// The cors middleware will handle preflight requests correctly
 
 app.use(express.json({ limit: '1mb' }));
 
@@ -94,12 +77,12 @@ app.use((req, res, next) => {
   // Log requests for debugging (only in production for critical info)
   if (process.env.NODE_ENV === 'development' || 
       (req.method !== 'GET' && req.method !== 'HEAD' && req.url !== '/health' && req.url !== '/ping')) {
-    logger.info({
+    console.log('Incoming request:', {
       method: req.method,
       url: req.url,
       origin: req.header('origin'),
       userAgent: req.header('user-agent')
-    }, 'Incoming request');
+    });
   }
   next();
 });

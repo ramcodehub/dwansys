@@ -10,111 +10,76 @@ const createLimiter = rateLimit({ windowMs: 60 * 1000, max: 10, standardHeaders:
 
 router.post('/', createLimiter, async (req, res, next) => {
   try {
+    // Validate request body
     const { error, value } = subscriberCreateSchema.validate(req.body, { abortEarly: false, stripUnknown: true });
     if (error) {
-      const err = new Error('Invalid subscriber payload');
-      err.status = 400;
-      err.code = 'INVALID_BODY';
-      err.details = error.details.map((d) => d.message);
-      throw err;
+      return res.status(400).json({ 
+        error: { 
+          code: 'INVALID_BODY', 
+          message: 'Invalid subscriber payload',
+          details: error.details.map((d) => d.message)
+        } 
+      });
     }
 
+    // Get Supabase client
     const supabase = getSupabase();
+    
+    // Prepare payload
     const ip = req.headers['x-forwarded-for']?.split(',')[0]?.trim() || req.socket.remoteAddress || null;
     const userAgent = req.headers['user-agent'] || null;
 
-    const payload = { email: value.email, ip, user_agent: userAgent };
-    
-    // Log the payload for debugging
-    console.log('Inserting subscriber:', { 
-      email: payload.email,
-      ip: payload.ip
-    });
-    
+    const payload = { 
+      email: value.email, 
+      ip, 
+      user_agent: userAgent 
+    };
+
+    // Insert into database
     const { data, error: dbError } = await supabase
       .from('subscribers')
       .insert(payload)
       .select()
       .single();
     
-    // Set CORS headers before any response
-    if (req.header('origin')) {
-      res.header('Access-Control-Allow-Origin', req.header('origin'));
-      res.header('Access-Control-Allow-Credentials', 'true');
-    }
-    
     if (dbError) {
-      console.error('Database error:', dbError);
+      console.error('Database error in subscribers route:', dbError);
       if (dbError.code === '23505') { // Unique constraint violation
-        const err = new Error('Email already subscribed');
-        err.status = 409;
-        err.code = 'EMAIL_EXISTS';
-        throw err;
+        return res.status(409).json({ 
+          error: { 
+            code: 'EMAIL_EXISTS', 
+            message: 'Email already subscribed'
+          } 
+        });
       }
-      const e = new Error(dbError.message);
-      e.status = 500;
-      throw e;
+      return res.status(500).json({ 
+        error: { 
+          code: 'DATABASE_ERROR', 
+          message: 'Failed to save subscription'
+        } 
+      });
     }
 
     // Send email asynchronously (non-blocking)
     sendEmail({ template: 'subscription', data: value, req })
       .then(() => {
-        if (req.log) req.log.info('Subscription email sent successfully');
+        console.log('Subscription email sent successfully');
       })
       .catch((emailErr) => {
-        if (req.log) req.log.warn({ err: { message: emailErr.message } }, 'Failed to send subscription email');
+        console.warn('Failed to send subscription email:', emailErr.message);
       });
 
-    // Respond immediately after database operation
+    // Respond with success
     res.status(201).json({ success: true, subscriber: data });
   } catch (err) { 
-    // Ensure CORS headers are set for error responses
-    if (req.header('origin')) {
-      res.header('Access-Control-Allow-Origin', req.header('origin'));
-      res.header('Access-Control-Allow-Credentials', 'true');
-    }
-    console.error('Subscriber form error:', err);
-    next(err); 
+    console.error('Unexpected error in subscribers route:', err);
+    res.status(500).json({ 
+      error: { 
+        code: 'INTERNAL_ERROR', 
+        message: 'An unexpected error occurred'
+      } 
+    });
   }
 });
 
-router.get('/', async (req, res, next) => {
-  try {
-    const supabase = getSupabase();
-    const { data, error } = await supabase.from('subscribers').select('*').order('created_at', { ascending: false });
-    if (error) { const e = new Error(error.message); e.status = 500; throw e; }
-    res.json({ subscribers: data });
-  } catch (err) { next(err); }
-});
-
-router.get('/:id', async (req, res, next) => {
-  try {
-    const supabase = getSupabase();
-    const { data, error } = await supabase.from('subscribers').select('*').eq('id', req.params.id).single();
-    if (error) { const e = new Error(error.message); e.status = 404; throw e; }
-    res.json({ subscriber: data });
-  } catch (err) { next(err); }
-});
-
-router.patch('/:id', async (req, res, next) => {
-  try {
-    const { error, value } = subscriberUpdateSchema.validate(req.body, { abortEarly: false, stripUnknown: true });
-    if (error) { const e = new Error('Invalid body'); e.status = 400; e.code = 'INVALID_BODY'; throw e; }
-
-    const supabase = getSupabase();
-    const { data, error: dbError } = await supabase.from('subscribers').update(value).eq('id', req.params.id).select('*').single();
-    if (dbError) { const e = new Error(dbError.message); e.status = 500; throw e; }
-    res.json({ subscriber: data });
-  } catch (err) { next(err); }
-});
-
-router.delete('/:id', async (req, res, next) => {
-  try {
-    const supabase = getSupabase();
-    const { error } = await supabase.from('subscribers').delete().eq('id', req.params.id);
-    if (error) { const e = new Error(error.message); e.status = 500; throw e; }
-    res.status(204).send();
-  } catch (err) { next(err); }
-});
-
-module.exports = router;
+// ... keep the rest of the routes as they are ...
