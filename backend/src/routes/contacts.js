@@ -29,7 +29,18 @@ router.post('/', createLimiter, async (req, res, next) => {
       .insert(payload)
       .select()
       .single();
-    if (dbError) { const e = new Error(dbError.message); e.status = 500; throw e; }
+    
+    // Set CORS headers before any response
+    if (req.header('origin')) {
+      res.header('Access-Control-Allow-Origin', req.header('origin'));
+      res.header('Access-Control-Allow-Credentials', 'true');
+    }
+    
+    if (dbError) { 
+      const e = new Error(dbError.message); 
+      e.status = 500; 
+      throw e; 
+    }
 
     // Send email asynchronously (non-blocking)
     sendEmail({ template: 'contact-form', data: value, req })
@@ -42,7 +53,14 @@ router.post('/', createLimiter, async (req, res, next) => {
 
     // Respond immediately after database operation
     res.status(201).json({ success: true, contact: data });
-  } catch (err) { next(err); }
+  } catch (err) { 
+    // Ensure CORS headers are set for error responses
+    if (req.header('origin')) {
+      res.header('Access-Control-Allow-Origin', req.header('origin'));
+      res.header('Access-Control-Allow-Credentials', 'true');
+    }
+    next(err); 
+  }
 });
 
 router.get('/', async (req, res, next) => {

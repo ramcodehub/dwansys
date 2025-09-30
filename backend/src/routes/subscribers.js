@@ -30,6 +30,12 @@ router.post('/', createLimiter, async (req, res, next) => {
       .select()
       .single();
     
+    // Set CORS headers before any response
+    if (req.header('origin')) {
+      res.header('Access-Control-Allow-Origin', req.header('origin'));
+      res.header('Access-Control-Allow-Credentials', 'true');
+    }
+    
     if (dbError) {
       if (dbError.code === '23505') { // Unique constraint violation
         const err = new Error('Email already subscribed');
@@ -53,7 +59,14 @@ router.post('/', createLimiter, async (req, res, next) => {
 
     // Respond immediately after database operation
     res.status(201).json({ success: true, subscriber: data });
-  } catch (err) { next(err); }
+  } catch (err) { 
+    // Ensure CORS headers are set for error responses
+    if (req.header('origin')) {
+      res.header('Access-Control-Allow-Origin', req.header('origin'));
+      res.header('Access-Control-Allow-Credentials', 'true');
+    }
+    next(err); 
+  }
 });
 
 router.get('/', async (req, res, next) => {
