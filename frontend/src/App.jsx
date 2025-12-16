@@ -63,6 +63,7 @@ import Home from './pages/Home/Home';
 import DiscoverDwansys from './pages/DiscoverDwansys/DiscoverDwansys';
 import Blogs from './pages/Blogs/Blogs';
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import BlogDetail from './components/BlogDetail/BlogDetail';
 
 
 function App() {
@@ -75,6 +76,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path='/discover-dwansys' element={<DiscoverDwansys/>}/>
           <Route path='/blogs' element={<Blogs/>}/>
+          <Route path="/blogs/:id" element={<BlogDetail />} />
           <Route path='*' element={<ErrorPage/>}/>
          
           <Route path="/llm-evaluation" element={<LLMEvaluation />} />

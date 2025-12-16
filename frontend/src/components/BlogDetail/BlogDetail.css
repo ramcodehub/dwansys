@@ -1,0 +1,10 @@
+.blog-detail{
+    padding-top: 100px;
+}
+
+.blog-detail img{
+    max-width: 100%;
+    border-radius: 12px;
+    height: 400px;
+    
+}
