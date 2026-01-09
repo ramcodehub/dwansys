@@ -81,12 +81,12 @@
 }
 
 /* BUTTON */
-.primaryBtn {
+/* .primaryBtn {
     color: #fff;
     border-radius: 12px;
     width: fit-content;
     transition: transform 0.3s ease;
-}
+} */
 
 /* .blog-card:hover .primaryBtn {
     transform: translateX(6px);
