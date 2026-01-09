@@ -11,8 +11,8 @@ import './Styles/variables.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Router>
-      <App />
-    </Router>
+      <Router>
+        <App />
+      </Router>
   </StrictMode>
 );
