@@ -27,7 +27,7 @@ const Navigation = () => {
                     <Link
                       className="m-0 p-0 text-decoration-none"
                       to={subLink.path}
-                      onClick={() => setOpenIndex(null)} // ✅ closes dropdown on click
+                      onClick={() => setOpenIndex(null)} 
                     >
                       {subLink.name}
                     </Link>
@@ -41,7 +41,7 @@ const Navigation = () => {
             <Link
               className="d-flex align-items-baseline text-decoration-none fw-medium header-link"
               to={link.path}
-              onClick={() => setOpenIndex(null)} // ✅ also closes any open dropdown
+              onClick={() => setOpenIndex(null)} 
             >
               {link.name}
             </Link>

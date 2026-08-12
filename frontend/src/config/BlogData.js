@@ -4,8 +4,19 @@ import WorkLifeBalance from '../assets/images/blog-images/work-life-balance.jpg'
 import FutureOfAI from '../assets/images/blog-images/future-of-ai.avif';
 import FastapivsExpress from '../assets/images/blog-images/fastapi-vs-express.png';
 import DigitalMarketing from '../assets/images/blog-images/digital-marketing.jpg';
+import AIHLS from '../assets/images/blog-images/blog-ai-hls.png';
 
 const blogs = [
+  {
+    id: 'ai-life-sciences-chatgpt',
+    title: 'AI Meets Life Sciences',
+    excerpt:
+      'Explore how Generative AI is accelerating pharmaceutical research, clinical trials, and enterprise innovation.',
+    image: AIHLS,
+    date: '02-07-2026',
+    externalUrl: 'https://intuitionlabs.ai/articles/astrazeneca-chatgpt-case-study',
+    openInNewTab: true,
+  },
   {
     id: 'cloud-computing',
     title: 'Cloud Computing Explained',
